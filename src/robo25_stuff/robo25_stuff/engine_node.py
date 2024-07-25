@@ -23,7 +23,7 @@ class EngineNode(Node):
 
         self.sensor_serial_port = serial.Serial(self.serial_port, 1000000)
         # configure interface
-        #self.sensor_serial_port.write(f"MODE ROS2\n".encode()) # extra tfor startup
+        self.sensor_serial_port.write(f"MODE ROS2\n".encode()) # extra tfor startup
 
 
         self.engine_msg_publisher = self.create_publisher(String, 'engine_msg', 10)

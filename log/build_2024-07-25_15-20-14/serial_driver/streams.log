@@ -1,0 +1,93 @@
+[0.010s] Invoking command in '/home/mikew/robo25ws/build/serial_driver': AMENT_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/mikew/robo25ws/src/transport_drivers/serial_driver -DCMAKE_INSTALL_PREFIX=/home/mikew/robo25ws/install/serial_driver
+[0.068s] -- The C compiler identification is GNU 11.4.0
+[0.144s] -- The CXX compiler identification is GNU 11.4.0
+[0.152s] -- Detecting C compiler ABI info
+[0.222s] -- Detecting C compiler ABI info - done
+[0.238s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.238s] -- Detecting C compile features
+[0.239s] -- Detecting C compile features - done
+[0.244s] -- Detecting CXX compiler ABI info
+[0.326s] -- Detecting CXX compiler ABI info - done
+[0.334s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.334s] -- Detecting CXX compile features
+[0.335s] -- Detecting CXX compile features - done
+[0.337s] -- Found ament_cmake_auto: 1.3.9 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.496s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.704s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.709s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.721s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.736s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.758s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.834s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.838s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.945s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.981s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.037s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.048s] -- Looking for pthread.h
+[1.126s] -- Looking for pthread.h - found
+[1.126s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.206s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.207s] -- Found Threads: TRUE  
+[1.559s] -- Found ASIO: /usr/include  
+[1.619s] -- Configuring done
+[1.673s] -- Generating done
+[1.674s] -- Build files have been written to: /home/mikew/robo25ws/build/serial_driver
+[1.684s] Invoked command in '/home/mikew/robo25ws/build/serial_driver' returned '0': AMENT_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/mikew/robo25ws/src/transport_drivers/serial_driver -DCMAKE_INSTALL_PREFIX=/home/mikew/robo25ws/install/serial_driver
+[1.687s] Invoking command in '/home/mikew/robo25ws/build/serial_driver': AMENT_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/mikew/robo25ws/build/serial_driver -- -j8 -l8
+[1.738s] [ 20%] [32mBuilding CXX object CMakeFiles/lifecycle_service_client.dir/rclcpp_components/node_main_lifecycle_service_client.cpp.o[0m
+[1.738s] [ 20%] [32mBuilding CXX object CMakeFiles/serial_bridge.dir/rclcpp_components/node_main_serial_bridge.cpp.o[0m
+[1.741s] [ 30%] [32mBuilding CXX object CMakeFiles/serial_driver.dir/src/serial_port.cpp.o[0m
+[1.741s] [ 40%] [32mBuilding CXX object CMakeFiles/serial_driver.dir/src/serial_driver.cpp.o[0m
+[6.814s] [ 50%] [32m[1mLinking CXX shared library libserial_driver.so[0m
+[7.423s] [ 50%] Built target serial_driver
+[7.496s] [ 60%] [32mBuilding CXX object CMakeFiles/serial_driver_nodes.dir/src/serial_bridge_node.cpp.o[0m
+[7.533s] [ 70%] [32mBuilding CXX object CMakeFiles/serial_driver_nodes.dir/src/lifecycle_service_client.cpp.o[0m
+[7.831s] [ 80%] [32m[1mLinking CXX executable serial_bridge[0m
+[8.158s] [ 80%] Built target serial_bridge
+[8.171s] [ 90%] [32m[1mLinking CXX executable lifecycle_service_client[0m
+[8.419s] [ 90%] Built target lifecycle_service_client
+[18.636s] [100%] [32m[1mLinking CXX shared library libserial_driver_nodes.so[0m
+[19.569s] [100%] Built target serial_driver_nodes
+[19.584s] Invoked command in '/home/mikew/robo25ws/build/serial_driver' returned '0': AMENT_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/mikew/robo25ws/build/serial_driver -- -j8 -l8
+[19.642s] Invoking command in '/home/mikew/robo25ws/build/serial_driver': AMENT_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/mikew/robo25ws/build/serial_driver
+[19.652s] -- Install configuration: ""
+[19.653s] -- Installing: /home/mikew/robo25ws/install/serial_driver/lib/serial_driver/serial_bridge
+[19.653s] -- Set runtime path of "/home/mikew/robo25ws/install/serial_driver/lib/serial_driver/serial_bridge" to ""
+[19.654s] -- Installing: /home/mikew/robo25ws/install/serial_driver/lib/serial_driver/lifecycle_service_client
+[19.654s] -- Set runtime path of "/home/mikew/robo25ws/install/serial_driver/lib/serial_driver/lifecycle_service_client" to ""
+[19.654s] -- Installing: /home/mikew/robo25ws/install/serial_driver/include
+[19.655s] -- Installing: /home/mikew/robo25ws/install/serial_driver/include/serial_driver
+[19.655s] -- Installing: /home/mikew/robo25ws/install/serial_driver/include/serial_driver/serial_port.hpp
+[19.655s] -- Installing: /home/mikew/robo25ws/install/serial_driver/include/serial_driver/serial_driver.hpp
+[19.655s] -- Installing: /home/mikew/robo25ws/install/serial_driver/include/serial_driver/visibility_control.hpp
+[19.661s] -- Installing: /home/mikew/robo25ws/install/serial_driver/include/serial_driver/serial_bridge_node.hpp
+[19.661s] -- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/library_path.sh
+[19.661s] -- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/library_path.dsv
+[19.661s] -- Installing: /home/mikew/robo25ws/install/serial_driver/lib/libserial_driver.so
+[19.668s] -- Set runtime path of "/home/mikew/robo25ws/install/serial_driver/lib/libserial_driver.so" to ""
+[19.668s] -- Installing: /home/mikew/robo25ws/install/serial_driver/lib/libserial_driver_nodes.so
+[19.681s] -- Set runtime path of "/home/mikew/robo25ws/install/serial_driver/lib/libserial_driver_nodes.so" to ""
+[19.681s] -- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/launch
+[19.682s] -- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/launch/serial_driver_bridge_node.launch.py
+[19.682s] -- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/params
+[19.682s] -- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/params/example.params.yaml
+[19.682s] -- Installing: /home/mikew/robo25ws/install/serial_driver/share/ament_index/resource_index/package_run_dependencies/serial_driver
+[19.682s] -- Installing: /home/mikew/robo25ws/install/serial_driver/share/ament_index/resource_index/parent_prefix_path/serial_driver
+[19.683s] -- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/ament_prefix_path.sh
+[19.683s] -- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/ament_prefix_path.dsv
+[19.683s] -- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/path.sh
+[19.683s] -- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/path.dsv
+[19.683s] -- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/local_setup.bash
+[19.684s] -- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/local_setup.sh
+[19.684s] -- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/local_setup.zsh
+[19.684s] -- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/local_setup.dsv
+[19.684s] -- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/package.dsv
+[19.684s] -- Installing: /home/mikew/robo25ws/install/serial_driver/share/ament_index/resource_index/packages/serial_driver
+[19.685s] -- Installing: /home/mikew/robo25ws/install/serial_driver/share/ament_index/resource_index/rclcpp_components/serial_driver
+[19.685s] -- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/cmake/ament_cmake_export_dependencies-extras.cmake
+[19.685s] -- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/cmake/ament_cmake_export_include_directories-extras.cmake
+[19.685s] -- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/cmake/ament_cmake_export_libraries-extras.cmake
+[19.685s] -- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/cmake/serial_driverConfig.cmake
+[19.686s] -- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/cmake/serial_driverConfig-version.cmake
+[19.686s] -- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/package.xml
+[19.701s] Invoked command in '/home/mikew/robo25ws/build/serial_driver' returned '0': AMENT_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/mikew/robo25ws/build/serial_driver

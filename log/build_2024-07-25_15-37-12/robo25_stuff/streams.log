@@ -1,0 +1,22 @@
+[0.780s] Invoking command in '/home/mikew/robo25ws/src/robo25_stuff': PYTHONPATH=/home/mikew/robo25ws/build/robo25_stuff/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/robo25_stuff build --build-base /home/mikew/robo25ws/build/robo25_stuff/build install --record /home/mikew/robo25ws/build/robo25_stuff/install.log --single-version-externally-managed install_data
+[1.140s] running egg_info
+[1.141s] writing ../../build/robo25_stuff/robo25_stuff.egg-info/PKG-INFO
+[1.141s] writing dependency_links to ../../build/robo25_stuff/robo25_stuff.egg-info/dependency_links.txt
+[1.142s] writing entry points to ../../build/robo25_stuff/robo25_stuff.egg-info/entry_points.txt
+[1.142s] writing requirements to ../../build/robo25_stuff/robo25_stuff.egg-info/requires.txt
+[1.142s] writing top-level names to ../../build/robo25_stuff/robo25_stuff.egg-info/top_level.txt
+[1.144s] reading manifest file '../../build/robo25_stuff/robo25_stuff.egg-info/SOURCES.txt'
+[1.145s] writing manifest file '../../build/robo25_stuff/robo25_stuff.egg-info/SOURCES.txt'
+[1.145s] running build
+[1.145s] running build_py
+[1.145s] running install
+[1.146s] running install_lib
+[1.147s] running install_data
+[1.147s] running install_egg_info
+[1.148s] removing '/home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages/robo25_stuff-0.0.0-py3.10.egg-info' (and everything under it)
+[1.149s] Copying ../../build/robo25_stuff/robo25_stuff.egg-info to /home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages/robo25_stuff-0.0.0-py3.10.egg-info
+[1.150s] running install_scripts
+[1.170s] Installing engine_node script to /home/mikew/robo25ws/install/robo25_stuff/lib/robo25_stuff
+[1.170s] Installing lc_serial_manager_node script to /home/mikew/robo25ws/install/robo25_stuff/lib/robo25_stuff
+[1.171s] writing list of installed files to '/home/mikew/robo25ws/build/robo25_stuff/install.log'
+[1.199s] Invoked command in '/home/mikew/robo25ws/src/robo25_stuff' returned '0': PYTHONPATH=/home/mikew/robo25ws/build/robo25_stuff/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/robo25_stuff build --build-base /home/mikew/robo25ws/build/robo25_stuff/build install --record /home/mikew/robo25ws/build/robo25_stuff/install.log --single-version-externally-managed install_data

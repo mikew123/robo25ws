@@ -1,0 +1,22 @@
+[ 30%] Built target serial_driver
+[ 50%] Built target serial_bridge
+[ 70%] Built target lifecycle_service_client
+[35m[1mConsolidate compiler generated dependencies of target serial_driver_nodes[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/serial_driver_nodes.dir/src/lifecycle_service_client.cpp.o[0m
+[01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:44:68:[m[K [01;31m[Kerror: [m[Kinvalid operands of types ‘[01m[Kconst char* const[m[K’ and ‘[01m[Kconst char [11][m[K’ to binary ‘[01m[Koperator+[m[K’
+   44 | constexpr char const * node_get_state_topic = [32m[Klifecycle_node[m[K[01;31m[K+[m[K[34m[K"/get_state"[m[K;
+      |                                               [32m[K~~~~~~~~~~~~~~[m[K[01;31m[K^[m[K[34m[K~~~~~~~~~~~~[m[K
+      |                                               [32m[K|[m[K              [34m[K|[m[K
+      |                                               [32m[K|[m[K              [34m[Kconst char [11][m[K
+      |                                               [32m[Kconst char* const[m[K
+
+[01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:45:71:[m[K [01;31m[Kerror: [m[Kinvalid operands of types ‘[01m[Kconst char* const[m[K’ and ‘[01m[Kconst char [14][m[K’ to binary ‘[01m[Koperator+[m[K’
+   45 | stexpr char const * node_change_state_topic = [32m[Klifecycle_node[m[K[01;31m[K+[m[K[34m[K"/change_state"[m[K;
+      |                                               [32m[K~~~~~~~~~~~~~~[m[K[01;31m[K^[m[K[34m[K~~~~~~~~~~~~~~~[m[K
+      |                                               [32m[K|[m[K              [34m[K|[m[K
+      |                                               [32m[K|[m[K              [34m[Kconst char [14][m[K
+      |                                               [32m[Kconst char* const[m[K
+
+gmake[2]: *** [CMakeFiles/serial_driver_nodes.dir/build.make:90: CMakeFiles/serial_driver_nodes.dir/src/lifecycle_service_client.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/serial_driver_nodes.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

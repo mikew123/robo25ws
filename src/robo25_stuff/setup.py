@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'engine_node = robo25_stuff.engine_node:main'
+            'engine_node = robo25_stuff.engine_node:main',
         ],
     },
 )

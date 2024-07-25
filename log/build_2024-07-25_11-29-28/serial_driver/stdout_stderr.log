@@ -1,0 +1,129 @@
+[ 20%] Built target serial_bridge
+[ 40%] Built target lifecycle_service_client
+[ 70%] Built target serial_driver
+[35m[1mConsolidate compiler generated dependencies of target serial_driver_nodes[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/serial_driver_nodes.dir/src/lifecycle_service_client.cpp.o[0m
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:25[m[K:
+[01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:[m[K In member function ‘[01m[Kunsigned int LifecycleServiceClient::get_state(std::chrono::seconds)[m[K’:
+[01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:145:23:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 5 has type ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  145 |         get_logger(), [01;35m[K"Server time out while getting current state for node %s"[m[K, lifecycle_node);
+      |                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:145:78:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  145 | r(), "Server time out while getting current state for node [01;36m[K%s[m[K", lifecycle_node);
+      |                                                            [01;36m[K~^[m[K
+      |                                                             [01;36m[K|[m[K
+      |                                                             [01;36m[Kchar*[m[K
+
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:25[m[K:
+[01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:152:23:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 5 has type ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  152 |         get_logger(), [01;35m[K"Node %s has current state %s."[m[K,
+      |                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:152:30:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  152 |         get_logger(), "Node [01;36m[K%s[m[K has current state %s.",
+      |                             [01;36m[K~^[m[K
+      |                              [01;36m[K|[m[K
+      |                              [01;36m[Kchar*[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:25[m[K:
+[01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:157:23:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 5 has type ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  157 |         get_logger(), [01;35m[K"Failed to get current state for node %s"[m[K, lifecycle_node);
+      |                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:157:62:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  157 |        get_logger(), "Failed to get current state for node [01;36m[K%s[m[K", lifecycle_node);
+      |                                                            [01;36m[K~^[m[K
+      |                                                             [01;36m[K|[m[K
+      |                                                             [01;36m[Kchar*[m[K
+
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:25[m[K:
+[01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:[m[K In member function ‘[01m[Kbool LifecycleServiceClient::change_state(uint8_t, std::chrono::seconds)[m[K’:
+[01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:203:23:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 5 has type ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  203 |         get_logger(), [01;35m[K"Server time out while getting current state for node %s"[m[K, lifecycle_node);
+      |                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:203:78:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  203 | r(), "Server time out while getting current state for node [01;36m[K%s[m[K", lifecycle_node);
+      |                                                            [01;36m[K~^[m[K
+      |                                                             [01;36m[K|[m[K
+      |                                                             [01;36m[Kchar*[m[K
+
+[ 90%] [32m[1mLinking CXX shared library libserial_driver_nodes.so[0m
+[100%] Built target serial_driver_nodes
+-- Install configuration: ""
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/lib/serial_driver/serial_bridge
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/lib/serial_driver/lifecycle_service_client
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/include
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/include/serial_driver
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/include/serial_driver/serial_port.hpp
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/include/serial_driver/serial_driver.hpp
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/include/serial_driver/visibility_control.hpp
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/include/serial_driver/serial_bridge_node.hpp
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/library_path.sh
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/library_path.dsv
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/lib/libserial_driver.so
+-- Installing: /home/mikew/robo25ws/install/serial_driver/lib/libserial_driver_nodes.so
+-- Set runtime path of "/home/mikew/robo25ws/install/serial_driver/lib/libserial_driver_nodes.so" to ""
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/launch
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/launch/serial_driver_bridge_node.launch.py
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/params
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/params/example.params.yaml
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/ament_index/resource_index/package_run_dependencies/serial_driver
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/ament_index/resource_index/parent_prefix_path/serial_driver
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/ament_prefix_path.sh
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/path.sh
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/path.dsv
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/local_setup.bash
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/local_setup.sh
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/local_setup.zsh
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/local_setup.dsv
+-- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/package.dsv
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/ament_index/resource_index/packages/serial_driver
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/ament_index/resource_index/rclcpp_components/serial_driver
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/cmake/serial_driverConfig.cmake
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/cmake/serial_driverConfig-version.cmake
+-- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/package.xml

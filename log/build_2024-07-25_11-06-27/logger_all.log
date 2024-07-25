@@ -1,0 +1,423 @@
+[0.106s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.106s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7ca720952680>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7ca720952140>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7ca720952140>>, mixin_verb=('build',))
+[0.307s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.307s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.307s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.307s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.307s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.307s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.307s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/mikew/robo25ws'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(arduino) by extensions ['ignore', 'ignore_ament_install']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(arduino) by extension 'ignore'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(arduino) by extension 'ignore_ament_install'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(arduino) by extensions ['colcon_pkg']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(arduino) by extension 'colcon_pkg'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(arduino) by extensions ['colcon_meta']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(arduino) by extension 'colcon_meta'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(arduino) by extensions ['ros']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(arduino) by extension 'ros'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(arduino) by extensions ['cmake', 'python']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(arduino) by extension 'cmake'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(arduino) by extension 'python'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(arduino) by extensions ['python_setup_py']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(arduino) by extension 'python_setup_py'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(arduino/RCX6-engine-ctrl) by extensions ['ignore', 'ignore_ament_install']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(arduino/RCX6-engine-ctrl) by extension 'ignore'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(arduino/RCX6-engine-ctrl) by extension 'ignore_ament_install'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(arduino/RCX6-engine-ctrl) by extensions ['colcon_pkg']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(arduino/RCX6-engine-ctrl) by extension 'colcon_pkg'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(arduino/RCX6-engine-ctrl) by extensions ['colcon_meta']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(arduino/RCX6-engine-ctrl) by extension 'colcon_meta'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(arduino/RCX6-engine-ctrl) by extensions ['ros']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(arduino/RCX6-engine-ctrl) by extension 'ros'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(arduino/RCX6-engine-ctrl) by extensions ['cmake', 'python']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(arduino/RCX6-engine-ctrl) by extension 'cmake'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(arduino/RCX6-engine-ctrl) by extension 'python'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(arduino/RCX6-engine-ctrl) by extensions ['python_setup_py']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(arduino/RCX6-engine-ctrl) by extension 'python_setup_py'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo25_stuff) by extensions ['ignore', 'ignore_ament_install']
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo25_stuff) by extension 'ignore'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo25_stuff) by extension 'ignore_ament_install'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo25_stuff) by extensions ['colcon_pkg']
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo25_stuff) by extension 'colcon_pkg'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo25_stuff) by extensions ['colcon_meta']
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo25_stuff) by extension 'colcon_meta'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo25_stuff) by extensions ['ros']
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/robo25_stuff) by extension 'ros'
+[0.332s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robo25_stuff' with type 'ros.ament_python' and name 'robo25_stuff'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers) by extensions ['ignore', 'ignore_ament_install']
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers) by extension 'ignore'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers) by extension 'ignore_ament_install'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers) by extensions ['colcon_pkg']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers) by extension 'colcon_pkg'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers) by extensions ['colcon_meta']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers) by extension 'colcon_meta'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers) by extensions ['ros']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers) by extension 'ros'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers) by extensions ['cmake', 'python']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers) by extension 'cmake'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers) by extension 'python'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers) by extensions ['python_setup_py']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers) by extension 'python_setup_py'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/asio_cmake_module) by extensions ['ignore', 'ignore_ament_install']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/asio_cmake_module) by extension 'ignore'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/asio_cmake_module) by extension 'ignore_ament_install'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/asio_cmake_module) by extensions ['colcon_pkg']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/asio_cmake_module) by extension 'colcon_pkg'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/asio_cmake_module) by extensions ['colcon_meta']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/asio_cmake_module) by extension 'colcon_meta'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/asio_cmake_module) by extensions ['ros']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/asio_cmake_module) by extension 'ros'
+[0.334s] DEBUG:colcon.colcon_core.package_identification:Package 'src/transport_drivers/asio_cmake_module' with type 'ros.ament_cmake' and name 'asio_cmake_module'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/io_context) by extensions ['ignore', 'ignore_ament_install']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/io_context) by extension 'ignore'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/io_context) by extension 'ignore_ament_install'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/io_context) by extensions ['colcon_pkg']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/io_context) by extension 'colcon_pkg'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/io_context) by extensions ['colcon_meta']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/io_context) by extension 'colcon_meta'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/io_context) by extensions ['ros']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/io_context) by extension 'ros'
+[0.336s] DEBUG:colcon.colcon_core.package_identification:Package 'src/transport_drivers/io_context' with type 'ros.ament_cmake' and name 'io_context'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/serial_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/serial_driver) by extension 'ignore'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/serial_driver) by extension 'ignore_ament_install'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/serial_driver) by extensions ['colcon_pkg']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/serial_driver) by extension 'colcon_pkg'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/serial_driver) by extensions ['colcon_meta']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/serial_driver) by extension 'colcon_meta'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/serial_driver) by extensions ['ros']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/serial_driver) by extension 'ros'
+[0.337s] DEBUG:colcon.colcon_core.package_identification:Package 'src/transport_drivers/serial_driver' with type 'ros.ament_cmake' and name 'serial_driver'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/udp_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/udp_driver) by extension 'ignore'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/udp_driver) by extension 'ignore_ament_install'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/udp_driver) by extensions ['colcon_pkg']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/udp_driver) by extension 'colcon_pkg'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/udp_driver) by extensions ['colcon_meta']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/udp_driver) by extension 'colcon_meta'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/udp_driver) by extensions ['ros']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/transport_drivers/udp_driver) by extension 'ros'
+[0.339s] DEBUG:colcon.colcon_core.package_identification:Package 'src/transport_drivers/udp_driver' with type 'ros.ament_cmake' and name 'udp_driver'
+[0.339s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.339s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.339s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.339s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.339s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.358s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.358s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.360s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/mikew/robo25ws/install
+[0.362s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 347 installed packages in /opt/ros/humble
+[0.364s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.407s] Level 5:colcon.colcon_core.verb:set package 'asio_cmake_module' build argument 'cmake_args' from command line to 'None'
+[0.407s] Level 5:colcon.colcon_core.verb:set package 'asio_cmake_module' build argument 'cmake_target' from command line to 'None'
+[0.407s] Level 5:colcon.colcon_core.verb:set package 'asio_cmake_module' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.407s] Level 5:colcon.colcon_core.verb:set package 'asio_cmake_module' build argument 'cmake_clean_cache' from command line to 'False'
+[0.407s] Level 5:colcon.colcon_core.verb:set package 'asio_cmake_module' build argument 'cmake_clean_first' from command line to 'False'
+[0.407s] Level 5:colcon.colcon_core.verb:set package 'asio_cmake_module' build argument 'cmake_force_configure' from command line to 'False'
+[0.407s] Level 5:colcon.colcon_core.verb:set package 'asio_cmake_module' build argument 'ament_cmake_args' from command line to 'None'
+[0.407s] Level 5:colcon.colcon_core.verb:set package 'asio_cmake_module' build argument 'catkin_cmake_args' from command line to 'None'
+[0.407s] Level 5:colcon.colcon_core.verb:set package 'asio_cmake_module' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.407s] DEBUG:colcon.colcon_core.verb:Building package 'asio_cmake_module' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mikew/robo25ws/build/asio_cmake_module', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mikew/robo25ws/install/asio_cmake_module', 'merge_install': False, 'path': '/home/mikew/robo25ws/src/transport_drivers/asio_cmake_module', 'symlink_install': False, 'test_result_base': None}
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'robo25_stuff' build argument 'cmake_args' from command line to 'None'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'robo25_stuff' build argument 'cmake_target' from command line to 'None'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'robo25_stuff' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'robo25_stuff' build argument 'cmake_clean_cache' from command line to 'False'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'robo25_stuff' build argument 'cmake_clean_first' from command line to 'False'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'robo25_stuff' build argument 'cmake_force_configure' from command line to 'False'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'robo25_stuff' build argument 'ament_cmake_args' from command line to 'None'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'robo25_stuff' build argument 'catkin_cmake_args' from command line to 'None'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'robo25_stuff' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.408s] DEBUG:colcon.colcon_core.verb:Building package 'robo25_stuff' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mikew/robo25ws/build/robo25_stuff', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mikew/robo25ws/install/robo25_stuff', 'merge_install': False, 'path': '/home/mikew/robo25ws/src/robo25_stuff', 'symlink_install': False, 'test_result_base': None}
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'io_context' build argument 'cmake_args' from command line to 'None'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'io_context' build argument 'cmake_target' from command line to 'None'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'io_context' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'io_context' build argument 'cmake_clean_cache' from command line to 'False'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'io_context' build argument 'cmake_clean_first' from command line to 'False'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'io_context' build argument 'cmake_force_configure' from command line to 'False'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'io_context' build argument 'ament_cmake_args' from command line to 'None'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'io_context' build argument 'catkin_cmake_args' from command line to 'None'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'io_context' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.408s] DEBUG:colcon.colcon_core.verb:Building package 'io_context' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mikew/robo25ws/build/io_context', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mikew/robo25ws/install/io_context', 'merge_install': False, 'path': '/home/mikew/robo25ws/src/transport_drivers/io_context', 'symlink_install': False, 'test_result_base': None}
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'serial_driver' build argument 'cmake_args' from command line to 'None'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'serial_driver' build argument 'cmake_target' from command line to 'None'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'serial_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'serial_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'serial_driver' build argument 'cmake_clean_first' from command line to 'False'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'serial_driver' build argument 'cmake_force_configure' from command line to 'False'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'serial_driver' build argument 'ament_cmake_args' from command line to 'None'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'serial_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'serial_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.409s] DEBUG:colcon.colcon_core.verb:Building package 'serial_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mikew/robo25ws/build/serial_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mikew/robo25ws/install/serial_driver', 'merge_install': False, 'path': '/home/mikew/robo25ws/src/transport_drivers/serial_driver', 'symlink_install': False, 'test_result_base': None}
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'udp_driver' build argument 'cmake_args' from command line to 'None'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'udp_driver' build argument 'cmake_target' from command line to 'None'
+[0.410s] Level 5:colcon.colcon_core.verb:set package 'udp_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.410s] Level 5:colcon.colcon_core.verb:set package 'udp_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.410s] Level 5:colcon.colcon_core.verb:set package 'udp_driver' build argument 'cmake_clean_first' from command line to 'False'
+[0.410s] Level 5:colcon.colcon_core.verb:set package 'udp_driver' build argument 'cmake_force_configure' from command line to 'False'
+[0.410s] Level 5:colcon.colcon_core.verb:set package 'udp_driver' build argument 'ament_cmake_args' from command line to 'None'
+[0.410s] Level 5:colcon.colcon_core.verb:set package 'udp_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.410s] Level 5:colcon.colcon_core.verb:set package 'udp_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.410s] DEBUG:colcon.colcon_core.verb:Building package 'udp_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mikew/robo25ws/build/udp_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mikew/robo25ws/install/udp_driver', 'merge_install': False, 'path': '/home/mikew/robo25ws/src/transport_drivers/udp_driver', 'symlink_install': False, 'test_result_base': None}
+[0.410s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.411s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.411s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mikew/robo25ws/src/transport_drivers/asio_cmake_module' with build type 'ament_cmake'
+[0.411s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mikew/robo25ws/src/transport_drivers/asio_cmake_module'
+[0.414s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.414s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.414s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.417s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/mikew/robo25ws/src/robo25_stuff' with build type 'ament_python'
+[0.418s] Level 1:colcon.colcon_core.shell:create_environment_hook('robo25_stuff', 'ament_prefix_path')
+[0.418s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/robo25_stuff/share/robo25_stuff/hook/ament_prefix_path.ps1'
+[0.419s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mikew/robo25ws/install/robo25_stuff/share/robo25_stuff/hook/ament_prefix_path.dsv'
+[0.419s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/robo25_stuff/share/robo25_stuff/hook/ament_prefix_path.sh'
+[0.420s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.420s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.429s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mikew/robo25ws/build/asio_cmake_module': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble /usr/bin/cmake --build /home/mikew/robo25ws/build/asio_cmake_module -- -j8 -l8
+[0.800s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/mikew/robo25ws/src/robo25_stuff'
+[0.801s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.801s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.805s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mikew/robo25ws/build/asio_cmake_module' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble /usr/bin/cmake --build /home/mikew/robo25ws/build/asio_cmake_module -- -j8 -l8
+[0.841s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mikew/robo25ws/build/asio_cmake_module': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble /usr/bin/cmake --install /home/mikew/robo25ws/build/asio_cmake_module
+[0.853s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(asio_cmake_module)
+[0.854s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mikew/robo25ws/build/asio_cmake_module' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble /usr/bin/cmake --install /home/mikew/robo25ws/build/asio_cmake_module
+[0.856s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/asio_cmake_module' for CMake module files
+[0.856s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/asio_cmake_module' for CMake config files
+[0.856s] Level 1:colcon.colcon_core.shell:create_environment_hook('asio_cmake_module', 'cmake_prefix_path')
+[0.857s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/hook/cmake_prefix_path.ps1'
+[0.857s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/hook/cmake_prefix_path.dsv'
+[0.857s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/hook/cmake_prefix_path.sh'
+[0.858s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/asio_cmake_module/bin'
+[0.858s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/asio_cmake_module/lib/pkgconfig/asio_cmake_module.pc'
+[0.858s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/asio_cmake_module/lib/python3.10/site-packages'
+[0.858s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/asio_cmake_module/bin'
+[0.859s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/package.ps1'
+[0.859s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/package.dsv'
+[0.860s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/package.sh'
+[0.861s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/package.bash'
+[0.861s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/package.zsh'
+[0.862s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mikew/robo25ws/install/asio_cmake_module/share/colcon-core/packages/asio_cmake_module)
+[0.887s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(asio_cmake_module)
+[0.887s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/asio_cmake_module' for CMake module files
+[0.887s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/asio_cmake_module' for CMake config files
+[0.888s] Level 1:colcon.colcon_core.shell:create_environment_hook('asio_cmake_module', 'cmake_prefix_path')
+[0.888s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/hook/cmake_prefix_path.ps1'
+[0.888s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/hook/cmake_prefix_path.dsv'
+[0.889s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/hook/cmake_prefix_path.sh'
+[0.889s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/asio_cmake_module/bin'
+[0.889s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/asio_cmake_module/lib/pkgconfig/asio_cmake_module.pc'
+[0.889s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/asio_cmake_module/lib/python3.10/site-packages'
+[0.890s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/asio_cmake_module/bin'
+[0.890s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/package.ps1'
+[0.891s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/package.dsv'
+[0.891s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/package.sh'
+[0.892s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/package.bash'
+[0.892s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/package.zsh'
+[0.892s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mikew/robo25ws/install/asio_cmake_module/share/colcon-core/packages/asio_cmake_module)
+[0.893s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mikew/robo25ws/src/transport_drivers/io_context' with build type 'ament_cmake'
+[0.893s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mikew/robo25ws/src/transport_drivers/io_context'
+[0.893s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.893s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.903s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mikew/robo25ws/build/io_context': CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/robo25ws/install/udp_driver:/home/mikew/robo25ws/install/serial_driver:/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble /usr/bin/cmake --build /home/mikew/robo25ws/build/io_context -- -j8 -l8
+[1.006s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mikew/robo25ws/build/io_context' returned '0': CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/robo25ws/install/udp_driver:/home/mikew/robo25ws/install/serial_driver:/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble /usr/bin/cmake --build /home/mikew/robo25ws/build/io_context -- -j8 -l8
+[1.044s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mikew/robo25ws/build/io_context': CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/robo25ws/install/udp_driver:/home/mikew/robo25ws/install/serial_driver:/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble /usr/bin/cmake --install /home/mikew/robo25ws/build/io_context
+[1.056s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(io_context)
+[1.057s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/io_context' for CMake module files
+[1.057s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mikew/robo25ws/build/io_context' returned '0': CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/robo25ws/install/udp_driver:/home/mikew/robo25ws/install/serial_driver:/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble /usr/bin/cmake --install /home/mikew/robo25ws/build/io_context
+[1.057s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/io_context' for CMake config files
+[1.057s] Level 1:colcon.colcon_core.shell:create_environment_hook('io_context', 'cmake_prefix_path')
+[1.058s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/io_context/share/io_context/hook/cmake_prefix_path.ps1'
+[1.058s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mikew/robo25ws/install/io_context/share/io_context/hook/cmake_prefix_path.dsv'
+[1.058s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/io_context/share/io_context/hook/cmake_prefix_path.sh'
+[1.059s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/io_context/lib'
+[1.059s] Level 1:colcon.colcon_core.shell:create_environment_hook('io_context', 'ld_library_path_lib')
+[1.059s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/io_context/share/io_context/hook/ld_library_path_lib.ps1'
+[1.060s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mikew/robo25ws/install/io_context/share/io_context/hook/ld_library_path_lib.dsv'
+[1.060s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/io_context/share/io_context/hook/ld_library_path_lib.sh'
+[1.060s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/io_context/bin'
+[1.060s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/io_context/lib/pkgconfig/io_context.pc'
+[1.061s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/io_context/lib/python3.10/site-packages'
+[1.061s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/io_context/bin'
+[1.061s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/io_context/share/io_context/package.ps1'
+[1.062s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mikew/robo25ws/install/io_context/share/io_context/package.dsv'
+[1.062s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/io_context/share/io_context/package.sh'
+[1.062s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/io_context/share/io_context/package.bash'
+[1.063s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/io_context/share/io_context/package.zsh'
+[1.063s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mikew/robo25ws/install/io_context/share/colcon-core/packages/io_context)
+[1.101s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(io_context)
+[1.101s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/io_context' for CMake module files
+[1.102s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/io_context' for CMake config files
+[1.102s] Level 1:colcon.colcon_core.shell:create_environment_hook('io_context', 'cmake_prefix_path')
+[1.102s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/io_context/share/io_context/hook/cmake_prefix_path.ps1'
+[1.103s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mikew/robo25ws/install/io_context/share/io_context/hook/cmake_prefix_path.dsv'
+[1.103s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/io_context/share/io_context/hook/cmake_prefix_path.sh'
+[1.104s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/io_context/lib'
+[1.104s] Level 1:colcon.colcon_core.shell:create_environment_hook('io_context', 'ld_library_path_lib')
+[1.104s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/io_context/share/io_context/hook/ld_library_path_lib.ps1'
+[1.104s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mikew/robo25ws/install/io_context/share/io_context/hook/ld_library_path_lib.dsv'
+[1.105s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/io_context/share/io_context/hook/ld_library_path_lib.sh'
+[1.105s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/io_context/bin'
+[1.105s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/io_context/lib/pkgconfig/io_context.pc'
+[1.106s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/io_context/lib/python3.10/site-packages'
+[1.106s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/io_context/bin'
+[1.106s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/io_context/share/io_context/package.ps1'
+[1.107s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mikew/robo25ws/install/io_context/share/io_context/package.dsv'
+[1.107s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/io_context/share/io_context/package.sh'
+[1.108s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/io_context/share/io_context/package.bash'
+[1.108s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/io_context/share/io_context/package.zsh'
+[1.108s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mikew/robo25ws/install/io_context/share/colcon-core/packages/io_context)
+[1.109s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mikew/robo25ws/src/transport_drivers/serial_driver' with build type 'ament_cmake'
+[1.109s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mikew/robo25ws/src/transport_drivers/serial_driver'
+[1.109s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.109s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.114s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mikew/robo25ws/src/transport_drivers/udp_driver' with build type 'ament_cmake'
+[1.115s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mikew/robo25ws/src/transport_drivers/udp_driver'
+[1.115s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.115s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.125s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mikew/robo25ws/build/serial_driver': CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/robo25ws/install/udp_driver:/home/mikew/robo25ws/install/serial_driver:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:/home/mikew/robo25ws/install/udp_driver/lib:/home/mikew/robo25ws/install/serial_driver/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/mikew/robo25ws/build/serial_driver -- -j8 -l8
+[1.130s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mikew/robo25ws/build/udp_driver': CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/robo25ws/install/udp_driver:/home/mikew/robo25ws/install/serial_driver:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:/home/mikew/robo25ws/install/udp_driver/lib:/home/mikew/robo25ws/install/serial_driver/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/mikew/robo25ws/build/udp_driver -- -j8 -l8
+[1.326s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mikew/robo25ws/build/udp_driver' returned '0': CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/robo25ws/install/udp_driver:/home/mikew/robo25ws/install/serial_driver:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:/home/mikew/robo25ws/install/udp_driver/lib:/home/mikew/robo25ws/install/serial_driver/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/mikew/robo25ws/build/udp_driver -- -j8 -l8
+[1.364s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mikew/robo25ws/src/robo25_stuff': PYTHONPATH=/home/mikew/robo25ws/build/robo25_stuff/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/robo25_stuff build --build-base /home/mikew/robo25ws/build/robo25_stuff/build install --record /home/mikew/robo25ws/build/robo25_stuff/install.log --single-version-externally-managed install_data
+[1.395s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mikew/robo25ws/build/udp_driver': CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/robo25ws/install/udp_driver:/home/mikew/robo25ws/install/serial_driver:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:/home/mikew/robo25ws/install/udp_driver/lib:/home/mikew/robo25ws/install/serial_driver/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/mikew/robo25ws/build/udp_driver
+[1.409s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(udp_driver)
+[1.409s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/udp_driver' for CMake module files
+[1.410s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mikew/robo25ws/build/udp_driver' returned '0': CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/robo25ws/install/udp_driver:/home/mikew/robo25ws/install/serial_driver:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:/home/mikew/robo25ws/install/udp_driver/lib:/home/mikew/robo25ws/install/serial_driver/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/mikew/robo25ws/build/udp_driver
+[1.411s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/udp_driver' for CMake config files
+[1.411s] Level 1:colcon.colcon_core.shell:create_environment_hook('udp_driver', 'cmake_prefix_path')
+[1.411s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/udp_driver/share/udp_driver/hook/cmake_prefix_path.ps1'
+[1.412s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mikew/robo25ws/install/udp_driver/share/udp_driver/hook/cmake_prefix_path.dsv'
+[1.412s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/udp_driver/share/udp_driver/hook/cmake_prefix_path.sh'
+[1.413s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/udp_driver/lib'
+[1.413s] Level 1:colcon.colcon_core.shell:create_environment_hook('udp_driver', 'ld_library_path_lib')
+[1.413s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/udp_driver/share/udp_driver/hook/ld_library_path_lib.ps1'
+[1.413s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mikew/robo25ws/install/udp_driver/share/udp_driver/hook/ld_library_path_lib.dsv'
+[1.414s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/udp_driver/share/udp_driver/hook/ld_library_path_lib.sh'
+[1.414s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/udp_driver/bin'
+[1.414s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/udp_driver/lib/pkgconfig/udp_driver.pc'
+[1.415s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/udp_driver/lib/python3.10/site-packages'
+[1.415s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/udp_driver/bin'
+[1.415s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/udp_driver/share/udp_driver/package.ps1'
+[1.416s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mikew/robo25ws/install/udp_driver/share/udp_driver/package.dsv'
+[1.416s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/udp_driver/share/udp_driver/package.sh'
+[1.417s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/udp_driver/share/udp_driver/package.bash'
+[1.417s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/udp_driver/share/udp_driver/package.zsh'
+[1.417s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mikew/robo25ws/install/udp_driver/share/colcon-core/packages/udp_driver)
+[1.483s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(udp_driver)
+[1.484s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/udp_driver' for CMake module files
+[1.484s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/udp_driver' for CMake config files
+[1.484s] Level 1:colcon.colcon_core.shell:create_environment_hook('udp_driver', 'cmake_prefix_path')
+[1.485s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/udp_driver/share/udp_driver/hook/cmake_prefix_path.ps1'
+[1.485s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mikew/robo25ws/install/udp_driver/share/udp_driver/hook/cmake_prefix_path.dsv'
+[1.486s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/udp_driver/share/udp_driver/hook/cmake_prefix_path.sh'
+[1.486s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/udp_driver/lib'
+[1.487s] Level 1:colcon.colcon_core.shell:create_environment_hook('udp_driver', 'ld_library_path_lib')
+[1.487s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/udp_driver/share/udp_driver/hook/ld_library_path_lib.ps1'
+[1.487s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mikew/robo25ws/install/udp_driver/share/udp_driver/hook/ld_library_path_lib.dsv'
+[1.488s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/udp_driver/share/udp_driver/hook/ld_library_path_lib.sh'
+[1.488s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/udp_driver/bin'
+[1.489s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/udp_driver/lib/pkgconfig/udp_driver.pc'
+[1.489s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/udp_driver/lib/python3.10/site-packages'
+[1.489s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/udp_driver/bin'
+[1.489s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/udp_driver/share/udp_driver/package.ps1'
+[1.490s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mikew/robo25ws/install/udp_driver/share/udp_driver/package.dsv'
+[1.491s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/udp_driver/share/udp_driver/package.sh'
+[1.491s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/udp_driver/share/udp_driver/package.bash'
+[1.492s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/udp_driver/share/udp_driver/package.zsh'
+[1.492s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mikew/robo25ws/install/udp_driver/share/colcon-core/packages/udp_driver)
+[1.778s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/robo25_stuff' for CMake module files
+[1.779s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mikew/robo25ws/src/robo25_stuff' returned '0': PYTHONPATH=/home/mikew/robo25ws/build/robo25_stuff/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/robo25_stuff build --build-base /home/mikew/robo25ws/build/robo25_stuff/build install --record /home/mikew/robo25ws/build/robo25_stuff/install.log --single-version-externally-managed install_data
+[1.780s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/robo25_stuff' for CMake config files
+[1.780s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/robo25_stuff/lib'
+[1.780s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/robo25_stuff/bin'
+[1.780s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/robo25_stuff/lib/pkgconfig/robo25_stuff.pc'
+[1.781s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages'
+[1.781s] Level 1:colcon.colcon_core.shell:create_environment_hook('robo25_stuff', 'pythonpath')
+[1.781s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/robo25_stuff/share/robo25_stuff/hook/pythonpath.ps1'
+[1.781s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mikew/robo25ws/install/robo25_stuff/share/robo25_stuff/hook/pythonpath.dsv'
+[1.782s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/robo25_stuff/share/robo25_stuff/hook/pythonpath.sh'
+[1.782s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/robo25_stuff/bin'
+[1.782s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robo25_stuff)
+[1.782s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/robo25_stuff/share/robo25_stuff/package.ps1'
+[1.783s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mikew/robo25ws/install/robo25_stuff/share/robo25_stuff/package.dsv'
+[1.783s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/robo25_stuff/share/robo25_stuff/package.sh'
+[1.784s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/robo25_stuff/share/robo25_stuff/package.bash'
+[1.784s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/robo25_stuff/share/robo25_stuff/package.zsh'
+[1.785s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mikew/robo25ws/install/robo25_stuff/share/colcon-core/packages/robo25_stuff)
+[4.470s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mikew/robo25ws/build/serial_driver' returned '2': CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/robo25ws/install/udp_driver:/home/mikew/robo25ws/install/serial_driver:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:/home/mikew/robo25ws/install/udp_driver/lib:/home/mikew/robo25ws/install/serial_driver/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/mikew/robo25ws/build/serial_driver -- -j8 -l8
+[4.513s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(serial_driver)
+[4.514s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/serial_driver' for CMake module files
+[4.514s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/serial_driver' for CMake config files
+[4.514s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial_driver', 'cmake_prefix_path')
+[4.515s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/serial_driver/share/serial_driver/hook/cmake_prefix_path.ps1'
+[4.515s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mikew/robo25ws/install/serial_driver/share/serial_driver/hook/cmake_prefix_path.dsv'
+[4.516s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/serial_driver/share/serial_driver/hook/cmake_prefix_path.sh'
+[4.516s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/serial_driver/lib'
+[4.516s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial_driver', 'ld_library_path_lib')
+[4.517s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/serial_driver/share/serial_driver/hook/ld_library_path_lib.ps1'
+[4.517s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mikew/robo25ws/install/serial_driver/share/serial_driver/hook/ld_library_path_lib.dsv'
+[4.517s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mikew/robo25ws/install/serial_driver/share/serial_driver/hook/ld_library_path_lib.sh'
+[4.518s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/serial_driver/bin'
+[4.518s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/serial_driver/lib/pkgconfig/serial_driver.pc'
+[4.518s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/serial_driver/lib/python3.10/site-packages'
+[4.519s] Level 1:colcon.colcon_core.environment:checking '/home/mikew/robo25ws/install/serial_driver/bin'
+[4.519s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/serial_driver/share/serial_driver/package.ps1'
+[4.520s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mikew/robo25ws/install/serial_driver/share/serial_driver/package.dsv'
+[4.520s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/serial_driver/share/serial_driver/package.sh'
+[4.521s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/serial_driver/share/serial_driver/package.bash'
+[4.521s] INFO:colcon.colcon_core.shell:Creating package script '/home/mikew/robo25ws/install/serial_driver/share/serial_driver/package.zsh'
+[4.521s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mikew/robo25ws/install/serial_driver/share/colcon-core/packages/serial_driver)
+[4.532s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[4.532s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[4.532s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[4.532s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[4.538s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[4.538s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[4.538s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[4.548s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[4.548s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mikew/robo25ws/install/local_setup.ps1'
+[4.549s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mikew/robo25ws/install/_local_setup_util_ps1.py'
+[4.550s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mikew/robo25ws/install/setup.ps1'
+[4.552s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mikew/robo25ws/install/local_setup.sh'
+[4.552s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mikew/robo25ws/install/_local_setup_util_sh.py'
+[4.553s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mikew/robo25ws/install/setup.sh'
+[4.554s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mikew/robo25ws/install/local_setup.bash'
+[4.554s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mikew/robo25ws/install/setup.bash'
+[4.556s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mikew/robo25ws/install/local_setup.zsh'
+[4.556s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mikew/robo25ws/install/setup.zsh'

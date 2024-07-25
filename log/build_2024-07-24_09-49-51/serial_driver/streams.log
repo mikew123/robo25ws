@@ -1,0 +1,84 @@
+[0.014s] Invoking command in '/home/mikew/robo25ws/build/serial_driver': CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/robo25ws/install/udp_driver:/home/mikew/robo25ws/install/serial_driver:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:/home/mikew/robo25ws/install/udp_driver/lib:/home/mikew/robo25ws/install/serial_driver/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/mikew/robo25ws/src/transport_drivers/serial_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mikew/robo25ws/install/serial_driver
+[0.028s] -- Found ament_cmake_auto: 1.3.9 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.153s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.269s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.272s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.279s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.292s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.310s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.371s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.373s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.509s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.913s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.920s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[0.934s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.936s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.937s] -- Configured cppcheck include dirs: /home/mikew/robo25ws/src/transport_drivers/serial_driver/include
+[0.937s] -- Configured cppcheck exclude dirs and/or files: 
+[0.939s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.939s] -- Configured cpplint exclude dirs and/or files: 
+[0.939s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.940s] -- Added test 'lint_cmake' to check CMake code style
+[0.941s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.943s] -- Added test 'uncrustify' to check C / C++ code style
+[0.943s] -- Configured uncrustify additional arguments: 
+[0.943s] -- Added test 'xmllint' to check XML markup files
+[0.946s] -- Configuring done
+[1.038s] -- Generating done
+[1.042s] -- Build files have been written to: /home/mikew/robo25ws/build/serial_driver
+[1.051s] Invoked command in '/home/mikew/robo25ws/build/serial_driver' returned '0': CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/robo25ws/install/udp_driver:/home/mikew/robo25ws/install/serial_driver:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:/home/mikew/robo25ws/install/udp_driver/lib:/home/mikew/robo25ws/install/serial_driver/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/mikew/robo25ws/src/transport_drivers/serial_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mikew/robo25ws/install/serial_driver
+[1.053s] Invoking command in '/home/mikew/robo25ws/build/serial_driver': CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/robo25ws/install/udp_driver:/home/mikew/robo25ws/install/serial_driver:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:/home/mikew/robo25ws/install/udp_driver/lib:/home/mikew/robo25ws/install/serial_driver/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/mikew/robo25ws/build/serial_driver -- -j8 -l8
+[1.099s] [35m[1mConsolidate compiler generated dependencies of target gtest[0m
+[1.099s] [35m[1mConsolidate compiler generated dependencies of target serial_bridge[0m
+[1.101s] [35m[1mConsolidate compiler generated dependencies of target gtest_main[0m
+[1.105s] [35m[1mConsolidate compiler generated dependencies of target serial_driver[0m
+[1.117s] [ 13%] Built target gtest
+[1.119s] [ 26%] Built target gtest_main
+[1.127s] [ 33%] [32m[1mLinking CXX executable serial_bridge[0m
+[1.137s] [ 40%] [32m[1mLinking CXX shared library libserial_driver.so[0m
+[1.310s] [ 46%] Built target serial_bridge
+[1.359s] [ 60%] Built target serial_driver
+[1.374s] [35m[1mConsolidate compiler generated dependencies of target test_serial_port[0m
+[1.376s] [35m[1mConsolidate compiler generated dependencies of target serial_driver_nodes[0m
+[1.377s] [35m[1mConsolidate compiler generated dependencies of target test_serial_driver[0m
+[1.408s] [ 66%] [32m[1mLinking CXX executable test_serial_port[0m
+[1.420s] [ 73%] [32m[1mLinking CXX executable test_serial_driver[0m
+[1.424s] [ 80%] [32m[1mLinking CXX shared library libserial_driver_nodes.so[0m
+[1.698s] [ 86%] Built target test_serial_driver
+[1.704s] [ 93%] Built target test_serial_port
+[2.126s] [100%] Built target serial_driver_nodes
+[2.138s] Invoked command in '/home/mikew/robo25ws/build/serial_driver' returned '0': CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/robo25ws/install/udp_driver:/home/mikew/robo25ws/install/serial_driver:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:/home/mikew/robo25ws/install/udp_driver/lib:/home/mikew/robo25ws/install/serial_driver/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/mikew/robo25ws/build/serial_driver -- -j8 -l8
+[2.187s] Invoking command in '/home/mikew/robo25ws/build/serial_driver': CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/robo25ws/install/udp_driver:/home/mikew/robo25ws/install/serial_driver:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:/home/mikew/robo25ws/install/udp_driver/lib:/home/mikew/robo25ws/install/serial_driver/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/mikew/robo25ws/build/serial_driver
+[2.196s] -- Install configuration: ""
+[2.196s] -- Execute custom install script
+[2.197s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/lib/serial_driver/serial_bridge
+[2.208s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/include/serial_driver/serial_bridge_node.hpp
+[2.217s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/include/serial_driver/serial_driver.hpp
+[2.227s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/include/serial_driver/serial_port.hpp
+[2.236s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/include/serial_driver/visibility_control.hpp
+[2.246s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/library_path.sh
+[2.256s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/library_path.dsv
+[2.266s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/lib/libserial_driver.so
+[2.277s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/lib/libserial_driver_nodes.so
+[2.292s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/launch/serial_driver_bridge_node.launch.py
+[2.302s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/params/example.params.yaml
+[2.313s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/share/ament_index/resource_index/package_run_dependencies/serial_driver
+[2.324s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/share/ament_index/resource_index/parent_prefix_path/serial_driver
+[2.334s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/ament_prefix_path.sh
+[2.346s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/ament_prefix_path.dsv
+[2.359s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/path.sh
+[2.374s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/path.dsv
+[2.389s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/local_setup.bash
+[2.403s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/local_setup.sh
+[2.418s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/local_setup.zsh
+[2.435s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/local_setup.dsv
+[2.452s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/package.dsv
+[2.471s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/share/ament_index/resource_index/packages/serial_driver
+[2.494s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/share/ament_index/resource_index/rclcpp_components/serial_driver
+[2.515s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.536s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.554s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/cmake/ament_cmake_export_libraries-extras.cmake
+[2.570s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/cmake/serial_driverConfig.cmake
+[2.593s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/cmake/serial_driverConfig-version.cmake
+[2.617s] -- Symlinking: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/package.xml
+[2.651s] Invoked command in '/home/mikew/robo25ws/build/serial_driver' returned '0': CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/robo25ws/install/udp_driver:/home/mikew/robo25ws/install/serial_driver:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:/home/mikew/robo25ws/install/udp_driver/lib:/home/mikew/robo25ws/install/serial_driver/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/mikew/robo25ws/build/serial_driver

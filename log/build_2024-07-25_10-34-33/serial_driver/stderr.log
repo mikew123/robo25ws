@@ -1,0 +1,6 @@
+[01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:21:1:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ does not name a type
+   21 | [01;31m[KString[m[K str = "string";
+      | [01;31m[K^~~~~~[m[K
+gmake[2]: *** [CMakeFiles/serial_driver_nodes.dir/build.make:90: CMakeFiles/serial_driver_nodes.dir/src/lifecycle_service_client.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/serial_driver_nodes.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
