@@ -21,6 +21,8 @@
 #include <107-Arduino-Servo-RP2040.h>
 #include <Arduino_JSON.h>
 #include <strings.h>
+#include <string>
+//#include <cstdlib>
 
 /**************************************************************************************
  * GLOBAL VARIABLES
@@ -59,15 +61,18 @@ static _107_::Servo sSteer, sThrottle, sShift, pwm_3, muxSel;
 #define shiftHigh 1900
 
 #define systemStatusPeriod 1000
+#define systemRxDataPeriod 10
 
 #define failsafeThrottleThresh (throttleZero+100)
 
 // Loop timers for precise interval periods
 unsigned long systemStatusMillis_last = 0;
+unsigned long systemRxDataMillis_last = 0;
 
 unsigned long mSteer_micros_last0 = 0, mSteer_micros_last1 = 0;
 bool mSteer_meas_rdy = 0;
 int mSteer_per=0, mSteer_wid=0;
+
 
 unsigned long mThrottle_micros_last0 = 0, mThrottle_micros_last1 = 0;
 bool mThrottle_meas_rdy = 0;
@@ -203,10 +208,12 @@ void loop()
   // send a system status message
   sendSystemStatus(loopMillis);
 
+  // send receiver RX data message
+  sendRxData(loopMillis);
 
 
 
-  delay(1); // TODO: delay 0 ???
+  delay(0); // TODO: delay 0 ???
 }
 
 
@@ -275,13 +282,60 @@ void checkFailsafe() {
   }
 }
 
+
+// Send receiver RX data to host computer
+//#define throttleZero 1500
+//#define throttleFwdMax 1900
+//#define throttleRevMax 1100
+//// These are impericaly measured, how do the change with temp?
+//#define throttleFwdMin 1545
+//#define throttleRevMin 1475
+//#define steerCenter 1575
+//#define steerRightMax 2000
+//#define steerLeftMax 1000
+
+void sendRxData(unsigned long loopMillis) {
+  // Send system status at defined rate
+  if ((loopMillis - systemRxDataMillis_last) > systemRxDataPeriod) {
+    systemRxDataMillis_last = loopMillis + systemRxDataPeriod;
+
+//    std::__cxx11::setprecision(2);   
+    
+    JSONVar myObject;
+
+    myObject["rx"]["gear"] = shiftState==0?"low":"high";
+
+    // Throttle has a "dead zone" - pct=0 in dead zone
+    float throttlePct = 0.0;
+    if(mThrottle_wid > throttleFwdMin) {
+      throttlePct = (100.0*(mThrottle_wid - throttleFwdMin))/(throttleFwdMax - throttleFwdMin);
+    } else if(mThrottle_wid < throttleRevMin) {
+      throttlePct = (-100.0*(throttleRevMin - mThrottle_wid))/(throttleRevMin - throttleRevMax);
+    }
+    myObject["rx"]["thr"] = String(throttlePct).c_str();
+    
+    float steerPct = 0.0;
+    if(mSteer_wid > steerCenter) {
+      steerPct = (100.0*(mSteer_wid - steerCenter))/(steerRightMax - steerCenter);
+    } else if(mSteer_wid < steerCenter) {
+      steerPct = (-100.0*(steerCenter - mSteer_wid))/(steerCenter - steerLeftMax);
+    }
+    myObject["rx"]["str"] = String(steerPct).c_str();
+
+
+    String jsonString = JSON.stringify(myObject);
+    Serial.println(jsonString);    
+  }
+}
+
 // Send system status message to host computer
 void sendSystemStatus(unsigned long loopMillis) {
   // Send system status at defined rate
   if ((loopMillis - systemStatusMillis_last) > systemStatusPeriod) {
+    systemStatusMillis_last = systemStatusMillis_last + systemStatusPeriod;
 
     // DEBUG print servos PWM
-    monitorReceiver();
+    //monitorReceiver();
   
     JSONVar myObject;
   
@@ -315,7 +369,6 @@ void sendSystemStatus(unsigned long loopMillis) {
     String jsonString = JSON.stringify(myObject);
     Serial.println(jsonString);
   
-    systemStatusMillis_last = systemStatusMillis_last+1000;
   }
 
 }
