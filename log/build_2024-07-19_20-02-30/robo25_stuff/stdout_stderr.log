@@ -1,0 +1,28 @@
+running develop
+/usr/lib/python3/dist-packages/setuptools/command/develop.py:40: EasyInstallDeprecationWarning: easy_install command is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` and ``easy_install``.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        See https://github.com/pypa/setuptools/issues/917 for details.
+        ********************************************************************************
+
+!!
+  easy_install.initialize_options(self)
+running egg_info
+writing robo25_stuff.egg-info/PKG-INFO
+writing dependency_links to robo25_stuff.egg-info/dependency_links.txt
+writing entry points to robo25_stuff.egg-info/entry_points.txt
+writing requirements to robo25_stuff.egg-info/requires.txt
+writing top-level names to robo25_stuff.egg-info/top_level.txt
+reading manifest file 'robo25_stuff.egg-info/SOURCES.txt'
+writing manifest file 'robo25_stuff.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/robo25/robo25ws/install/robo25_stuff/lib/python3.12/site-packages/robo25-stuff.egg-link (link to .)
+Installing engine_node script to /home/robo25/robo25ws/install/robo25_stuff/lib/robo25_stuff
+
+Installed /home/robo25/robo25ws/build/robo25_stuff
+running symlink_data

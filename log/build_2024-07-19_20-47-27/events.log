@@ -1,0 +1,51 @@
+[0.000000] (-) TimerEvent: {}
+[0.000220] (robo25_stuff) JobQueued: {'identifier': 'robo25_stuff', 'dependencies': OrderedDict()}
+[0.000714] (robo25_stuff) JobStarted: {'identifier': 'robo25_stuff'}
+[0.099740] (-) TimerEvent: {}
+[0.203136] (-) TimerEvent: {}
+[0.303484] (-) TimerEvent: {}
+[0.403774] (-) TimerEvent: {}
+[0.504093] (-) TimerEvent: {}
+[0.604388] (-) TimerEvent: {}
+[0.704978] (-) TimerEvent: {}
+[0.805317] (-) TimerEvent: {}
+[0.905810] (-) TimerEvent: {}
+[1.007196] (-) TimerEvent: {}
+[1.037309] (robo25_stuff) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/robo25/robo25ws/build/robo25_stuff/build', '--no-deps', 'symlink_data'], 'cwd': '/home/robo25/robo25ws/build/robo25_stuff', 'env': {'LANGUAGE': 'en_US:en', 'HOSTNAME': 'robo25', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'HOME': '/home/ubuntu', 'OLDPWD': '/', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': '', 'LANG': 'en_US.UTF-8', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/robo25/robo25ws/build/robo25_stuff', 'LC_ALL': 'en_US.UTF-8', 'PYTHONPATH': '/home/robo25/robo25ws/build/robo25_stuff/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robo25/robo25ws/install/robo25_stuff/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1'}, 'shell': False}
+[1.107296] (-) TimerEvent: {}
+[1.207749] (-) TimerEvent: {}
+[1.308465] (-) TimerEvent: {}
+[1.346019] (robo25_stuff) StdoutLine: {'line': b'running develop\n'}
+[1.347170] (robo25_stuff) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/develop.py:40: EasyInstallDeprecationWarning: easy_install command is deprecated.\n'}
+[1.347312] (robo25_stuff) StderrLine: {'line': b'!!\n'}
+[1.347394] (robo25_stuff) StderrLine: {'line': b'\n'}
+[1.347468] (robo25_stuff) StderrLine: {'line': b'        ********************************************************************************\n'}
+[1.347541] (robo25_stuff) StderrLine: {'line': b'        Please avoid running ``setup.py`` and ``easy_install``.\n'}
+[1.347612] (robo25_stuff) StderrLine: {'line': b'        Instead, use pypa/build, pypa/installer or other\n'}
+[1.347683] (robo25_stuff) StderrLine: {'line': b'        standards-based tools.\n'}
+[1.347752] (robo25_stuff) StderrLine: {'line': b'\n'}
+[1.347820] (robo25_stuff) StderrLine: {'line': b'        See https://github.com/pypa/setuptools/issues/917 for details.\n'}
+[1.347889] (robo25_stuff) StderrLine: {'line': b'        ********************************************************************************\n'}
+[1.347959] (robo25_stuff) StderrLine: {'line': b'\n'}
+[1.348027] (robo25_stuff) StderrLine: {'line': b'!!\n'}
+[1.348094] (robo25_stuff) StderrLine: {'line': b'  easy_install.initialize_options(self)\n'}
+[1.408526] (-) TimerEvent: {}
+[1.487622] (robo25_stuff) StdoutLine: {'line': b'running egg_info\n'}
+[1.501358] (robo25_stuff) StdoutLine: {'line': b'writing robo25_stuff.egg-info/PKG-INFO\n'}
+[1.501608] (robo25_stuff) StdoutLine: {'line': b'writing dependency_links to robo25_stuff.egg-info/dependency_links.txt\n'}
+[1.503120] (robo25_stuff) StdoutLine: {'line': b'writing entry points to robo25_stuff.egg-info/entry_points.txt\n'}
+[1.503975] (robo25_stuff) StdoutLine: {'line': b'writing requirements to robo25_stuff.egg-info/requires.txt\n'}
+[1.505894] (robo25_stuff) StdoutLine: {'line': b'writing top-level names to robo25_stuff.egg-info/top_level.txt\n'}
+[1.508579] (-) TimerEvent: {}
+[1.536394] (robo25_stuff) StdoutLine: {'line': b"reading manifest file 'robo25_stuff.egg-info/SOURCES.txt'\n"}
+[1.537155] (robo25_stuff) StdoutLine: {'line': b"writing manifest file 'robo25_stuff.egg-info/SOURCES.txt'\n"}
+[1.554139] (robo25_stuff) StdoutLine: {'line': b'running build_ext\n'}
+[1.554268] (robo25_stuff) StdoutLine: {'line': b'Creating /home/robo25/robo25ws/install/robo25_stuff/lib/python3.12/site-packages/robo25-stuff.egg-link (link to .)\n'}
+[1.554345] (robo25_stuff) StdoutLine: {'line': b'Installing engine_node script to /home/robo25/robo25ws/install/robo25_stuff/lib/robo25_stuff\n'}
+[1.554421] (robo25_stuff) StdoutLine: {'line': b'\n'}
+[1.554511] (robo25_stuff) StdoutLine: {'line': b'Installed /home/robo25/robo25ws/build/robo25_stuff\n'}
+[1.554645] (robo25_stuff) StdoutLine: {'line': b'running symlink_data\n'}
+[1.608717] (-) TimerEvent: {}
+[1.633312] (robo25_stuff) CommandEnded: {'returncode': 0}
+[1.663130] (robo25_stuff) JobEnded: {'identifier': 'robo25_stuff', 'rc': 0}
+[1.664669] (-) EventReactorShutdown: {}
