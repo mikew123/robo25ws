@@ -61,7 +61,7 @@ static _107_::Servo sSteer, sThrottle, sShift, pwm_3, muxSel;
 #define shiftHigh 1900
 
 #define systemStatusPeriod 1000
-#define systemRxDataPeriod 10
+#define systemRxDataPeriod 50
 
 #define failsafeThrottleThresh (throttleZero+100)
 
@@ -91,13 +91,15 @@ bool receiverSignalsValid = false;
 
 
 // Computer (slave mux input) signals
-int sSteerPct = 0;
-int sThrottlePct = 0;
+float sSteerPct = 0;
+float sThrottlePct = 0;
 String sShiftGear = "low";
 
 
 String sFailSafe;
 String sRcMux;
+String sLoopback = "off";
+bool sRxEnable = false;
 
 /**************************************************************************************
  * INTERRUPTS
@@ -148,6 +150,48 @@ void pin_mShift_interrupt (void) {
   }
 }
 
+unsigned long steerPct2Wid(float steerPct) {
+  int steerPwmOffset = 0;
+  if(sSteerPct>0) {
+    steerPwmOffset = (+steerPct/100.0)*(steerRightMax - steerCenter);
+  } else {
+    steerPwmOffset = (-steerPct/100.0)*(steerLeftMax - steerCenter);
+  }
+  int steerPwm = steerCenter + steerPwmOffset;
+  return(steerPwm);
+}
+unsigned long throttlePct2Wid(float throttlePct) {
+    int throttlePwmOffset = 0;
+    int throttlePwm = throttleZero;
+    if(throttlePct>0) {
+      throttlePwmOffset = (+throttlePct/100.0)*(throttleFwdMax - throttleFwdMin);
+      throttlePwm = throttleFwdMin + throttlePwmOffset;
+    } else {
+      throttlePwmOffset = (-throttlePct/100.0)*(throttleRevMax - throttleRevMin);
+      throttlePwm = throttleRevMin + throttlePwmOffset;
+    }
+    return(throttlePwm);
+}
+float throttleWid2Pct(unsigned long throttleWid) {
+  // Throttle has a "dead zone" - pct=0 in dead zone
+  float throttlePct = 0.0;
+  if(throttleWid > throttleFwdMin) {
+    throttlePct = (100.0*(throttleWid - throttleFwdMin))/(throttleFwdMax - throttleFwdMin);
+  } else if(throttleWid < throttleRevMin) {
+    throttlePct = (-100.0*(throttleRevMin - throttleWid))/(throttleRevMin - throttleRevMax);
+  }
+  return(throttlePct);
+}
+float steerWid2Pct(unsigned long steerWid) {
+  float steerPct = 0.0;
+  if(steerWid > steerCenter) {
+    steerPct = (100.0*(steerWid - steerCenter))/(steerRightMax - steerCenter);
+  } else if(steerWid < steerCenter) {
+    steerPct = (-100.0*(steerCenter - steerWid))/(steerCenter - steerLeftMax);
+  }
+  return(steerPct);
+}
+
 /**************************************************************************************
  * SETUP
  **************************************************************************************/
@@ -185,6 +229,7 @@ void setup()
 /**************************************************************************************
  * LOOP
  **************************************************************************************/
+
 void loop()
 {
   unsigned long loopMillis = millis();
@@ -192,13 +237,9 @@ void loop()
   // impliment failsafe mechanism
   checkFailsafe();
 
-  // Check serial port for a JSON message
-  if (Serial.available() > 0) {
-    // read the incoming string and parse it
-    String incomingString = Serial.readStringUntil('\n');
-    jsonParse(incomingString.c_str());
-  }
-
+  // process any serial receive data
+  serialRx();
+  
   // Decode mux selection
   muxSelectDecode();
 
@@ -211,8 +252,6 @@ void loop()
   // send receiver RX data message
   sendRxData(loopMillis);
 
-
-
   delay(0); // TODO: delay 0 ???
 }
 
@@ -220,11 +259,21 @@ void loop()
 // computer signals to servos and motor
 
 void computerSignals() {
-  if ((muxSelRcvr==false) && (failsafeActive==false) ) {
+  // loopback operation
+  if (sLoopback == "wid") {
+    // loopback signal widths
+    sSteer.writeMicroseconds(mSteer_wid);
+    sThrottle.writeMicroseconds(mThrottle_wid);
+  }
+  else if (sLoopback == "pct") {
+    // loopback percentages
+    sSteer.writeMicroseconds(steerPct2Wid(steerWid2Pct(mSteer_wid)));
+    sThrottle.writeMicroseconds(throttlePct2Wid(throttleWid2Pct(mThrottle_wid)));
+  }
+  // normal operation
+  else if ((muxSelRcvr==false) && (failsafeActive==false) ) {
     // send computer signals to pwm mux
     // Convert percent signals to PWM widths
-    sSteerPct;
-    sThrottlePct;
     int steerPwmOffset = 0;
     if(sSteerPct>0) {
       steerPwmOffset = (+sSteerPct/100.0)*(steerRightMax - steerCenter);
@@ -284,55 +333,32 @@ void checkFailsafe() {
 
 
 // Send receiver RX data to host computer
-//#define throttleZero 1500
-//#define throttleFwdMax 1900
-//#define throttleRevMax 1100
-//// These are impericaly measured, how do the change with temp?
-//#define throttleFwdMin 1545
-//#define throttleRevMin 1475
-//#define steerCenter 1575
-//#define steerRightMax 2000
-//#define steerLeftMax 1000
-
 void sendRxData(unsigned long loopMillis) {
-  // Send system status at defined rate
-  if ((loopMillis - systemRxDataMillis_last) > systemRxDataPeriod) {
-    systemRxDataMillis_last = loopMillis + systemRxDataPeriod;
+  if (sRxEnable == false) return;
 
-//    std::__cxx11::setprecision(2);   
+  // Send system status at defined rate
+  // Use unsigned long long to cause number wrap to work
+  if (((signed long long)loopMillis - systemRxDataMillis_last) > systemRxDataPeriod) {
+    systemRxDataMillis_last = loopMillis;
     
     JSONVar myObject;
 
-    myObject["rx"]["gear"] = shiftState==0?"low":"high";
-
-    // Throttle has a "dead zone" - pct=0 in dead zone
-    float throttlePct = 0.0;
-    if(mThrottle_wid > throttleFwdMin) {
-      throttlePct = (100.0*(mThrottle_wid - throttleFwdMin))/(throttleFwdMax - throttleFwdMin);
-    } else if(mThrottle_wid < throttleRevMin) {
-      throttlePct = (-100.0*(throttleRevMin - mThrottle_wid))/(throttleRevMin - throttleRevMax);
-    }
-    myObject["rx"]["thr"] = String(throttlePct).c_str();
-    
-    float steerPct = 0.0;
-    if(mSteer_wid > steerCenter) {
-      steerPct = (100.0*(mSteer_wid - steerCenter))/(steerRightMax - steerCenter);
-    } else if(mSteer_wid < steerCenter) {
-      steerPct = (-100.0*(steerCenter - mSteer_wid))/(steerCenter - steerLeftMax);
-    }
-    myObject["rx"]["str"] = String(steerPct).c_str();
-
+    myObject["rx"]["sft"] = shiftState==0?"low":"high";
+    myObject["rx"]["thr"] = int(throttleWid2Pct(mThrottle_wid)*10)/10.0;
+    myObject["rx"]["str"] = int(steerWid2Pct(mSteer_wid)*10)/10.0;
 
     String jsonString = JSON.stringify(myObject);
-    Serial.println(jsonString);    
+    Serial.println(jsonString);   
+
   }
+  
 }
 
 // Send system status message to host computer
 void sendSystemStatus(unsigned long loopMillis) {
   // Send system status at defined rate
-  if ((loopMillis - systemStatusMillis_last) > systemStatusPeriod) {
-    systemStatusMillis_last = systemStatusMillis_last + systemStatusPeriod;
+  if (((signed long long)loopMillis - systemStatusMillis_last) > systemStatusPeriod) {
+    systemStatusMillis_last = loopMillis;
 
     // DEBUG print servos PWM
     //monitorReceiver();
@@ -341,10 +367,10 @@ void sendSystemStatus(unsigned long loopMillis) {
   
     if(shiftState==0) {
       // low gear
-      myObject["systat"]["gear"] = "low";
+      myObject["systat"]["sft"] = "low";
     } else {
       // high gear
-      myObject["systat"]["gear"] = "hi";
+      myObject["systat"]["sft"] = "hi";
     }
   
     if(muxSelRcvr) {
@@ -445,6 +471,15 @@ void muxSelectDecode() {
 
 }
 
+void serialRx() {
+  // Check serial port for a JSON message
+  if (Serial.available() > 0) {
+    // read the incoming string and parse it
+    String incomingString = Serial.readStringUntil('\n');
+    jsonParse(incomingString.c_str());
+  }
+}
+
 bool jsonParse(const char *jsonStr) {
   //Serial.println(jsonStr);
 
@@ -455,36 +490,58 @@ bool jsonParse(const char *jsonStr) {
     return false;
   }
 
-  if (myObject.hasOwnProperty("str")) {
-    sSteerPct = (int) myObject["str"];
-    Serial.print("steer = ");
-    Serial.println(sSteerPct);
-  }
+  if (myObject.hasOwnProperty("drv")) {
+    JSONVar drvObject = myObject["drv"];
 
-  if (myObject.hasOwnProperty("thr")) {
-    sThrottlePct = (int) myObject["thr"];
-    Serial.print("throttle = ");
-    Serial.println(sThrottlePct);
+    if (drvObject.hasOwnProperty("str")) {
+      sSteerPct = (double) drvObject["str"];
+      //Serial.print("steer = ");
+      //Serial.println(sSteerPct);
+    }
+  
+    if (drvObject.hasOwnProperty("thr")) {
+      sThrottlePct = (double) drvObject["thr"];
+      //Serial.print("throttle = ");
+      //Serial.println(sThrottlePct);
+    }
+  
+    if (drvObject.hasOwnProperty("sft")) {
+      sShiftGear = (String) drvObject["sft"];
+      //Serial.print("gear = ");
+      //Serial.println(sShiftGear);
+    }
   }
-
-  if (myObject.hasOwnProperty("sft")) {
-    sShiftGear = (String) myObject["sft"];
-    Serial.print("gear = ");
-    Serial.println(sShiftGear);
-  }
-
-  // Failsafe 
-  if (myObject.hasOwnProperty("fsafe")) {
-    sFailSafe = (String) myObject["fsafe"];
-    Serial.print("fail safe = ");
-    Serial.println(sFailSafe);
-  }
-
-  // RC mux tx/cpu control, tx PWM decode shares mode
-  if (myObject.hasOwnProperty("mux")) {
-    sRcMux = (String) myObject["mux"];
-    Serial.print("RC mux = ");
-    Serial.println(sRcMux);
+  
+  if (myObject.hasOwnProperty("cfg")) {
+    JSONVar cfgObject = myObject["cfg"];
+    
+    // Failsafe 
+    if (cfgObject.hasOwnProperty("fsa")) {
+      sFailSafe = (String) cfgObject["fsa"];
+      //Serial.print("fail safe = ");
+      //Serial.println(sFailSafe);
+    }
+  
+    // RC mux tx/cpu control, tx PWM decode shares mode
+    if (cfgObject.hasOwnProperty("mux")) {
+      sRcMux = (String) cfgObject["mux"];
+      //Serial.print("RC mux = ");
+      //Serial.println(sRcMux);
+    }
+  
+    // Loopbacks
+    if (cfgObject.hasOwnProperty("lbk")) {
+      sLoopback = (String) cfgObject["lbk"];
+      //Serial.print("loop back = ");
+      //Serial.println(sLoopback);
+    }
+  
+    // receiver RX msg enable
+    if (cfgObject.hasOwnProperty("rxe")) {
+      sRxEnable = (bool) cfgObject["rxe"];
+      //Serial.print("rx enable = ");
+      //Serial.println(sRxEnable);
+    }
   }
 
   return true;
