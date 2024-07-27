@@ -1,0 +1,12 @@
+[ 20%] Built target serial_bridge
+[ 40%] Built target lifecycle_service_client
+[ 70%] Built target serial_driver
+[35m[1mConsolidate compiler generated dependencies of target serial_driver_nodes[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/serial_driver_nodes.dir/src/lifecycle_service_client.cpp.o[0m
+[01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:21:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kstring[m[K’ does not name a type; did you mean ‘[01m[Kstdin[m[K’?
+   21 | [01;31m[Kstring[m[K str = "string";
+      | [01;31m[K^~~~~~[m[K
+      | [32m[Kstdin[m[K
+gmake[2]: *** [CMakeFiles/serial_driver_nodes.dir/build.make:90: CMakeFiles/serial_driver_nodes.dir/src/lifecycle_service_client.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/serial_driver_nodes.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

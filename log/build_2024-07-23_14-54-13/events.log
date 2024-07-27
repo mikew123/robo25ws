@@ -1,0 +1,818 @@
+[0.000000] (-) TimerEvent: {}
+[0.000181] (asio_cmake_module) JobQueued: {'identifier': 'asio_cmake_module', 'dependencies': OrderedDict()}
+[0.000242] (robo25_stuff) JobQueued: {'identifier': 'robo25_stuff', 'dependencies': OrderedDict()}
+[0.000304] (io_context) JobQueued: {'identifier': 'io_context', 'dependencies': OrderedDict([('asio_cmake_module', '/home/mikew/robo25ws/install/asio_cmake_module')])}
+[0.000357] (serial_driver) JobQueued: {'identifier': 'serial_driver', 'dependencies': OrderedDict([('asio_cmake_module', '/home/mikew/robo25ws/install/asio_cmake_module'), ('io_context', '/home/mikew/robo25ws/install/io_context')])}
+[0.000415] (udp_driver) JobQueued: {'identifier': 'udp_driver', 'dependencies': OrderedDict([('asio_cmake_module', '/home/mikew/robo25ws/install/asio_cmake_module'), ('io_context', '/home/mikew/robo25ws/install/io_context')])}
+[0.000463] (asio_cmake_module) JobStarted: {'identifier': 'asio_cmake_module'}
+[0.006134] (robo25_stuff) JobStarted: {'identifier': 'robo25_stuff'}
+[0.013144] (asio_cmake_module) JobProgress: {'identifier': 'asio_cmake_module', 'progress': 'cmake'}
+[0.013478] (asio_cmake_module) Command: {'cmd': ['/usr/bin/cmake', '/home/mikew/robo25ws/transport_drivers/asio_cmake_module', '-DCMAKE_INSTALL_PREFIX=/home/mikew/robo25ws/install/asio_cmake_module'], 'cwd': '/home/mikew/robo25ws/build/asio_cmake_module', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'mikew'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/mikew/cppws/install/udp_driver/lib:/home/mikew/cppws/install/serial_driver/lib:/home/mikew/cppws/install/io_context/lib:/home/mikew/cppws/install/turtlesim/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/mikew'), ('OLDPWD', '/home/mikew'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1594'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/mikew/cppws/install:/home/mikew/robo25ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'mikew'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'mikew'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/mikew/.local/bin:/home/mikew/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/mikew/Luxonis/depthai/entrypoint'), ('SESSION_MANAGER', 'local/Robo24-DEV:@/tmp/.ICE-unix/1550,unix/Robo24-DEV:/tmp/.ICE-unix/1550'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b39ce4c3_8d17_4bde_b587_319f0db8354f'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.H2AZQ2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.134'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('PATH_TO_ROS_DOCKERS', '/home/mikew/ROS_dockers'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('ACTIVE_DOCKER', 'ros2_x86_linux'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/mikew/robo25ws/build/asio_cmake_module'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/mikew/cppws/install/turtlesim/local/lib/python3.10/dist-packages:/home/mikew/robo25ws/build/robo25_stuff:/home/robo25/robo25ws/build/robo25_stuff:/home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble')]), 'shell': False}
+[0.072421] (asio_cmake_module) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099128] (-) TimerEvent: {}
+[0.127385] (asio_cmake_module) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.134560] (asio_cmake_module) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.199238] (-) TimerEvent: {}
+[0.203715] (asio_cmake_module) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.211189] (asio_cmake_module) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.211495] (asio_cmake_module) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.211917] (asio_cmake_module) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.214751] (asio_cmake_module) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.293947] (asio_cmake_module) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.299330] (-) TimerEvent: {}
+[0.301378] (asio_cmake_module) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.301732] (asio_cmake_module) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.302258] (asio_cmake_module) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.305508] (asio_cmake_module) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.399444] (-) TimerEvent: {}
+[0.459129] (asio_cmake_module) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.499552] (-) TimerEvent: {}
+[0.555422] (asio_cmake_module) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.599662] (-) TimerEvent: {}
+[0.643469] (asio_cmake_module) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[0.645458] (asio_cmake_module) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[0.646749] (asio_cmake_module) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[0.648337] (asio_cmake_module) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.651340] (asio_cmake_module) StdoutLine: {'line': b'-- Generating done\n'}
+[0.652252] (asio_cmake_module) StdoutLine: {'line': b'-- Build files have been written to: /home/mikew/robo25ws/build/asio_cmake_module\n'}
+[0.656278] (asio_cmake_module) CommandEnded: {'returncode': 0}
+[0.656928] (asio_cmake_module) JobProgress: {'identifier': 'asio_cmake_module', 'progress': 'build'}
+[0.658067] (asio_cmake_module) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/mikew/robo25ws/build/asio_cmake_module', '--', '-j8', '-l8'], 'cwd': '/home/mikew/robo25ws/build/asio_cmake_module', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'mikew'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/mikew/cppws/install/udp_driver/lib:/home/mikew/cppws/install/serial_driver/lib:/home/mikew/cppws/install/io_context/lib:/home/mikew/cppws/install/turtlesim/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/mikew'), ('OLDPWD', '/home/mikew'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1594'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/mikew/cppws/install:/home/mikew/robo25ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'mikew'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'mikew'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/mikew/.local/bin:/home/mikew/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/mikew/Luxonis/depthai/entrypoint'), ('SESSION_MANAGER', 'local/Robo24-DEV:@/tmp/.ICE-unix/1550,unix/Robo24-DEV:/tmp/.ICE-unix/1550'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b39ce4c3_8d17_4bde_b587_319f0db8354f'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.H2AZQ2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.134'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('PATH_TO_ROS_DOCKERS', '/home/mikew/ROS_dockers'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('ACTIVE_DOCKER', 'ros2_x86_linux'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/mikew/robo25ws/build/asio_cmake_module'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/mikew/cppws/install/turtlesim/local/lib/python3.10/dist-packages:/home/mikew/robo25ws/build/robo25_stuff:/home/robo25/robo25ws/build/robo25_stuff:/home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble')]), 'shell': False}
+[0.697789] (asio_cmake_module) CommandEnded: {'returncode': 0}
+[0.699739] (-) TimerEvent: {}
+[0.716407] (robo25_stuff) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'develop', '--uninstall', '--editable', '--build-directory', '/home/mikew/robo25ws/build/robo25_stuff/build'], 'cwd': '/home/mikew/robo25ws/build/robo25_stuff', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'mikew', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/mikew/cppws/install/udp_driver/lib:/home/mikew/cppws/install/serial_driver/lib:/home/mikew/cppws/install/io_context/lib:/home/mikew/cppws/install/turtlesim/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/mikew', 'OLDPWD': '/home/mikew', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1594', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/mikew/cppws/install:/home/mikew/robo25ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'mikew', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'mikew', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/mikew/.local/bin:/home/mikew/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/mikew/Luxonis/depthai/entrypoint', 'SESSION_MANAGER': 'local/Robo24-DEV:@/tmp/.ICE-unix/1550,unix/Robo24-DEV:/tmp/.ICE-unix/1550', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/b39ce4c3_8d17_4bde_b587_319f0db8354f', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.H2AZQ2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.134', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble', 'SHELL': '/bin/bash', 'PATH_TO_ROS_DOCKERS': '/home/mikew/ROS_dockers', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ACTIVE_DOCKER': 'ros2_x86_linux', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/mikew/robo25ws/build/robo25_stuff', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/mikew/robo25ws/build/robo25_stuff/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages:/home/mikew/cppws/install/turtlesim/local/lib/python3.10/dist-packages:/home/mikew/robo25ws/build/robo25_stuff:/home/robo25/robo25ws/build/robo25_stuff:/home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim'}, 'shell': False}
+[0.723133] (asio_cmake_module) JobProgress: {'identifier': 'asio_cmake_module', 'progress': 'install'}
+[0.732861] (asio_cmake_module) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/mikew/robo25ws/build/asio_cmake_module'], 'cwd': '/home/mikew/robo25ws/build/asio_cmake_module', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'mikew'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/mikew/cppws/install/udp_driver/lib:/home/mikew/cppws/install/serial_driver/lib:/home/mikew/cppws/install/io_context/lib:/home/mikew/cppws/install/turtlesim/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/mikew'), ('OLDPWD', '/home/mikew'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1594'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/mikew/cppws/install:/home/mikew/robo25ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'mikew'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'mikew'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/mikew/.local/bin:/home/mikew/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/mikew/Luxonis/depthai/entrypoint'), ('SESSION_MANAGER', 'local/Robo24-DEV:@/tmp/.ICE-unix/1550,unix/Robo24-DEV:/tmp/.ICE-unix/1550'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b39ce4c3_8d17_4bde_b587_319f0db8354f'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.H2AZQ2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.134'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('PATH_TO_ROS_DOCKERS', '/home/mikew/ROS_dockers'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('ACTIVE_DOCKER', 'ros2_x86_linux'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/mikew/robo25ws/build/asio_cmake_module'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/mikew/cppws/install/turtlesim/local/lib/python3.10/dist-packages:/home/mikew/robo25ws/build/robo25_stuff:/home/robo25/robo25ws/build/robo25_stuff:/home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble')]), 'shell': False}
+[0.740944] (asio_cmake_module) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.741227] (asio_cmake_module) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/asio_cmake_module/share/ament_index/resource_index/package_run_dependencies/asio_cmake_module\n'}
+[0.741503] (asio_cmake_module) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/asio_cmake_module/share/ament_index/resource_index/parent_prefix_path/asio_cmake_module\n'}
+[0.741722] (asio_cmake_module) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/environment/ament_prefix_path.sh\n'}
+[0.741925] (asio_cmake_module) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/environment/ament_prefix_path.dsv\n'}
+[0.742078] (asio_cmake_module) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/environment/path.sh\n'}
+[0.742302] (asio_cmake_module) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/environment/path.dsv\n'}
+[0.742516] (asio_cmake_module) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/local_setup.bash\n'}
+[0.742704] (asio_cmake_module) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/local_setup.sh\n'}
+[0.742902] (asio_cmake_module) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/local_setup.zsh\n'}
+[0.743077] (asio_cmake_module) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/local_setup.dsv\n'}
+[0.743232] (asio_cmake_module) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/package.dsv\n'}
+[0.743371] (asio_cmake_module) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/asio_cmake_module/share/ament_index/resource_index/packages/asio_cmake_module\n'}
+[0.743635] (asio_cmake_module) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/cmake/asio_cmake_module-extras.cmake\n'}
+[0.743819] (asio_cmake_module) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/cmake/asio_cmake_moduleConfig.cmake\n'}
+[0.743958] (asio_cmake_module) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/cmake/asio_cmake_moduleConfig-version.cmake\n'}
+[0.744141] (asio_cmake_module) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/package.xml\n'}
+[0.744355] (asio_cmake_module) StdoutLine: {'line': b'-- Up-to-date: /home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/cmake\n'}
+[0.744470] (asio_cmake_module) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/cmake/Modules\n'}
+[0.744592] (asio_cmake_module) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/asio_cmake_module/share/asio_cmake_module/cmake/Modules/FindASIO.cmake\n'}
+[0.745860] (asio_cmake_module) CommandEnded: {'returncode': 0}
+[0.783952] (asio_cmake_module) JobEnded: {'identifier': 'asio_cmake_module', 'rc': 0}
+[0.784597] (io_context) JobStarted: {'identifier': 'io_context'}
+[0.791402] (io_context) JobProgress: {'identifier': 'io_context', 'progress': 'cmake'}
+[0.792203] (io_context) Command: {'cmd': ['/usr/bin/cmake', '/home/mikew/robo25ws/transport_drivers/io_context', '-DCMAKE_INSTALL_PREFIX=/home/mikew/robo25ws/install/io_context'], 'cwd': '/home/mikew/robo25ws/build/io_context', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'mikew'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/mikew/cppws/install/udp_driver/lib:/home/mikew/cppws/install/serial_driver/lib:/home/mikew/cppws/install/io_context/lib:/home/mikew/cppws/install/turtlesim/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/mikew'), ('OLDPWD', '/home/mikew'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1594'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/mikew/cppws/install:/home/mikew/robo25ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'mikew'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'mikew'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/mikew/.local/bin:/home/mikew/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/mikew/Luxonis/depthai/entrypoint'), ('SESSION_MANAGER', 'local/Robo24-DEV:@/tmp/.ICE-unix/1550,unix/Robo24-DEV:/tmp/.ICE-unix/1550'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b39ce4c3_8d17_4bde_b587_319f0db8354f'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.H2AZQ2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.134'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('PATH_TO_ROS_DOCKERS', '/home/mikew/ROS_dockers'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('ACTIVE_DOCKER', 'ros2_x86_linux'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/mikew/robo25ws/build/io_context'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/mikew/cppws/install/turtlesim/local/lib/python3.10/dist-packages:/home/mikew/robo25ws/build/robo25_stuff:/home/robo25/robo25ws/build/robo25_stuff:/home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble')]), 'shell': False}
+[0.799823] (-) TimerEvent: {}
+[0.848484] (io_context) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.899920] (-) TimerEvent: {}
+[0.902089] (io_context) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.909089] (io_context) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.976866] (io_context) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.984210] (io_context) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.984491] (io_context) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.984918] (io_context) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.987770] (io_context) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.000009] (-) TimerEvent: {}
+[1.034529] (robo25_stuff) StdoutLine: {'line': b'running develop\n'}
+[1.034921] (robo25_stuff) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.\n'}
+[1.035041] (robo25_stuff) StderrLine: {'line': b'  warnings.warn(\n'}
+[1.067208] (io_context) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.074663] (io_context) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.074952] (io_context) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.075422] (io_context) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.078235] (io_context) StdoutLine: {'line': b'-- Found ament_cmake_auto: 1.3.9 (/opt/ros/humble/share/ament_cmake_auto/cmake)\n'}
+[1.100098] (-) TimerEvent: {}
+[1.200390] (-) TimerEvent: {}
+[1.234516] (io_context) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.264112] (robo25_stuff) StdoutLine: {'line': b'Removing /home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages/robo25-stuff.egg-link (link to .)\n'}
+[1.289547] (robo25_stuff) CommandEnded: {'returncode': 0}
+[1.291170] (robo25_stuff) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/robo25_stuff', 'build', '--build-base', '/home/mikew/robo25ws/build/robo25_stuff/build', 'install', '--record', '/home/mikew/robo25ws/build/robo25_stuff/install.log', '--single-version-externally-managed', 'install_data', '--force'], 'cwd': '/home/mikew/robo25ws/src/robo25_stuff', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'mikew', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/mikew/cppws/install/udp_driver/lib:/home/mikew/cppws/install/serial_driver/lib:/home/mikew/cppws/install/io_context/lib:/home/mikew/cppws/install/turtlesim/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/mikew', 'OLDPWD': '/home/mikew', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1594', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/mikew/cppws/install:/home/mikew/robo25ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'mikew', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'mikew', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/mikew/.local/bin:/home/mikew/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/mikew/Luxonis/depthai/entrypoint', 'SESSION_MANAGER': 'local/Robo24-DEV:@/tmp/.ICE-unix/1550,unix/Robo24-DEV:/tmp/.ICE-unix/1550', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/b39ce4c3_8d17_4bde_b587_319f0db8354f', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.H2AZQ2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.134', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble', 'SHELL': '/bin/bash', 'PATH_TO_ROS_DOCKERS': '/home/mikew/ROS_dockers', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ACTIVE_DOCKER': 'ros2_x86_linux', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/mikew/robo25ws/build/robo25_stuff', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/mikew/robo25ws/build/robo25_stuff/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages:/home/mikew/cppws/install/turtlesim/local/lib/python3.10/dist-packages:/home/mikew/robo25ws/build/robo25_stuff:/home/robo25/robo25ws/build/robo25_stuff:/home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim'}, 'shell': False}
+[1.300500] (-) TimerEvent: {}
+[1.400754] (-) TimerEvent: {}
+[1.461198] (io_context) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.467821] (io_context) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.477931] (io_context) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.493314] (io_context) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.500848] (-) TimerEvent: {}
+[1.515717] (io_context) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.566779] (robo25_stuff) StdoutLine: {'line': b'running egg_info\n'}
+[1.567209] (robo25_stuff) StdoutLine: {'line': b'writing ../../build/robo25_stuff/robo25_stuff.egg-info/PKG-INFO\n'}
+[1.567423] (robo25_stuff) StdoutLine: {'line': b'writing dependency_links to ../../build/robo25_stuff/robo25_stuff.egg-info/dependency_links.txt\n'}
+[1.567565] (robo25_stuff) StdoutLine: {'line': b'writing entry points to ../../build/robo25_stuff/robo25_stuff.egg-info/entry_points.txt\n'}
+[1.567715] (robo25_stuff) StdoutLine: {'line': b'writing requirements to ../../build/robo25_stuff/robo25_stuff.egg-info/requires.txt\n'}
+[1.567857] (robo25_stuff) StdoutLine: {'line': b'writing top-level names to ../../build/robo25_stuff/robo25_stuff.egg-info/top_level.txt\n'}
+[1.569501] (robo25_stuff) StdoutLine: {'line': b"reading manifest file '../../build/robo25_stuff/robo25_stuff.egg-info/SOURCES.txt'\n"}
+[1.570204] (robo25_stuff) StdoutLine: {'line': b"writing manifest file '../../build/robo25_stuff/robo25_stuff.egg-info/SOURCES.txt'\n"}
+[1.570363] (robo25_stuff) StdoutLine: {'line': b'running build\n'}
+[1.570475] (robo25_stuff) StdoutLine: {'line': b'running build_py\n'}
+[1.570648] (robo25_stuff) StdoutLine: {'line': b'creating /home/mikew/robo25ws/build/robo25_stuff/build\n'}
+[1.570771] (robo25_stuff) StdoutLine: {'line': b'creating /home/mikew/robo25ws/build/robo25_stuff/build/lib\n'}
+[1.570894] (robo25_stuff) StdoutLine: {'line': b'creating /home/mikew/robo25ws/build/robo25_stuff/build/lib/robo25_stuff\n'}
+[1.570991] (robo25_stuff) StdoutLine: {'line': b'copying robo25_stuff/engine_node.py -> /home/mikew/robo25ws/build/robo25_stuff/build/lib/robo25_stuff\n'}
+[1.571089] (robo25_stuff) StdoutLine: {'line': b'copying robo25_stuff/__init__.py -> /home/mikew/robo25ws/build/robo25_stuff/build/lib/robo25_stuff\n'}
+[1.571215] (robo25_stuff) StdoutLine: {'line': b'running install\n'}
+[1.571311] (robo25_stuff) StdoutLine: {'line': b'running install_lib\n'}
+[1.571705] (robo25_stuff) StdoutLine: {'line': b'creating /home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages/robo25_stuff\n'}
+[1.571807] (robo25_stuff) StdoutLine: {'line': b'copying /home/mikew/robo25ws/build/robo25_stuff/build/lib/robo25_stuff/engine_node.py -> /home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages/robo25_stuff\n'}
+[1.571907] (robo25_stuff) StdoutLine: {'line': b'copying /home/mikew/robo25ws/build/robo25_stuff/build/lib/robo25_stuff/__init__.py -> /home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages/robo25_stuff\n'}
+[1.572353] (robo25_stuff) StdoutLine: {'line': b'byte-compiling /home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages/robo25_stuff/engine_node.py to engine_node.cpython-310.pyc\n'}
+[1.572969] (robo25_stuff) StdoutLine: {'line': b'byte-compiling /home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages/robo25_stuff/__init__.py to __init__.cpython-310.pyc\n'}
+[1.573135] (robo25_stuff) StdoutLine: {'line': b'running install_data\n'}
+[1.573237] (robo25_stuff) StdoutLine: {'line': b'copying resource/robo25_stuff -> /home/mikew/robo25ws/install/robo25_stuff/share/ament_index/resource_index/packages\n'}
+[1.573332] (robo25_stuff) StdoutLine: {'line': b'copying package.xml -> /home/mikew/robo25ws/install/robo25_stuff/share/robo25_stuff\n'}
+[1.573448] (robo25_stuff) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.575112] (robo25_stuff) StdoutLine: {'line': b'Copying ../../build/robo25_stuff/robo25_stuff.egg-info to /home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages/robo25_stuff-0.0.0-py3.10.egg-info\n'}
+[1.575933] (robo25_stuff) StdoutLine: {'line': b'running install_scripts\n'}
+[1.595165] (robo25_stuff) StdoutLine: {'line': b'Installing engine_node script to /home/mikew/robo25ws/install/robo25_stuff/lib/robo25_stuff\n'}
+[1.595473] (robo25_stuff) StdoutLine: {'line': b"writing list of installed files to '/home/mikew/robo25ws/build/robo25_stuff/install.log'\n"}
+[1.598877] (io_context) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.600963] (-) TimerEvent: {}
+[1.602736] (io_context) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.616270] (robo25_stuff) CommandEnded: {'returncode': 0}
+[1.622510] (robo25_stuff) JobEnded: {'identifier': 'robo25_stuff', 'rc': 0}
+[1.701085] (-) TimerEvent: {}
+[1.705370] (io_context) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.734847] (io_context) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.784216] (io_context) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.795971] (io_context) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.801176] (-) TimerEvent: {}
+[1.864506] (io_context) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.864766] (io_context) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.901304] (-) TimerEvent: {}
+[1.936215] (io_context) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.937173] (io_context) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[2.001416] (-) TimerEvent: {}
+[2.101675] (-) TimerEvent: {}
+[2.151113] (io_context) StdoutLine: {'line': b'-- Found ASIO: /usr/include  \n'}
+[2.155238] (io_context) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[2.183396] (io_context) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[2.190986] (io_context) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[2.192659] (io_context) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[2.192913] (io_context) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/mikew/robo25ws/transport_drivers/io_context/include\n'}
+[2.193002] (io_context) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[2.194431] (io_context) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[2.194523] (io_context) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[2.195397] (io_context) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.197071] (io_context) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[2.197160] (io_context) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[2.197738] (io_context) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.200537] (io_context) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.201763] (-) TimerEvent: {}
+[2.214782] (io_context) StdoutLine: {'line': b'-- Generating done\n'}
+[2.216488] (io_context) StdoutLine: {'line': b'-- Build files have been written to: /home/mikew/robo25ws/build/io_context\n'}
+[2.224797] (io_context) CommandEnded: {'returncode': 0}
+[2.225360] (io_context) JobProgress: {'identifier': 'io_context', 'progress': 'build'}
+[2.225759] (io_context) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/mikew/robo25ws/build/io_context', '--', '-j8', '-l8'], 'cwd': '/home/mikew/robo25ws/build/io_context', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'mikew'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/mikew/cppws/install/udp_driver/lib:/home/mikew/cppws/install/serial_driver/lib:/home/mikew/cppws/install/io_context/lib:/home/mikew/cppws/install/turtlesim/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/mikew'), ('OLDPWD', '/home/mikew'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1594'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/mikew/cppws/install:/home/mikew/robo25ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'mikew'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'mikew'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/mikew/.local/bin:/home/mikew/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/mikew/Luxonis/depthai/entrypoint'), ('SESSION_MANAGER', 'local/Robo24-DEV:@/tmp/.ICE-unix/1550,unix/Robo24-DEV:/tmp/.ICE-unix/1550'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b39ce4c3_8d17_4bde_b587_319f0db8354f'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.H2AZQ2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.134'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('PATH_TO_ROS_DOCKERS', '/home/mikew/ROS_dockers'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('ACTIVE_DOCKER', 'ros2_x86_linux'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/mikew/robo25ws/build/io_context'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/mikew/cppws/install/turtlesim/local/lib/python3.10/dist-packages:/home/mikew/robo25ws/build/robo25_stuff:/home/robo25/robo25ws/build/robo25_stuff:/home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble')]), 'shell': False}
+[2.277111] (io_context) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/io_context.dir/src/io_context.cpp.o\x1b[0m\n'}
+[2.277347] (io_context) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o\x1b[0m\n'}
+[2.277506] (io_context) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o\x1b[0m\n'}
+[2.277684] (io_context) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/io_context.dir/src/msg_converters/std_msgs.cpp.o\x1b[0m\n'}
+[2.301883] (-) TimerEvent: {}
+[2.402193] (-) TimerEvent: {}
+[2.502470] (-) TimerEvent: {}
+[2.602768] (-) TimerEvent: {}
+[2.703064] (-) TimerEvent: {}
+[2.803357] (-) TimerEvent: {}
+[2.903653] (-) TimerEvent: {}
+[3.003950] (-) TimerEvent: {}
+[3.104258] (-) TimerEvent: {}
+[3.202792] (io_context) StdoutLine: {'line': b'[ 55%] \x1b[32m\x1b[1mLinking CXX static library libgtest_main.a\x1b[0m\n'}
+[3.204352] (-) TimerEvent: {}
+[3.237905] (io_context) StdoutLine: {'line': b'[ 55%] Built target gtest_main\n'}
+[3.304469] (-) TimerEvent: {}
+[3.404781] (-) TimerEvent: {}
+[3.505089] (-) TimerEvent: {}
+[3.605405] (-) TimerEvent: {}
+[3.705739] (-) TimerEvent: {}
+[3.806064] (-) TimerEvent: {}
+[3.906418] (-) TimerEvent: {}
+[4.006737] (-) TimerEvent: {}
+[4.011977] (io_context) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX shared library libio_context.so\x1b[0m\n'}
+[4.106856] (-) TimerEvent: {}
+[4.126836] (io_context) StdoutLine: {'line': b'[ 66%] Built target io_context\n'}
+[4.206987] (-) TimerEvent: {}
+[4.307268] (-) TimerEvent: {}
+[4.407555] (-) TimerEvent: {}
+[4.507839] (-) TimerEvent: {}
+[4.608118] (-) TimerEvent: {}
+[4.708397] (-) TimerEvent: {}
+[4.808661] (-) TimerEvent: {}
+[4.908941] (-) TimerEvent: {}
+[5.009220] (-) TimerEvent: {}
+[5.109500] (-) TimerEvent: {}
+[5.209795] (-) TimerEvent: {}
+[5.268696] (io_context) StdoutLine: {'line': b'[ 77%] \x1b[32m\x1b[1mLinking CXX static library libgtest.a\x1b[0m\n'}
+[5.309916] (-) TimerEvent: {}
+[5.322991] (io_context) StdoutLine: {'line': b'[ 77%] Built target gtest\n'}
+[5.343593] (io_context) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding CXX object CMakeFiles/test_io_context.dir/test/test_io_context.cpp.o\x1b[0m\n'}
+[5.410032] (-) TimerEvent: {}
+[5.510311] (-) TimerEvent: {}
+[5.610592] (-) TimerEvent: {}
+[5.710852] (-) TimerEvent: {}
+[5.811121] (-) TimerEvent: {}
+[5.911391] (-) TimerEvent: {}
+[6.011660] (-) TimerEvent: {}
+[6.111914] (-) TimerEvent: {}
+[6.212228] (-) TimerEvent: {}
+[6.312492] (-) TimerEvent: {}
+[6.412758] (-) TimerEvent: {}
+[6.513025] (-) TimerEvent: {}
+[6.613295] (-) TimerEvent: {}
+[6.713560] (-) TimerEvent: {}
+[6.813828] (-) TimerEvent: {}
+[6.914092] (-) TimerEvent: {}
+[7.014397] (-) TimerEvent: {}
+[7.114668] (-) TimerEvent: {}
+[7.214933] (-) TimerEvent: {}
+[7.315202] (-) TimerEvent: {}
+[7.406262] (io_context) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable test_io_context\x1b[0m\n'}
+[7.415307] (-) TimerEvent: {}
+[7.515567] (-) TimerEvent: {}
+[7.567096] (io_context) StdoutLine: {'line': b'[100%] Built target test_io_context\n'}
+[7.577713] (io_context) CommandEnded: {'returncode': 0}
+[7.612609] (io_context) JobProgress: {'identifier': 'io_context', 'progress': 'install'}
+[7.613354] (io_context) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/mikew/robo25ws/build/io_context'], 'cwd': '/home/mikew/robo25ws/build/io_context', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'mikew'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/mikew/cppws/install/udp_driver/lib:/home/mikew/cppws/install/serial_driver/lib:/home/mikew/cppws/install/io_context/lib:/home/mikew/cppws/install/turtlesim/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/mikew'), ('OLDPWD', '/home/mikew'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1594'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/mikew/cppws/install:/home/mikew/robo25ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'mikew'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'mikew'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/mikew/.local/bin:/home/mikew/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/mikew/Luxonis/depthai/entrypoint'), ('SESSION_MANAGER', 'local/Robo24-DEV:@/tmp/.ICE-unix/1550,unix/Robo24-DEV:/tmp/.ICE-unix/1550'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b39ce4c3_8d17_4bde_b587_319f0db8354f'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.H2AZQ2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.134'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('PATH_TO_ROS_DOCKERS', '/home/mikew/ROS_dockers'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('ACTIVE_DOCKER', 'ros2_x86_linux'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/mikew/robo25ws/build/io_context'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/mikew/cppws/install/turtlesim/local/lib/python3.10/dist-packages:/home/mikew/robo25ws/build/robo25_stuff:/home/robo25/robo25ws/build/robo25_stuff:/home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble')]), 'shell': False}
+[7.615626] (-) TimerEvent: {}
+[7.621091] (io_context) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[7.621357] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/include\n'}
+[7.621634] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/include/io_context\n'}
+[7.621705] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/include/io_context/io_context.hpp\n'}
+[7.621908] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/include/io_context/common.hpp\n'}
+[7.622014] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/include/msg_converters\n'}
+[7.622098] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/include/msg_converters/udp_msgs.hpp\n'}
+[7.622257] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/include/msg_converters/std_msgs.hpp\n'}
+[7.622374] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/include/msg_converters/converters.hpp\n'}
+[7.622517] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/share/io_context/environment/library_path.sh\n'}
+[7.622674] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/share/io_context/environment/library_path.dsv\n'}
+[7.622858] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/lib/libio_context.so\n'}
+[7.623610] (io_context) StdoutLine: {'line': b'-- Set runtime path of "/home/mikew/robo25ws/install/io_context/lib/libio_context.so" to ""\n'}
+[7.623820] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/share/ament_index/resource_index/package_run_dependencies/io_context\n'}
+[7.624038] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/share/ament_index/resource_index/parent_prefix_path/io_context\n'}
+[7.624182] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/share/io_context/environment/ament_prefix_path.sh\n'}
+[7.624370] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/share/io_context/environment/ament_prefix_path.dsv\n'}
+[7.624505] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/share/io_context/environment/path.sh\n'}
+[7.624644] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/share/io_context/environment/path.dsv\n'}
+[7.624749] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/share/io_context/local_setup.bash\n'}
+[7.624877] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/share/io_context/local_setup.sh\n'}
+[7.625008] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/share/io_context/local_setup.zsh\n'}
+[7.625160] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/share/io_context/local_setup.dsv\n'}
+[7.625265] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/share/io_context/package.dsv\n'}
+[7.625429] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/share/ament_index/resource_index/packages/io_context\n'}
+[7.625589] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/share/io_context/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[7.625758] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/share/io_context/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[7.625877] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/share/io_context/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[7.626005] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/share/io_context/cmake/io_contextConfig.cmake\n'}
+[7.626127] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/share/io_context/cmake/io_contextConfig-version.cmake\n'}
+[7.626317] (io_context) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/io_context/share/io_context/package.xml\n'}
+[7.628344] (io_context) CommandEnded: {'returncode': 0}
+[7.679151] (io_context) JobEnded: {'identifier': 'io_context', 'rc': 0}
+[7.679546] (serial_driver) JobStarted: {'identifier': 'serial_driver'}
+[7.683555] (udp_driver) JobStarted: {'identifier': 'udp_driver'}
+[7.689226] (serial_driver) JobProgress: {'identifier': 'serial_driver', 'progress': 'cmake'}
+[7.689538] (serial_driver) Command: {'cmd': ['/usr/bin/cmake', '/home/mikew/robo25ws/transport_drivers/serial_driver', '-DCMAKE_INSTALL_PREFIX=/home/mikew/robo25ws/install/serial_driver'], 'cwd': '/home/mikew/robo25ws/build/serial_driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'mikew'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/mikew/robo25ws/install/io_context/lib:/home/mikew/cppws/install/udp_driver/lib:/home/mikew/cppws/install/serial_driver/lib:/home/mikew/cppws/install/io_context/lib:/home/mikew/cppws/install/turtlesim/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/mikew'), ('OLDPWD', '/home/mikew'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1594'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/mikew/cppws/install:/home/mikew/robo25ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'mikew'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'mikew'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/mikew/.local/bin:/home/mikew/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/mikew/Luxonis/depthai/entrypoint'), ('SESSION_MANAGER', 'local/Robo24-DEV:@/tmp/.ICE-unix/1550,unix/Robo24-DEV:/tmp/.ICE-unix/1550'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b39ce4c3_8d17_4bde_b587_319f0db8354f'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.H2AZQ2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.134'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('PATH_TO_ROS_DOCKERS', '/home/mikew/ROS_dockers'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('ACTIVE_DOCKER', 'ros2_x86_linux'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/mikew/robo25ws/build/serial_driver'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/mikew/cppws/install/turtlesim/local/lib/python3.10/dist-packages:/home/mikew/robo25ws/build/robo25_stuff:/home/robo25/robo25ws/build/robo25_stuff:/home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble')]), 'shell': False}
+[7.694002] (udp_driver) JobProgress: {'identifier': 'udp_driver', 'progress': 'cmake'}
+[7.694394] (udp_driver) Command: {'cmd': ['/usr/bin/cmake', '/home/mikew/robo25ws/transport_drivers/udp_driver', '-DCMAKE_INSTALL_PREFIX=/home/mikew/robo25ws/install/udp_driver'], 'cwd': '/home/mikew/robo25ws/build/udp_driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'mikew'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/mikew/robo25ws/install/io_context/lib:/home/mikew/cppws/install/udp_driver/lib:/home/mikew/cppws/install/serial_driver/lib:/home/mikew/cppws/install/io_context/lib:/home/mikew/cppws/install/turtlesim/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/mikew'), ('OLDPWD', '/home/mikew'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1594'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/mikew/cppws/install:/home/mikew/robo25ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'mikew'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'mikew'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/mikew/.local/bin:/home/mikew/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/mikew/Luxonis/depthai/entrypoint'), ('SESSION_MANAGER', 'local/Robo24-DEV:@/tmp/.ICE-unix/1550,unix/Robo24-DEV:/tmp/.ICE-unix/1550'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b39ce4c3_8d17_4bde_b587_319f0db8354f'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.H2AZQ2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.134'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('PATH_TO_ROS_DOCKERS', '/home/mikew/ROS_dockers'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('ACTIVE_DOCKER', 'ros2_x86_linux'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/mikew/robo25ws/build/udp_driver'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/mikew/cppws/install/turtlesim/local/lib/python3.10/dist-packages:/home/mikew/robo25ws/build/robo25_stuff:/home/robo25/robo25ws/build/robo25_stuff:/home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble')]), 'shell': False}
+[7.715770] (-) TimerEvent: {}
+[7.751156] (serial_driver) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[7.752402] (udp_driver) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[7.806866] (serial_driver) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[7.809049] (udp_driver) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[7.814079] (serial_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[7.815840] (-) TimerEvent: {}
+[7.817143] (udp_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[7.885047] (serial_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[7.885426] (udp_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[7.892377] (serial_driver) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[7.892721] (udp_driver) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[7.892844] (serial_driver) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[7.893059] (udp_driver) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[7.893377] (serial_driver) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[7.893663] (udp_driver) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[7.896399] (udp_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[7.897674] (serial_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[7.915976] (-) TimerEvent: {}
+[7.978257] (serial_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[7.979120] (udp_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[7.992526] (serial_driver) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[7.992986] (serial_driver) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[7.993365] (udp_driver) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[7.993827] (udp_driver) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[7.994070] (serial_driver) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[7.994601] (udp_driver) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[7.997255] (serial_driver) StdoutLine: {'line': b'-- Found ament_cmake_auto: 1.3.9 (/opt/ros/humble/share/ament_cmake_auto/cmake)\n'}
+[7.997636] (udp_driver) StdoutLine: {'line': b'-- Found ament_cmake_auto: 1.3.9 (/opt/ros/humble/share/ament_cmake_auto/cmake)\n'}
+[8.016043] (-) TimerEvent: {}
+[8.116387] (-) TimerEvent: {}
+[8.158313] (udp_driver) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[8.158544] (serial_driver) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[8.216512] (-) TimerEvent: {}
+[8.316791] (-) TimerEvent: {}
+[8.386466] (udp_driver) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[8.386898] (serial_driver) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[8.393288] (udp_driver) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[8.393760] (serial_driver) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[8.403692] (udp_driver) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[8.404160] (serial_driver) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[8.416876] (-) TimerEvent: {}
+[8.419732] (udp_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[8.420101] (serial_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[8.442560] (udp_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[8.442859] (serial_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[8.516994] (-) TimerEvent: {}
+[8.523779] (udp_driver) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[8.523894] (serial_driver) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[8.527564] (udp_driver) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[8.527690] (serial_driver) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[8.617122] (-) TimerEvent: {}
+[8.636666] (udp_driver) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[8.637093] (serial_driver) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[8.672866] (udp_driver) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[8.673099] (serial_driver) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[8.717239] (-) TimerEvent: {}
+[8.732324] (udp_driver) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[8.732621] (serial_driver) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[8.745281] (serial_driver) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[8.745482] (udp_driver) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[8.817355] (-) TimerEvent: {}
+[8.819191] (udp_driver) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[8.819521] (serial_driver) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[8.819756] (udp_driver) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[8.819881] (serial_driver) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[8.895083] (udp_driver) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[8.895222] (serial_driver) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[8.896234] (serial_driver) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[8.896339] (udp_driver) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[8.917449] (-) TimerEvent: {}
+[9.017697] (-) TimerEvent: {}
+[9.117974] (-) TimerEvent: {}
+[9.218278] (-) TimerEvent: {}
+[9.246325] (udp_driver) StdoutLine: {'line': b'-- Found ASIO: /usr/include  \n'}
+[9.250125] (serial_driver) StdoutLine: {'line': b'-- Found ASIO: /usr/include  \n'}
+[9.305114] (serial_driver) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[9.318372] (-) TimerEvent: {}
+[9.329046] (udp_driver) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[9.335348] (serial_driver) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[9.346703] (serial_driver) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[9.348581] (serial_driver) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[9.349043] (serial_driver) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/mikew/robo25ws/transport_drivers/serial_driver/include\n'}
+[9.349134] (serial_driver) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[9.350758] (serial_driver) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[9.350851] (serial_driver) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[9.351511] (serial_driver) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[9.352374] (serial_driver) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[9.353104] (serial_driver) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[9.354968] (serial_driver) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[9.355116] (serial_driver) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[9.355815] (serial_driver) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[9.358904] (serial_driver) StdoutLine: {'line': b'-- Configuring done\n'}
+[9.360399] (udp_driver) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[9.381115] (udp_driver) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[9.383211] (udp_driver) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[9.384020] (udp_driver) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/mikew/robo25ws/transport_drivers/udp_driver/include\n'}
+[9.384110] (udp_driver) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[9.385824] (udp_driver) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[9.385914] (udp_driver) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[9.387000] (udp_driver) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[9.389008] (udp_driver) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[9.389097] (udp_driver) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[9.389755] (udp_driver) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[9.392733] (udp_driver) StdoutLine: {'line': b'-- Configuring done\n'}
+[9.418488] (-) TimerEvent: {}
+[9.435240] (serial_driver) StdoutLine: {'line': b'-- Generating done\n'}
+[9.437306] (serial_driver) StdoutLine: {'line': b'-- Build files have been written to: /home/mikew/robo25ws/build/serial_driver\n'}
+[9.446625] (serial_driver) CommandEnded: {'returncode': 0}
+[9.447312] (serial_driver) JobProgress: {'identifier': 'serial_driver', 'progress': 'build'}
+[9.448194] (serial_driver) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/mikew/robo25ws/build/serial_driver', '--', '-j8', '-l8'], 'cwd': '/home/mikew/robo25ws/build/serial_driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'mikew'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/mikew/robo25ws/install/io_context/lib:/home/mikew/cppws/install/udp_driver/lib:/home/mikew/cppws/install/serial_driver/lib:/home/mikew/cppws/install/io_context/lib:/home/mikew/cppws/install/turtlesim/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/mikew'), ('OLDPWD', '/home/mikew'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1594'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/mikew/cppws/install:/home/mikew/robo25ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'mikew'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'mikew'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/mikew/.local/bin:/home/mikew/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/mikew/Luxonis/depthai/entrypoint'), ('SESSION_MANAGER', 'local/Robo24-DEV:@/tmp/.ICE-unix/1550,unix/Robo24-DEV:/tmp/.ICE-unix/1550'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b39ce4c3_8d17_4bde_b587_319f0db8354f'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.H2AZQ2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.134'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('PATH_TO_ROS_DOCKERS', '/home/mikew/ROS_dockers'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('ACTIVE_DOCKER', 'ros2_x86_linux'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/mikew/robo25ws/build/serial_driver'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/mikew/cppws/install/turtlesim/local/lib/python3.10/dist-packages:/home/mikew/robo25ws/build/robo25_stuff:/home/robo25/robo25ws/build/robo25_stuff:/home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble')]), 'shell': False}
+[9.502203] (serial_driver) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o\x1b[0m\n'}
+[9.503315] (serial_driver) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o\x1b[0m\n'}
+[9.508345] (serial_driver) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/serial_driver.dir/src/serial_driver.cpp.o\x1b[0m\n'}
+[9.508750] (serial_driver) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/serial_driver.dir/src/serial_port.cpp.o\x1b[0m\n'}
+[9.509267] (serial_driver) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/serial_bridge.dir/rclcpp_components/node_main_serial_bridge.cpp.o\x1b[0m\n'}
+[9.518601] (-) TimerEvent: {}
+[9.527765] (udp_driver) StdoutLine: {'line': b'-- Generating done\n'}
+[9.531783] (udp_driver) StdoutLine: {'line': b'-- Build files have been written to: /home/mikew/robo25ws/build/udp_driver\n'}
+[9.547191] (udp_driver) CommandEnded: {'returncode': 0}
+[9.548158] (udp_driver) JobProgress: {'identifier': 'udp_driver', 'progress': 'build'}
+[9.548814] (udp_driver) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/mikew/robo25ws/build/udp_driver', '--', '-j8', '-l8'], 'cwd': '/home/mikew/robo25ws/build/udp_driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'mikew'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/mikew/robo25ws/install/io_context/lib:/home/mikew/cppws/install/udp_driver/lib:/home/mikew/cppws/install/serial_driver/lib:/home/mikew/cppws/install/io_context/lib:/home/mikew/cppws/install/turtlesim/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/mikew'), ('OLDPWD', '/home/mikew'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1594'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/mikew/cppws/install:/home/mikew/robo25ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'mikew'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'mikew'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/mikew/.local/bin:/home/mikew/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/mikew/Luxonis/depthai/entrypoint'), ('SESSION_MANAGER', 'local/Robo24-DEV:@/tmp/.ICE-unix/1550,unix/Robo24-DEV:/tmp/.ICE-unix/1550'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b39ce4c3_8d17_4bde_b587_319f0db8354f'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.H2AZQ2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.134'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('PATH_TO_ROS_DOCKERS', '/home/mikew/ROS_dockers'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('ACTIVE_DOCKER', 'ros2_x86_linux'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/mikew/robo25ws/build/udp_driver'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/mikew/cppws/install/turtlesim/local/lib/python3.10/dist-packages:/home/mikew/robo25ws/build/robo25_stuff:/home/robo25/robo25ws/build/robo25_stuff:/home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble')]), 'shell': False}
+[9.618701] (-) TimerEvent: {}
+[9.638967] (udp_driver) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding CXX object CMakeFiles/udp_driver.dir/src/udp_socket.cpp.o\x1b[0m\n'}
+[9.644215] (udp_driver) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding CXX object CMakeFiles/udp_driver.dir/src/udp_driver.cpp.o\x1b[0m\n'}
+[9.655411] (udp_driver) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding CXX object CMakeFiles/udp_receiver_node_exe.dir/rclcpp_components/node_main_udp_receiver_node_exe.cpp.o\x1b[0m\n'}
+[9.662592] (udp_driver) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o\x1b[0m\n'}
+[9.685976] (udp_driver) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/udp_sender_node_exe.dir/rclcpp_components/node_main_udp_sender_node_exe.cpp.o\x1b[0m\n'}
+[9.688212] (udp_driver) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o\x1b[0m\n'}
+[9.718803] (-) TimerEvent: {}
+[9.819222] (-) TimerEvent: {}
+[9.919530] (-) TimerEvent: {}
+[10.019953] (-) TimerEvent: {}
+[10.120374] (-) TimerEvent: {}
+[10.220711] (-) TimerEvent: {}
+[10.321185] (-) TimerEvent: {}
+[10.421619] (-) TimerEvent: {}
+[10.522057] (-) TimerEvent: {}
+[10.622510] (-) TimerEvent: {}
+[10.722943] (-) TimerEvent: {}
+[10.823284] (-) TimerEvent: {}
+[10.923766] (-) TimerEvent: {}
+[11.024099] (-) TimerEvent: {}
+[11.124444] (-) TimerEvent: {}
+[11.224905] (-) TimerEvent: {}
+[11.325239] (-) TimerEvent: {}
+[11.425590] (-) TimerEvent: {}
+[11.526034] (-) TimerEvent: {}
+[11.626395] (-) TimerEvent: {}
+[11.726851] (-) TimerEvent: {}
+[11.827296] (-) TimerEvent: {}
+[11.898291] (serial_driver) StdoutLine: {'line': b'[ 40%] \x1b[32m\x1b[1mLinking CXX static library libgtest_main.a\x1b[0m\n'}
+[11.927400] (-) TimerEvent: {}
+[12.027829] (-) TimerEvent: {}
+[12.046598] (serial_driver) StdoutLine: {'line': b'[ 40%] Built target gtest_main\n'}
+[12.059852] (udp_driver) StdoutLine: {'line': b'[ 29%] \x1b[32m\x1b[1mLinking CXX static library libgtest_main.a\x1b[0m\n'}
+[12.112736] (udp_driver) StdoutLine: {'line': b'[ 29%] Built target gtest_main\n'}
+[12.127940] (-) TimerEvent: {}
+[12.228390] (-) TimerEvent: {}
+[12.328834] (-) TimerEvent: {}
+[12.429191] (-) TimerEvent: {}
+[12.529565] (-) TimerEvent: {}
+[12.629999] (-) TimerEvent: {}
+[12.730450] (-) TimerEvent: {}
+[12.830890] (-) TimerEvent: {}
+[12.931336] (-) TimerEvent: {}
+[13.031781] (-) TimerEvent: {}
+[13.132214] (-) TimerEvent: {}
+[13.232661] (-) TimerEvent: {}
+[13.333114] (-) TimerEvent: {}
+[13.433467] (-) TimerEvent: {}
+[13.533815] (-) TimerEvent: {}
+[13.634166] (-) TimerEvent: {}
+[13.734599] (-) TimerEvent: {}
+[13.834933] (-) TimerEvent: {}
+[13.935267] (-) TimerEvent: {}
+[14.035607] (-) TimerEvent: {}
+[14.135941] (-) TimerEvent: {}
+[14.180292] (serial_driver) StdoutLine: {'line': b'[ 46%] \x1b[32m\x1b[1mLinking CXX shared library libserial_driver.so\x1b[0m\n'}
+[14.236055] (-) TimerEvent: {}
+[14.336386] (-) TimerEvent: {}
+[14.430645] (serial_driver) StdoutLine: {'line': b'[ 46%] Built target serial_driver\n'}
+[14.436490] (-) TimerEvent: {}
+[14.465608] (serial_driver) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/serial_driver_nodes.dir/src/serial_bridge_node.cpp.o\x1b[0m\n'}
+[14.517939] (udp_driver) StdoutLine: {'line': b'[ 33%] \x1b[32m\x1b[1mLinking CXX shared library libudp_driver.so\x1b[0m\n'}
+[14.536594] (-) TimerEvent: {}
+[14.636915] (-) TimerEvent: {}
+[14.737223] (-) TimerEvent: {}
+[14.781332] (udp_driver) StdoutLine: {'line': b'[ 33%] Built target udp_driver\n'}
+[14.814847] (udp_driver) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/udp_driver_nodes.dir/src/udp_receiver_node.cpp.o\x1b[0m\n'}
+[14.815072] (udp_driver) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/udp_driver_nodes.dir/src/udp_sender_node.cpp.o\x1b[0m\n'}
+[14.820302] (serial_driver) StdoutLine: {'line': b'[ 60%] \x1b[32m\x1b[1mLinking CXX static library libgtest.a\x1b[0m\n'}
+[14.837330] (-) TimerEvent: {}
+[14.868463] (serial_driver) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX executable serial_bridge\x1b[0m\n'}
+[14.922743] (serial_driver) StdoutLine: {'line': b'[ 66%] Built target gtest\n'}
+[14.937450] (-) TimerEvent: {}
+[14.961858] (serial_driver) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/test_serial_driver.dir/test/test_serial_driver.cpp.o\x1b[0m\n'}
+[15.037558] (-) TimerEvent: {}
+[15.059075] (serial_driver) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/test_serial_port.dir/test/test_serial_port.cpp.o\x1b[0m\n'}
+[15.077248] (serial_driver) StdoutLine: {'line': b'[ 80%] Built target serial_bridge\n'}
+[15.137661] (-) TimerEvent: {}
+[15.237969] (-) TimerEvent: {}
+[15.338285] (-) TimerEvent: {}
+[15.438596] (-) TimerEvent: {}
+[15.450153] (udp_driver) StdoutLine: {'line': b'[ 45%] \x1b[32m\x1b[1mLinking CXX executable udp_sender_node_exe\x1b[0m\n'}
+[15.538700] (-) TimerEvent: {}
+[15.567247] (udp_driver) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX executable udp_receiver_node_exe\x1b[0m\n'}
+[15.638807] (-) TimerEvent: {}
+[15.682559] (udp_driver) StdoutLine: {'line': b'[ 50%] Built target udp_sender_node_exe\n'}
+[15.738915] (-) TimerEvent: {}
+[15.775189] (udp_driver) StdoutLine: {'line': b'[ 50%] Built target udp_receiver_node_exe\n'}
+[15.839031] (-) TimerEvent: {}
+[15.923899] (udp_driver) StdoutLine: {'line': b'[ 54%] \x1b[32m\x1b[1mLinking CXX static library libgtest.a\x1b[0m\n'}
+[15.939140] (-) TimerEvent: {}
+[16.014418] (udp_driver) StdoutLine: {'line': b'[ 54%] Built target gtest\n'}
+[16.039253] (-) TimerEvent: {}
+[16.139590] (-) TimerEvent: {}
+[16.239931] (-) TimerEvent: {}
+[16.340266] (-) TimerEvent: {}
+[16.440613] (-) TimerEvent: {}
+[16.540954] (-) TimerEvent: {}
+[16.641293] (-) TimerEvent: {}
+[16.741634] (-) TimerEvent: {}
+[16.841987] (-) TimerEvent: {}
+[16.942355] (-) TimerEvent: {}
+[17.042687] (-) TimerEvent: {}
+[17.143018] (-) TimerEvent: {}
+[17.243347] (-) TimerEvent: {}
+[17.343674] (-) TimerEvent: {}
+[17.443997] (-) TimerEvent: {}
+[17.544319] (-) TimerEvent: {}
+[17.644655] (-) TimerEvent: {}
+[17.702983] (serial_driver) StdoutLine: {'line': b'[ 86%] \x1b[32m\x1b[1mLinking CXX executable test_serial_port\x1b[0m\n'}
+[17.744772] (-) TimerEvent: {}
+[17.845111] (-) TimerEvent: {}
+[17.938461] (serial_driver) StdoutLine: {'line': b'[ 86%] Built target test_serial_port\n'}
+[17.945209] (-) TimerEvent: {}
+[18.045529] (-) TimerEvent: {}
+[18.145848] (-) TimerEvent: {}
+[18.246182] (-) TimerEvent: {}
+[18.346492] (-) TimerEvent: {}
+[18.443928] (serial_driver) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking CXX executable test_serial_driver\x1b[0m\n'}
+[18.446592] (-) TimerEvent: {}
+[18.546926] (-) TimerEvent: {}
+[18.647266] (-) TimerEvent: {}
+[18.667329] (serial_driver) StdoutLine: {'line': b'[ 93%] Built target test_serial_driver\n'}
+[18.747374] (-) TimerEvent: {}
+[18.847684] (-) TimerEvent: {}
+[18.947992] (-) TimerEvent: {}
+[19.048310] (-) TimerEvent: {}
+[19.148638] (-) TimerEvent: {}
+[19.248961] (-) TimerEvent: {}
+[19.349287] (-) TimerEvent: {}
+[19.449614] (-) TimerEvent: {}
+[19.549943] (-) TimerEvent: {}
+[19.650285] (-) TimerEvent: {}
+[19.750617] (-) TimerEvent: {}
+[19.850953] (-) TimerEvent: {}
+[19.951260] (-) TimerEvent: {}
+[20.051561] (-) TimerEvent: {}
+[20.151862] (-) TimerEvent: {}
+[20.252155] (-) TimerEvent: {}
+[20.352465] (-) TimerEvent: {}
+[20.452786] (-) TimerEvent: {}
+[20.553097] (-) TimerEvent: {}
+[20.653417] (-) TimerEvent: {}
+[20.753748] (-) TimerEvent: {}
+[20.854016] (-) TimerEvent: {}
+[20.954308] (-) TimerEvent: {}
+[21.054570] (-) TimerEvent: {}
+[21.154821] (-) TimerEvent: {}
+[21.255080] (-) TimerEvent: {}
+[21.355335] (-) TimerEvent: {}
+[21.455597] (-) TimerEvent: {}
+[21.555852] (-) TimerEvent: {}
+[21.656106] (-) TimerEvent: {}
+[21.756379] (-) TimerEvent: {}
+[21.856643] (-) TimerEvent: {}
+[21.956898] (-) TimerEvent: {}
+[22.057160] (-) TimerEvent: {}
+[22.157415] (-) TimerEvent: {}
+[22.257704] (-) TimerEvent: {}
+[22.357990] (-) TimerEvent: {}
+[22.458229] (-) TimerEvent: {}
+[22.558490] (-) TimerEvent: {}
+[22.658743] (-) TimerEvent: {}
+[22.759012] (-) TimerEvent: {}
+[22.859303] (-) TimerEvent: {}
+[22.959577] (-) TimerEvent: {}
+[23.059859] (-) TimerEvent: {}
+[23.160135] (-) TimerEvent: {}
+[23.260412] (-) TimerEvent: {}
+[23.360693] (-) TimerEvent: {}
+[23.460974] (-) TimerEvent: {}
+[23.561247] (-) TimerEvent: {}
+[23.661509] (-) TimerEvent: {}
+[23.761789] (-) TimerEvent: {}
+[23.862036] (-) TimerEvent: {}
+[23.962358] (-) TimerEvent: {}
+[24.062587] (-) TimerEvent: {}
+[24.162836] (-) TimerEvent: {}
+[24.263110] (-) TimerEvent: {}
+[24.363383] (-) TimerEvent: {}
+[24.463660] (-) TimerEvent: {}
+[24.563917] (-) TimerEvent: {}
+[24.664179] (-) TimerEvent: {}
+[24.764442] (-) TimerEvent: {}
+[24.864705] (-) TimerEvent: {}
+[24.885896] (serial_driver) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libserial_driver_nodes.so\x1b[0m\n'}
+[24.964833] (-) TimerEvent: {}
+[25.065123] (-) TimerEvent: {}
+[25.165420] (-) TimerEvent: {}
+[25.265714] (-) TimerEvent: {}
+[25.366006] (-) TimerEvent: {}
+[25.414067] (serial_driver) StdoutLine: {'line': b'[100%] Built target serial_driver_nodes\n'}
+[25.425767] (serial_driver) CommandEnded: {'returncode': 0}
+[25.466099] (-) TimerEvent: {}
+[25.466548] (udp_driver) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking CXX shared library libudp_driver_nodes.so\x1b[0m\n'}
+[25.473643] (serial_driver) JobProgress: {'identifier': 'serial_driver', 'progress': 'install'}
+[25.474038] (serial_driver) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/mikew/robo25ws/build/serial_driver'], 'cwd': '/home/mikew/robo25ws/build/serial_driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'mikew'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/mikew/robo25ws/install/io_context/lib:/home/mikew/cppws/install/udp_driver/lib:/home/mikew/cppws/install/serial_driver/lib:/home/mikew/cppws/install/io_context/lib:/home/mikew/cppws/install/turtlesim/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/mikew'), ('OLDPWD', '/home/mikew'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1594'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/mikew/cppws/install:/home/mikew/robo25ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'mikew'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'mikew'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/mikew/.local/bin:/home/mikew/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/mikew/Luxonis/depthai/entrypoint'), ('SESSION_MANAGER', 'local/Robo24-DEV:@/tmp/.ICE-unix/1550,unix/Robo24-DEV:/tmp/.ICE-unix/1550'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b39ce4c3_8d17_4bde_b587_319f0db8354f'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.H2AZQ2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.134'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('PATH_TO_ROS_DOCKERS', '/home/mikew/ROS_dockers'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('ACTIVE_DOCKER', 'ros2_x86_linux'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/mikew/robo25ws/build/serial_driver'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/mikew/cppws/install/turtlesim/local/lib/python3.10/dist-packages:/home/mikew/robo25ws/build/robo25_stuff:/home/robo25/robo25ws/build/robo25_stuff:/home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble')]), 'shell': False}
+[25.482628] (serial_driver) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[25.482936] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/lib/serial_driver/serial_bridge\n'}
+[25.483549] (serial_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/mikew/robo25ws/install/serial_driver/lib/serial_driver/serial_bridge" to ""\n'}
+[25.483770] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/include\n'}
+[25.484020] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/include/serial_driver\n'}
+[25.484243] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/include/serial_driver/serial_port.hpp\n'}
+[25.484428] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/include/serial_driver/serial_driver.hpp\n'}
+[25.484584] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/include/serial_driver/visibility_control.hpp\n'}
+[25.484749] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/include/serial_driver/serial_bridge_node.hpp\n'}
+[25.484966] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/library_path.sh\n'}
+[25.485143] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/library_path.dsv\n'}
+[25.485290] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/lib/libserial_driver.so\n'}
+[25.486319] (serial_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/mikew/robo25ws/install/serial_driver/lib/libserial_driver.so" to ""\n'}
+[25.486500] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/lib/libserial_driver_nodes.so\n'}
+[25.493393] (serial_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/mikew/robo25ws/install/serial_driver/lib/libserial_driver_nodes.so" to ""\n'}
+[25.493738] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/launch\n'}
+[25.493947] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/launch/serial_driver_bridge_node.launch.py\n'}
+[25.494123] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/params\n'}
+[25.494313] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/params/example.params.yaml\n'}
+[25.494449] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/share/ament_index/resource_index/package_run_dependencies/serial_driver\n'}
+[25.494612] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/share/ament_index/resource_index/parent_prefix_path/serial_driver\n'}
+[25.494824] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/ament_prefix_path.sh\n'}
+[25.495002] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/ament_prefix_path.dsv\n'}
+[25.495176] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/path.sh\n'}
+[25.495340] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/path.dsv\n'}
+[25.495507] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/local_setup.bash\n'}
+[25.495655] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/local_setup.sh\n'}
+[25.495792] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/local_setup.zsh\n'}
+[25.495953] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/local_setup.dsv\n'}
+[25.496102] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/package.dsv\n'}
+[25.496258] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/share/ament_index/resource_index/packages/serial_driver\n'}
+[25.496409] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/share/ament_index/resource_index/rclcpp_components/serial_driver\n'}
+[25.496547] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[25.496705] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[25.496836] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[25.496963] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/cmake/serial_driverConfig.cmake\n'}
+[25.497111] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/cmake/serial_driverConfig-version.cmake\n'}
+[25.497248] (serial_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/package.xml\n'}
+[25.498499] (serial_driver) CommandEnded: {'returncode': 0}
+[25.559066] (serial_driver) JobEnded: {'identifier': 'serial_driver', 'rc': 0}
+[25.566244] (-) TimerEvent: {}
+[25.666502] (-) TimerEvent: {}
+[25.766805] (-) TimerEvent: {}
+[25.867076] (-) TimerEvent: {}
+[25.967359] (-) TimerEvent: {}
+[25.994883] (udp_driver) StdoutLine: {'line': b'[ 58%] Built target udp_driver_nodes\n'}
+[26.018096] (udp_driver) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/test_udp_socket.dir/test/test_udp_socket.cpp.o\x1b[0m\n'}
+[26.018800] (udp_driver) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/test_udp_data.dir/test/test_udp_data.cpp.o\x1b[0m\n'}
+[26.020302] (udp_driver) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/udp_bridge_node_exe.dir/src/udp_bridge_node.cpp.o\x1b[0m\n'}
+[26.021841] (udp_driver) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/test_udp_driver.dir/test/test_udp_driver.cpp.o\x1b[0m\n'}
+[26.025464] (udp_driver) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding CXX object CMakeFiles/test_udp_driver_nodes.dir/test/test_udp_driver_nodes.cpp.o\x1b[0m\n'}
+[26.067472] (-) TimerEvent: {}
+[26.167804] (-) TimerEvent: {}
+[26.268137] (-) TimerEvent: {}
+[26.368443] (-) TimerEvent: {}
+[26.468730] (-) TimerEvent: {}
+[26.569070] (-) TimerEvent: {}
+[26.669410] (-) TimerEvent: {}
+[26.769722] (-) TimerEvent: {}
+[26.870035] (-) TimerEvent: {}
+[26.970357] (-) TimerEvent: {}
+[27.070652] (-) TimerEvent: {}
+[27.170955] (-) TimerEvent: {}
+[27.271259] (-) TimerEvent: {}
+[27.371567] (-) TimerEvent: {}
+[27.471877] (-) TimerEvent: {}
+[27.572188] (-) TimerEvent: {}
+[27.672496] (-) TimerEvent: {}
+[27.772819] (-) TimerEvent: {}
+[27.873144] (-) TimerEvent: {}
+[27.973469] (-) TimerEvent: {}
+[28.073797] (-) TimerEvent: {}
+[28.174120] (-) TimerEvent: {}
+[28.274441] (-) TimerEvent: {}
+[28.374736] (-) TimerEvent: {}
+[28.475041] (-) TimerEvent: {}
+[28.575359] (-) TimerEvent: {}
+[28.675682] (-) TimerEvent: {}
+[28.776013] (-) TimerEvent: {}
+[28.876328] (-) TimerEvent: {}
+[28.976644] (-) TimerEvent: {}
+[29.076955] (-) TimerEvent: {}
+[29.177271] (-) TimerEvent: {}
+[29.277593] (-) TimerEvent: {}
+[29.377908] (-) TimerEvent: {}
+[29.478215] (-) TimerEvent: {}
+[29.578514] (-) TimerEvent: {}
+[29.678810] (-) TimerEvent: {}
+[29.779106] (-) TimerEvent: {}
+[29.879401] (-) TimerEvent: {}
+[29.979703] (-) TimerEvent: {}
+[30.009281] (udp_driver) StdoutLine: {'line': b'[ 83%] \x1b[32m\x1b[1mLinking CXX executable test_udp_socket\x1b[0m\n'}
+[30.079819] (-) TimerEvent: {}
+[30.164256] (udp_driver) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking CXX executable test_udp_data\x1b[0m\n'}
+[30.179929] (-) TimerEvent: {}
+[30.280266] (-) TimerEvent: {}
+[30.344399] (udp_driver) StdoutLine: {'line': b'[ 91%] \x1b[32m\x1b[1mLinking CXX executable udp_bridge_node_exe\x1b[0m\n'}
+[30.357160] (udp_driver) StdoutLine: {'line': b'[ 91%] Built target test_udp_socket\n'}
+[30.380379] (-) TimerEvent: {}
+[30.425699] (udp_driver) StdoutLine: {'line': b'[ 91%] Built target test_udp_data\n'}
+[30.480500] (-) TimerEvent: {}
+[30.580840] (-) TimerEvent: {}
+[30.656989] (udp_driver) StdoutLine: {'line': b'[ 91%] Built target udp_bridge_node_exe\n'}
+[30.680946] (-) TimerEvent: {}
+[30.781255] (-) TimerEvent: {}
+[30.881558] (-) TimerEvent: {}
+[30.960621] (udp_driver) StdoutLine: {'line': b'[ 95%] \x1b[32m\x1b[1mLinking CXX executable test_udp_driver\x1b[0m\n'}
+[30.981667] (-) TimerEvent: {}
+[31.082040] (-) TimerEvent: {}
+[31.177177] (udp_driver) StdoutLine: {'line': b'[ 95%] Built target test_udp_driver\n'}
+[31.182174] (-) TimerEvent: {}
+[31.282460] (-) TimerEvent: {}
+[31.382739] (-) TimerEvent: {}
+[31.483009] (-) TimerEvent: {}
+[31.583279] (-) TimerEvent: {}
+[31.683561] (-) TimerEvent: {}
+[31.783834] (-) TimerEvent: {}
+[31.884103] (-) TimerEvent: {}
+[31.984376] (-) TimerEvent: {}
+[32.084642] (-) TimerEvent: {}
+[32.184907] (-) TimerEvent: {}
+[32.285175] (-) TimerEvent: {}
+[32.385443] (-) TimerEvent: {}
+[32.485710] (-) TimerEvent: {}
+[32.585998] (-) TimerEvent: {}
+[32.686313] (-) TimerEvent: {}
+[32.786578] (-) TimerEvent: {}
+[32.886847] (-) TimerEvent: {}
+[32.987105] (-) TimerEvent: {}
+[33.087382] (-) TimerEvent: {}
+[33.187660] (-) TimerEvent: {}
+[33.287941] (-) TimerEvent: {}
+[33.388227] (-) TimerEvent: {}
+[33.488494] (-) TimerEvent: {}
+[33.588755] (-) TimerEvent: {}
+[33.689010] (-) TimerEvent: {}
+[33.789271] (-) TimerEvent: {}
+[33.889528] (-) TimerEvent: {}
+[33.989785] (-) TimerEvent: {}
+[34.090045] (-) TimerEvent: {}
+[34.190368] (-) TimerEvent: {}
+[34.290647] (-) TimerEvent: {}
+[34.390911] (-) TimerEvent: {}
+[34.491191] (-) TimerEvent: {}
+[34.591476] (-) TimerEvent: {}
+[34.691750] (-) TimerEvent: {}
+[34.792031] (-) TimerEvent: {}
+[34.892307] (-) TimerEvent: {}
+[34.992582] (-) TimerEvent: {}
+[35.092846] (-) TimerEvent: {}
+[35.193124] (-) TimerEvent: {}
+[35.293403] (-) TimerEvent: {}
+[35.393683] (-) TimerEvent: {}
+[35.493959] (-) TimerEvent: {}
+[35.594242] (-) TimerEvent: {}
+[35.694515] (-) TimerEvent: {}
+[35.794794] (-) TimerEvent: {}
+[35.895262] (-) TimerEvent: {}
+[35.995840] (-) TimerEvent: {}
+[36.096190] (-) TimerEvent: {}
+[36.196476] (-) TimerEvent: {}
+[36.296768] (-) TimerEvent: {}
+[36.397054] (-) TimerEvent: {}
+[36.497348] (-) TimerEvent: {}
+[36.519116] (udp_driver) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable test_udp_driver_nodes\x1b[0m\n'}
+[36.597472] (-) TimerEvent: {}
+[36.697748] (-) TimerEvent: {}
+[36.798030] (-) TimerEvent: {}
+[36.898314] (-) TimerEvent: {}
+[36.998576] (-) TimerEvent: {}
+[37.052546] (udp_driver) StdoutLine: {'line': b'[100%] Built target test_udp_driver_nodes\n'}
+[37.063363] (udp_driver) CommandEnded: {'returncode': 0}
+[37.098666] (-) TimerEvent: {}
+[37.126612] (udp_driver) JobProgress: {'identifier': 'udp_driver', 'progress': 'install'}
+[37.127347] (udp_driver) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/mikew/robo25ws/build/udp_driver'], 'cwd': '/home/mikew/robo25ws/build/udp_driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'mikew'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/mikew/robo25ws/install/io_context/lib:/home/mikew/cppws/install/udp_driver/lib:/home/mikew/cppws/install/serial_driver/lib:/home/mikew/cppws/install/io_context/lib:/home/mikew/cppws/install/turtlesim/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/mikew'), ('OLDPWD', '/home/mikew'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1594'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/mikew/cppws/install:/home/mikew/robo25ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'mikew'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'mikew'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/mikew/.local/bin:/home/mikew/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/mikew/Luxonis/depthai/entrypoint'), ('SESSION_MANAGER', 'local/Robo24-DEV:@/tmp/.ICE-unix/1550,unix/Robo24-DEV:/tmp/.ICE-unix/1550'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b39ce4c3_8d17_4bde_b587_319f0db8354f'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.H2AZQ2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.134'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('PATH_TO_ROS_DOCKERS', '/home/mikew/ROS_dockers'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('ACTIVE_DOCKER', 'ros2_x86_linux'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/mikew/robo25ws/build/udp_driver'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/mikew/cppws/install/turtlesim/local/lib/python3.10/dist-packages:/home/mikew/robo25ws/build/robo25_stuff:/home/robo25/robo25ws/build/robo25_stuff:/home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/cppws/install/udp_driver:/home/mikew/cppws/install/serial_driver:/home/mikew/cppws/install/io_context:/home/mikew/cppws/install/asio_cmake_module:/home/mikew/cppws/install/cpp_pubsub:/home/mikew/cppws/install/turtlesim:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble')]), 'shell': False}
+[37.135504] (udp_driver) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[37.135771] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/lib/udp_driver/udp_receiver_node_exe\n'}
+[37.136491] (udp_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/mikew/robo25ws/install/udp_driver/lib/udp_driver/udp_receiver_node_exe" to ""\n'}
+[37.136870] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/lib/udp_driver/udp_sender_node_exe\n'}
+[37.137356] (udp_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/mikew/robo25ws/install/udp_driver/lib/udp_driver/udp_sender_node_exe" to ""\n'}
+[37.137563] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/include\n'}
+[37.137728] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/include/udp_driver\n'}
+[37.137912] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/include/udp_driver/udp_driver.hpp\n'}
+[37.138029] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/include/udp_driver/visibility_control.hpp\n'}
+[37.138173] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/include/udp_driver/udp_sender_node.hpp\n'}
+[37.138319] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/include/udp_driver/udp_receiver_node.hpp\n'}
+[37.138510] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/include/udp_driver/udp_socket.hpp\n'}
+[37.138698] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/environment/library_path.sh\n'}
+[37.138795] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/environment/library_path.dsv\n'}
+[37.138854] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/lib/libudp_driver.so\n'}
+[37.139920] (udp_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/mikew/robo25ws/install/udp_driver/lib/libudp_driver.so" to ""\n'}
+[37.140006] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/lib/libudp_driver_nodes.so\n'}
+[37.146781] (udp_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/mikew/robo25ws/install/udp_driver/lib/libudp_driver_nodes.so" to ""\n'}
+[37.147010] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/lib/udp_driver/udp_bridge_node_exe\n'}
+[37.147455] (udp_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/mikew/robo25ws/install/udp_driver/lib/udp_driver/udp_bridge_node_exe" to ""\n'}
+[37.147628] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/share/ament_index/resource_index/package_run_dependencies/udp_driver\n'}
+[37.147741] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/share/ament_index/resource_index/parent_prefix_path/udp_driver\n'}
+[37.147840] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/environment/ament_prefix_path.sh\n'}
+[37.147933] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/environment/ament_prefix_path.dsv\n'}
+[37.148034] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/environment/path.sh\n'}
+[37.148188] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/environment/path.dsv\n'}
+[37.148308] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/local_setup.bash\n'}
+[37.148434] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/local_setup.sh\n'}
+[37.148565] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/local_setup.zsh\n'}
+[37.148686] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/local_setup.dsv\n'}
+[37.148805] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/package.dsv\n'}
+[37.148949] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/share/ament_index/resource_index/packages/udp_driver\n'}
+[37.149103] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/share/ament_index/resource_index/rclcpp_components/udp_driver\n'}
+[37.149264] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[37.149442] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[37.149626] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[37.149749] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/cmake/udp_driverConfig.cmake\n'}
+[37.149875] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/cmake/udp_driverConfig-version.cmake\n'}
+[37.149988] (udp_driver) StdoutLine: {'line': b'-- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/package.xml\n'}
+[37.151509] (udp_driver) CommandEnded: {'returncode': 0}
+[37.198743] (-) TimerEvent: {}
+[37.227835] (udp_driver) JobEnded: {'identifier': 'udp_driver', 'rc': 0}
+[37.228552] (-) EventReactorShutdown: {}

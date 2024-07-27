@@ -1,0 +1,31 @@
+running develop
+Removing /home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages/robo25-stuff.egg-link (link to .)
+running egg_info
+writing ../../build/robo25_stuff/robo25_stuff.egg-info/PKG-INFO
+writing dependency_links to ../../build/robo25_stuff/robo25_stuff.egg-info/dependency_links.txt
+writing entry points to ../../build/robo25_stuff/robo25_stuff.egg-info/entry_points.txt
+writing requirements to ../../build/robo25_stuff/robo25_stuff.egg-info/requires.txt
+writing top-level names to ../../build/robo25_stuff/robo25_stuff.egg-info/top_level.txt
+reading manifest file '../../build/robo25_stuff/robo25_stuff.egg-info/SOURCES.txt'
+writing manifest file '../../build/robo25_stuff/robo25_stuff.egg-info/SOURCES.txt'
+running build
+running build_py
+copying robo25_stuff/lc_serial_manager_node.py -> /home/mikew/robo25ws/build/robo25_stuff/build/lib/robo25_stuff
+running install
+running install_lib
+creating /home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages/robo25_stuff
+copying /home/mikew/robo25ws/build/robo25_stuff/build/lib/robo25_stuff/lc_serial_manager_node.py -> /home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages/robo25_stuff
+copying /home/mikew/robo25ws/build/robo25_stuff/build/lib/robo25_stuff/engine_node.py -> /home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages/robo25_stuff
+copying /home/mikew/robo25ws/build/robo25_stuff/build/lib/robo25_stuff/__init__.py -> /home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages/robo25_stuff
+byte-compiling /home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages/robo25_stuff/lc_serial_manager_node.py to lc_serial_manager_node.cpython-310.pyc
+byte-compiling /home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages/robo25_stuff/engine_node.py to engine_node.cpython-310.pyc
+byte-compiling /home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages/robo25_stuff/__init__.py to __init__.cpython-310.pyc
+running install_data
+copying resource/robo25_stuff -> /home/mikew/robo25ws/install/robo25_stuff/share/ament_index/resource_index/packages
+copying package.xml -> /home/mikew/robo25ws/install/robo25_stuff/share/robo25_stuff
+running install_egg_info
+Copying ../../build/robo25_stuff/robo25_stuff.egg-info to /home/mikew/robo25ws/install/robo25_stuff/lib/python3.10/site-packages/robo25_stuff-0.0.0-py3.10.egg-info
+running install_scripts
+Installing engine_node script to /home/mikew/robo25ws/install/robo25_stuff/lib/robo25_stuff
+Installing lc_serial_manager_node script to /home/mikew/robo25ws/install/robo25_stuff/lib/robo25_stuff
+writing list of installed files to '/home/mikew/robo25ws/build/robo25_stuff/install.log'

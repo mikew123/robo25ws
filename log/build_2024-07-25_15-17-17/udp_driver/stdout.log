@@ -1,0 +1,11 @@
+[  8%] Built target gtest
+[ 16%] Built target gtest_main
+[ 25%] Built target udp_receiver_node_exe
+[ 33%] Built target udp_sender_node_exe
+[ 45%] Built target udp_driver
+[ 58%] Built target udp_driver_nodes
+[ 66%] Built target test_udp_data
+[ 91%] Built target udp_bridge_node_exe
+[ 91%] Built target test_udp_driver
+[ 91%] Built target test_udp_socket
+[100%] Built target test_udp_driver_nodes

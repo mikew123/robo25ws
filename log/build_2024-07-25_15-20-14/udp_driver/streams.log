@@ -1,0 +1,125 @@
+[0.011s] Invoking command in '/home/mikew/robo25ws/build/udp_driver': AMENT_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/mikew/robo25ws/src/transport_drivers/udp_driver -DCMAKE_INSTALL_PREFIX=/home/mikew/robo25ws/install/udp_driver
+[0.065s] -- The C compiler identification is GNU 11.4.0
+[0.136s] -- The CXX compiler identification is GNU 11.4.0
+[0.144s] -- Detecting C compiler ABI info
+[0.216s] -- Detecting C compiler ABI info - done
+[0.231s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.232s] -- Detecting C compile features
+[0.233s] -- Detecting C compile features - done
+[0.238s] -- Detecting CXX compiler ABI info
+[0.325s] -- Detecting CXX compiler ABI info - done
+[0.333s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.333s] -- Detecting CXX compile features
+[0.334s] -- Detecting CXX compile features - done
+[0.336s] -- Found ament_cmake_auto: 1.3.9 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.495s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.702s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.708s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.720s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.735s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.756s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.833s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.836s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.943s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.979s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.034s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.045s] -- Looking for pthread.h
+[1.123s] -- Looking for pthread.h - found
+[1.123s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.205s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.207s] -- Found Threads: TRUE  
+[1.557s] -- Found ASIO: /usr/include  
+[1.637s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.659s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[1.679s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.685s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.685s] -- Configured cppcheck include dirs: /home/mikew/robo25ws/src/transport_drivers/udp_driver/include
+[1.685s] -- Configured cppcheck exclude dirs and/or files: 
+[1.686s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.686s] -- Configured cpplint exclude dirs and/or files: 
+[1.687s] -- Added test 'lint_cmake' to check CMake code style
+[1.689s] -- Added test 'uncrustify' to check C / C++ code style
+[1.689s] -- Configured uncrustify additional arguments: 
+[1.689s] -- Added test 'xmllint' to check XML markup files
+[1.692s] -- Configuring done
+[1.822s] -- Generating done
+[1.824s] -- Build files have been written to: /home/mikew/robo25ws/build/udp_driver
+[1.835s] Invoked command in '/home/mikew/robo25ws/build/udp_driver' returned '0': AMENT_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/mikew/robo25ws/src/transport_drivers/udp_driver -DCMAKE_INSTALL_PREFIX=/home/mikew/robo25ws/install/udp_driver
+[1.837s] Invoking command in '/home/mikew/robo25ws/build/udp_driver': AMENT_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/mikew/robo25ws/build/udp_driver -- -j8 -l8
+[1.901s] [  4%] [32mBuilding CXX object CMakeFiles/udp_receiver_node_exe.dir/rclcpp_components/node_main_udp_receiver_node_exe.cpp.o[0m
+[1.901s] [  8%] [32mBuilding CXX object CMakeFiles/udp_driver.dir/src/udp_socket.cpp.o[0m
+[1.903s] [ 12%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[1.911s] [ 16%] [32mBuilding CXX object CMakeFiles/udp_driver.dir/src/udp_driver.cpp.o[0m
+[1.917s] [ 20%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[1.930s] [ 25%] [32mBuilding CXX object CMakeFiles/udp_sender_node_exe.dir/rclcpp_components/node_main_udp_sender_node_exe.cpp.o[0m
+[4.720s] [ 29%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[4.872s] [ 29%] Built target gtest_main
+[7.155s] [ 33%] [32m[1mLinking CXX shared library libudp_driver.so[0m
+[7.534s] [ 37%] [32m[1mLinking CXX static library libgtest.a[0m
+[7.563s] [ 37%] Built target udp_driver
+[7.601s] [ 41%] [32mBuilding CXX object CMakeFiles/udp_driver_nodes.dir/src/udp_receiver_node.cpp.o[0m
+[7.619s] [ 45%] [32mBuilding CXX object CMakeFiles/udp_driver_nodes.dir/src/udp_sender_node.cpp.o[0m
+[7.689s] [ 45%] Built target gtest
+[8.365s] [ 50%] [32m[1mLinking CXX executable udp_sender_node_exe[0m
+[8.540s] [ 54%] [32m[1mLinking CXX executable udp_receiver_node_exe[0m
+[8.676s] [ 54%] Built target udp_sender_node_exe
+[8.758s] [ 54%] Built target udp_receiver_node_exe
+[18.423s] [ 58%] [32m[1mLinking CXX shared library libudp_driver_nodes.so[0m
+[19.156s] [ 58%] Built target udp_driver_nodes
+[19.182s] [ 62%] [32mBuilding CXX object CMakeFiles/udp_bridge_node_exe.dir/src/udp_bridge_node.cpp.o[0m
+[19.184s] [ 70%] [32mBuilding CXX object CMakeFiles/test_udp_socket.dir/test/test_udp_socket.cpp.o[0m
+[19.184s] [ 70%] [32mBuilding CXX object CMakeFiles/test_udp_driver.dir/test/test_udp_driver.cpp.o[0m
+[19.185s] [ 75%] [32mBuilding CXX object CMakeFiles/test_udp_data.dir/test/test_udp_data.cpp.o[0m
+[19.186s] [ 79%] [32mBuilding CXX object CMakeFiles/test_udp_driver_nodes.dir/test/test_udp_driver_nodes.cpp.o[0m
+[22.475s] [ 83%] [32m[1mLinking CXX executable test_udp_socket[0m
+[22.827s] [ 83%] Built target test_udp_socket
+[23.000s] [ 87%] [32m[1mLinking CXX executable test_udp_data[0m
+[23.381s] [ 87%] Built target test_udp_data
+[24.930s] [ 91%] [32m[1mLinking CXX executable test_udp_driver[0m
+[25.054s] [ 95%] [32m[1mLinking CXX executable udp_bridge_node_exe[0m
+[25.196s] [ 95%] Built target test_udp_driver
+[25.363s] [ 95%] Built target udp_bridge_node_exe
+[31.743s] [100%] [32m[1mLinking CXX executable test_udp_driver_nodes[0m
+[32.396s] [100%] Built target test_udp_driver_nodes
+[32.408s] Invoked command in '/home/mikew/robo25ws/build/udp_driver' returned '0': AMENT_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/mikew/robo25ws/build/udp_driver -- -j8 -l8
+[32.469s] Invoking command in '/home/mikew/robo25ws/build/udp_driver': AMENT_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/mikew/robo25ws/build/udp_driver
+[32.477s] -- Install configuration: ""
+[32.477s] -- Installing: /home/mikew/robo25ws/install/udp_driver/lib/udp_driver/udp_receiver_node_exe
+[32.478s] -- Set runtime path of "/home/mikew/robo25ws/install/udp_driver/lib/udp_driver/udp_receiver_node_exe" to ""
+[32.478s] -- Installing: /home/mikew/robo25ws/install/udp_driver/lib/udp_driver/udp_sender_node_exe
+[32.479s] -- Set runtime path of "/home/mikew/robo25ws/install/udp_driver/lib/udp_driver/udp_sender_node_exe" to ""
+[32.479s] -- Installing: /home/mikew/robo25ws/install/udp_driver/include
+[32.479s] -- Installing: /home/mikew/robo25ws/install/udp_driver/include/udp_driver
+[32.479s] -- Installing: /home/mikew/robo25ws/install/udp_driver/include/udp_driver/udp_driver.hpp
+[32.479s] -- Installing: /home/mikew/robo25ws/install/udp_driver/include/udp_driver/visibility_control.hpp
+[32.480s] -- Installing: /home/mikew/robo25ws/install/udp_driver/include/udp_driver/udp_sender_node.hpp
+[32.480s] -- Installing: /home/mikew/robo25ws/install/udp_driver/include/udp_driver/udp_receiver_node.hpp
+[32.480s] -- Installing: /home/mikew/robo25ws/install/udp_driver/include/udp_driver/udp_socket.hpp
+[32.480s] -- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/environment/library_path.sh
+[32.480s] -- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/environment/library_path.dsv
+[32.480s] -- Installing: /home/mikew/robo25ws/install/udp_driver/lib/libudp_driver.so
+[32.481s] -- Set runtime path of "/home/mikew/robo25ws/install/udp_driver/lib/libudp_driver.so" to ""
+[32.481s] -- Installing: /home/mikew/robo25ws/install/udp_driver/lib/libudp_driver_nodes.so
+[32.489s] -- Set runtime path of "/home/mikew/robo25ws/install/udp_driver/lib/libudp_driver_nodes.so" to ""
+[32.489s] -- Installing: /home/mikew/robo25ws/install/udp_driver/lib/udp_driver/udp_bridge_node_exe
+[32.489s] -- Set runtime path of "/home/mikew/robo25ws/install/udp_driver/lib/udp_driver/udp_bridge_node_exe" to ""
+[32.490s] -- Installing: /home/mikew/robo25ws/install/udp_driver/share/ament_index/resource_index/package_run_dependencies/udp_driver
+[32.490s] -- Installing: /home/mikew/robo25ws/install/udp_driver/share/ament_index/resource_index/parent_prefix_path/udp_driver
+[32.490s] -- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/environment/ament_prefix_path.sh
+[32.490s] -- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/environment/ament_prefix_path.dsv
+[32.490s] -- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/environment/path.sh
+[32.490s] -- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/environment/path.dsv
+[32.491s] -- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/local_setup.bash
+[32.491s] -- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/local_setup.sh
+[32.491s] -- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/local_setup.zsh
+[32.491s] -- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/local_setup.dsv
+[32.491s] -- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/package.dsv
+[32.491s] -- Installing: /home/mikew/robo25ws/install/udp_driver/share/ament_index/resource_index/packages/udp_driver
+[32.491s] -- Installing: /home/mikew/robo25ws/install/udp_driver/share/ament_index/resource_index/rclcpp_components/udp_driver
+[32.491s] -- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/cmake/ament_cmake_export_dependencies-extras.cmake
+[32.492s] -- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/cmake/ament_cmake_export_include_directories-extras.cmake
+[32.492s] -- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/cmake/ament_cmake_export_libraries-extras.cmake
+[32.492s] -- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/cmake/udp_driverConfig.cmake
+[32.492s] -- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/cmake/udp_driverConfig-version.cmake
+[32.492s] -- Installing: /home/mikew/robo25ws/install/udp_driver/share/udp_driver/package.xml
+[32.495s] Invoked command in '/home/mikew/robo25ws/build/udp_driver' returned '0': AMENT_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/mikew/robo25ws/build/udp_driver

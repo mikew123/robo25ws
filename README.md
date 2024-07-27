@@ -53,12 +53,11 @@ Optional rotating LIDAR for far obsticle detection and avoidance
 Time Of Flight sensors on front, rear and optional sides with mm resolution for close obstical avoidance and close cone sensor
 
 # Computer 
-- Raspberry Pi4 (or 5) with OS Ubuntu 20.04
-- Enbedded PC with Linux or Windows (WSL) with OS Ubuntu 20.04
+Raspberry Pi5 with Docker and Humble or Iron ROS2 install (Ubuntu 22.04)
   
 # Software
 ## ROS2
-- ROS2 Humble or Iron versions requires Linux Ubuntu 20.04 OS
+- ROS2 Humble or Iron versions requires Linux Ubuntu 22.04 OS
 - 
 
 # Electronic modules
@@ -102,14 +101,24 @@ The microcontroller firmware is C-code developed using the Arduino IDE. The inte
 ## RC switch interface
 ### Outputs to RC switch
 - Slave select
-- Steering servo
-- Motor speed/fwd-rev
+- Steering servo Left-Right
+- Throttle speed fwd-rev
 - High-Low speed select servo
 ### Inputs from RC switch
 - Steering
-- High-Low speed select
+- Throttle
+- High-Low-Idle speed select
 ## JSON messages
-### Congfigure messages from the computer
-### Runtime controll messages from computer
-### Status messages to computer
+The messages to/from the computer and controllers are strings in JSON format</br>
+{"msg_type":{...}} The msg_type is used. Not all of the data needs to be in the message
+### Messages from engine controller to the computer
+{"systat": {"gear": string, "mux": string, "fsa": bool, "rca": bool}}</br>
+Generates ros2 topic "/engine_systat"</br>
+</br>
+{"rx": {"gear": string, "thr": float, "str": float}}</br>
+Generates ros2 topic "/engine_rx"</br>
+</br>
+
+### Messages to the engine controller from computer
+
 

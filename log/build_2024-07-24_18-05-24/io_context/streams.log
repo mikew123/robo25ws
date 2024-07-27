@@ -1,0 +1,36 @@
+[0.013s] Invoking command in '/home/mikew/robo25ws/build/io_context': CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/robo25ws/install/udp_driver:/home/mikew/robo25ws/install/serial_driver:/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble /usr/bin/cmake --build /home/mikew/robo25ws/build/io_context -- -j8 -l8
+[0.079s] [ 22%] Built target gtest_main
+[0.084s] [ 44%] Built target gtest
+[0.091s] [ 77%] Built target io_context
+[0.119s] [100%] Built target test_io_context
+[0.131s] Invoked command in '/home/mikew/robo25ws/build/io_context' returned '0': CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/robo25ws/install/udp_driver:/home/mikew/robo25ws/install/serial_driver:/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble /usr/bin/cmake --build /home/mikew/robo25ws/build/io_context -- -j8 -l8
+[0.173s] Invoking command in '/home/mikew/robo25ws/build/io_context': CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/robo25ws/install/udp_driver:/home/mikew/robo25ws/install/serial_driver:/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble /usr/bin/cmake --install /home/mikew/robo25ws/build/io_context
+[0.181s] -- Install configuration: ""
+[0.181s] -- Execute custom install script
+[0.182s] -- Up-to-date symlink: /home/mikew/robo25ws/install/io_context/include/io_context/common.hpp
+[0.182s] -- Up-to-date symlink: /home/mikew/robo25ws/install/io_context/include/io_context/io_context.hpp
+[0.182s] -- Up-to-date symlink: /home/mikew/robo25ws/install/io_context/include/msg_converters/converters.hpp
+[0.182s] -- Up-to-date symlink: /home/mikew/robo25ws/install/io_context/include/msg_converters/std_msgs.hpp
+[0.182s] -- Up-to-date symlink: /home/mikew/robo25ws/install/io_context/include/msg_converters/udp_msgs.hpp
+[0.183s] -- Up-to-date symlink: /home/mikew/robo25ws/install/io_context/share/io_context/environment/library_path.sh
+[0.183s] -- Up-to-date symlink: /home/mikew/robo25ws/install/io_context/share/io_context/environment/library_path.dsv
+[0.183s] -- Up-to-date symlink: /home/mikew/robo25ws/install/io_context/lib/libio_context.so
+[0.183s] -- Up-to-date symlink: /home/mikew/robo25ws/install/io_context/share/ament_index/resource_index/package_run_dependencies/io_context
+[0.184s] -- Up-to-date symlink: /home/mikew/robo25ws/install/io_context/share/ament_index/resource_index/parent_prefix_path/io_context
+[0.184s] -- Up-to-date symlink: /home/mikew/robo25ws/install/io_context/share/io_context/environment/ament_prefix_path.sh
+[0.184s] -- Up-to-date symlink: /home/mikew/robo25ws/install/io_context/share/io_context/environment/ament_prefix_path.dsv
+[0.184s] -- Up-to-date symlink: /home/mikew/robo25ws/install/io_context/share/io_context/environment/path.sh
+[0.184s] -- Up-to-date symlink: /home/mikew/robo25ws/install/io_context/share/io_context/environment/path.dsv
+[0.185s] -- Up-to-date symlink: /home/mikew/robo25ws/install/io_context/share/io_context/local_setup.bash
+[0.185s] -- Up-to-date symlink: /home/mikew/robo25ws/install/io_context/share/io_context/local_setup.sh
+[0.185s] -- Up-to-date symlink: /home/mikew/robo25ws/install/io_context/share/io_context/local_setup.zsh
+[0.185s] -- Up-to-date symlink: /home/mikew/robo25ws/install/io_context/share/io_context/local_setup.dsv
+[0.185s] -- Symlinking: /home/mikew/robo25ws/install/io_context/share/io_context/package.dsv
+[0.195s] -- Up-to-date symlink: /home/mikew/robo25ws/install/io_context/share/ament_index/resource_index/packages/io_context
+[0.195s] -- Up-to-date symlink: /home/mikew/robo25ws/install/io_context/share/io_context/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.195s] -- Up-to-date symlink: /home/mikew/robo25ws/install/io_context/share/io_context/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.195s] -- Up-to-date symlink: /home/mikew/robo25ws/install/io_context/share/io_context/cmake/ament_cmake_export_libraries-extras.cmake
+[0.196s] -- Up-to-date symlink: /home/mikew/robo25ws/install/io_context/share/io_context/cmake/io_contextConfig.cmake
+[0.196s] -- Up-to-date symlink: /home/mikew/robo25ws/install/io_context/share/io_context/cmake/io_contextConfig-version.cmake
+[0.196s] -- Up-to-date symlink: /home/mikew/robo25ws/install/io_context/share/io_context/package.xml
+[0.198s] Invoked command in '/home/mikew/robo25ws/build/io_context' returned '0': CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/robo25ws/install/udp_driver:/home/mikew/robo25ws/install/serial_driver:/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble /usr/bin/cmake --install /home/mikew/robo25ws/build/io_context

@@ -1,0 +1,133 @@
+[0.012s] Invoking command in '/home/mikew/robo25ws/build/serial_driver': CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/robo25ws/install/udp_driver:/home/mikew/robo25ws/install/serial_driver:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:/home/mikew/robo25ws/install/udp_driver/lib:/home/mikew/robo25ws/install/serial_driver/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/mikew/robo25ws/build/serial_driver -- -j8 -l8
+[0.086s] [ 20%] Built target serial_bridge
+[0.091s] [ 40%] Built target lifecycle_service_client
+[0.097s] [ 70%] Built target serial_driver
+[0.116s] [35m[1mConsolidate compiler generated dependencies of target serial_driver_nodes[0m
+[0.155s] [ 80%] [32mBuilding CXX object CMakeFiles/serial_driver_nodes.dir/src/lifecycle_service_client.cpp.o[0m
+[2.620s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[2.620s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[2.621s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[2.621s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[2.621s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[2.621s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[2.621s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[2.621s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[2.621s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.622s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.622s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.622s]                  from [01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:25[m[K:
+[2.622s] [01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:[m[K In member function ‘[01m[Kunsigned int LifecycleServiceClient::get_state(std::chrono::seconds)[m[K’:
+[2.622s] [01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:145:23:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 5 has type ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[2.622s]   145 |         get_logger(), [01;35m[K"Server time out while getting current state for node %s"[m[K, lifecycle_node);
+[2.622s]       |                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.622s] [01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:145:78:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[2.622s]   145 | r(), "Server time out while getting current state for node [01;36m[K%s[m[K", lifecycle_node);
+[2.622s]       |                                                            [01;36m[K~^[m[K
+[2.622s]       |                                                             [01;36m[K|[m[K
+[2.622s]       |                                                             [01;36m[Kchar*[m[K
+[2.622s] 
+[2.622s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[2.622s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[2.623s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[2.623s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[2.623s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[2.623s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[2.623s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[2.623s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[2.623s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.623s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.623s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.623s]                  from [01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:25[m[K:
+[2.623s] [01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:152:23:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 5 has type ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[2.623s]   152 |         get_logger(), [01;35m[K"Node %s has current state %s."[m[K,
+[2.623s]       |                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.623s] [01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:152:30:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[2.623s]   152 |         get_logger(), "Node [01;36m[K%s[m[K has current state %s.",
+[2.623s]       |                             [01;36m[K~^[m[K
+[2.623s]       |                              [01;36m[K|[m[K
+[2.624s]       |                              [01;36m[Kchar*[m[K
+[2.624s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[2.624s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[2.624s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[2.624s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[2.624s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[2.624s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[2.624s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[2.624s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[2.624s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.625s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.625s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.625s]                  from [01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:25[m[K:
+[2.625s] [01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:157:23:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 5 has type ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[2.625s]   157 |         get_logger(), [01;35m[K"Failed to get current state for node %s"[m[K, lifecycle_node);
+[2.625s]       |                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.625s] [01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:157:62:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[2.625s]   157 |        get_logger(), "Failed to get current state for node [01;36m[K%s[m[K", lifecycle_node);
+[2.625s]       |                                                            [01;36m[K~^[m[K
+[2.625s]       |                                                             [01;36m[K|[m[K
+[2.625s]       |                                                             [01;36m[Kchar*[m[K
+[2.625s] 
+[2.626s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[2.626s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[2.626s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[2.626s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[2.626s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[2.626s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[2.626s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[2.626s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[2.626s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.626s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.626s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.626s]                  from [01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:25[m[K:
+[2.626s] [01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:[m[K In member function ‘[01m[Kbool LifecycleServiceClient::change_state(uint8_t, std::chrono::seconds)[m[K’:
+[2.626s] [01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:203:23:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 5 has type ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[2.626s]   203 |         get_logger(), [01;35m[K"Server time out while getting current state for node %s"[m[K, lifecycle_node);
+[2.626s]       |                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.626s] [01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:203:78:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[2.627s]   203 | r(), "Server time out while getting current state for node [01;36m[K%s[m[K", lifecycle_node);
+[2.627s]       |                                                            [01;36m[K~^[m[K
+[2.627s]       |                                                             [01;36m[K|[m[K
+[2.627s]       |                                                             [01;36m[Kchar*[m[K
+[2.627s] 
+[4.509s] [ 90%] [32m[1mLinking CXX shared library libserial_driver_nodes.so[0m
+[5.250s] [100%] Built target serial_driver_nodes
+[5.263s] Invoked command in '/home/mikew/robo25ws/build/serial_driver' returned '0': CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/robo25ws/install/udp_driver:/home/mikew/robo25ws/install/serial_driver:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:/home/mikew/robo25ws/install/udp_driver/lib:/home/mikew/robo25ws/install/serial_driver/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/mikew/robo25ws/build/serial_driver -- -j8 -l8
+[5.310s] Invoking command in '/home/mikew/robo25ws/build/serial_driver': CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/robo25ws/install/udp_driver:/home/mikew/robo25ws/install/serial_driver:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:/home/mikew/robo25ws/install/udp_driver/lib:/home/mikew/robo25ws/install/serial_driver/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/mikew/robo25ws/build/serial_driver
+[5.318s] -- Install configuration: ""
+[5.318s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/lib/serial_driver/serial_bridge
+[5.319s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/lib/serial_driver/lifecycle_service_client
+[5.319s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/include
+[5.319s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/include/serial_driver
+[5.320s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/include/serial_driver/serial_port.hpp
+[5.320s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/include/serial_driver/serial_driver.hpp
+[5.320s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/include/serial_driver/visibility_control.hpp
+[5.320s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/include/serial_driver/serial_bridge_node.hpp
+[5.320s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/library_path.sh
+[5.320s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/library_path.dsv
+[5.320s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/lib/libserial_driver.so
+[5.320s] -- Installing: /home/mikew/robo25ws/install/serial_driver/lib/libserial_driver_nodes.so
+[5.338s] -- Set runtime path of "/home/mikew/robo25ws/install/serial_driver/lib/libserial_driver_nodes.so" to ""
+[5.338s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/launch
+[5.338s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/launch/serial_driver_bridge_node.launch.py
+[5.338s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/params
+[5.338s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/params/example.params.yaml
+[5.339s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/ament_index/resource_index/package_run_dependencies/serial_driver
+[5.339s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/ament_index/resource_index/parent_prefix_path/serial_driver
+[5.339s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/ament_prefix_path.sh
+[5.339s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/ament_prefix_path.dsv
+[5.339s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/path.sh
+[5.339s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/environment/path.dsv
+[5.339s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/local_setup.bash
+[5.339s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/local_setup.sh
+[5.340s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/local_setup.zsh
+[5.340s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/local_setup.dsv
+[5.340s] -- Installing: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/package.dsv
+[5.340s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/ament_index/resource_index/packages/serial_driver
+[5.340s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/ament_index/resource_index/rclcpp_components/serial_driver
+[5.340s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.340s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.340s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/cmake/ament_cmake_export_libraries-extras.cmake
+[5.340s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/cmake/serial_driverConfig.cmake
+[5.341s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/cmake/serial_driverConfig-version.cmake
+[5.341s] -- Up-to-date: /home/mikew/robo25ws/install/serial_driver/share/serial_driver/package.xml
+[5.342s] Invoked command in '/home/mikew/robo25ws/build/serial_driver' returned '0': CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/home/mikew/robo25ws/install/udp_driver:/home/mikew/robo25ws/install/serial_driver:/home/mikew/robo25ws/install/robo25_stuff:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:/home/mikew/robo25ws/install/udp_driver/lib:/home/mikew/robo25ws/install/serial_driver/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/mikew/robo25ws/build/serial_driver

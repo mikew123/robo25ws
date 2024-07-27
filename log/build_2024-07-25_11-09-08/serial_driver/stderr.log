@@ -1,0 +1,16 @@
+[01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:349:3:[m[K [01;31m[Kerror: [m[K‘[01m[Km_device_name[m[K’ was not declared in this scope
+  349 |   [01;31m[Km_device_name[m[K = declare_parameter<std::string>("device_name", "");
+      |   [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:349:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kdeclare_parameter[m[K’ was not declared in this scope
+  349 |   m_device_name = [01;31m[Kdeclare_parameter[m[K<std::string>("device_name", "");
+      |                   [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:349:48:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+  349 |   m_device_name = declare_parameter<std::string[01;31m[K>[m[K("device_name", "");
+      |                                                [01;31m[K^[m[K
+[01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:349:50:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+  349 |   m_device_name = declare_parameter<std::string>([01;35m[K"device_name"[m[K, "");
+      |                                                  [01;35m[K^~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/serial_driver_nodes.dir/build.make:90: CMakeFiles/serial_driver_nodes.dir/src/lifecycle_service_client.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/serial_driver_nodes.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

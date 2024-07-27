@@ -1,0 +1,23 @@
+[0.011s] Invoking command in '/home/mikew/robo25ws/build/serial_driver': AMENT_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/mikew/robo25ws/build/serial_driver -- -j8 -l8
+[0.086s] [ 20%] Built target lifecycle_service_client
+[0.093s] [ 50%] Built target serial_driver
+[0.095s] [ 70%] Built target serial_bridge
+[0.115s] [35m[1mConsolidate compiler generated dependencies of target serial_driver_nodes[0m
+[0.148s] [ 80%] [32mBuilding CXX object CMakeFiles/serial_driver_nodes.dir/src/lifecycle_service_client.cpp.o[0m
+[2.459s] [01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:[m[K In member function ‘[01m[Kvoid LifecycleServiceClient::init()[m[K’:
+[2.459s] [01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:79:49:[m[K [01;31m[Kerror: [m[Kinvalid operands of types ‘[01m[Kconst char* const[m[K’ and ‘[01m[Kconst char [11][m[K’ to binary ‘[01m[Koperator+[m[K’
+[2.459s]    79 |     char * node_get_state_topic = [32m[Klifecycle_node[m[K[01;31m[K+[m[K[34m[K"/get_state"[m[K;
+[2.459s]       |                                   [32m[K~~~~~~~~~~~~~~[m[K[01;31m[K^[m[K[34m[K~~~~~~~~~~~~[m[K
+[2.459s]       |                                   [32m[K|[m[K              [34m[K|[m[K
+[2.459s]       |                                   [32m[K|[m[K              [34m[Kconst char [11][m[K
+[2.459s]       |                                   [32m[Kconst char* const[m[K
+[2.459s] [01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:80:52:[m[K [01;31m[Kerror: [m[Kinvalid operands of types ‘[01m[Kconst char* const[m[K’ and ‘[01m[Kconst char [14][m[K’ to binary ‘[01m[Koperator+[m[K’
+[2.459s]    80 |     char * node_change_state_topic = [32m[Klifecycle_node[m[K[01;31m[K+[m[K[34m[K"/change_state"[m[K;
+[2.459s]       |                                      [32m[K~~~~~~~~~~~~~~[m[K[01;31m[K^[m[K[34m[K~~~~~~~~~~~~~~~[m[K
+[2.459s]       |                                      [32m[K|[m[K              [34m[K|[m[K
+[2.459s]       |                                      [32m[K|[m[K              [34m[Kconst char [14][m[K
+[2.459s]       |                                      [32m[Kconst char* const[m[K
+[3.298s] gmake[2]: *** [CMakeFiles/serial_driver_nodes.dir/build.make:90: CMakeFiles/serial_driver_nodes.dir/src/lifecycle_service_client.cpp.o] Error 1
+[3.298s] gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/serial_driver_nodes.dir/all] Error 2
+[3.299s] gmake: *** [Makefile:146: all] Error 2
+[3.301s] Invoked command in '/home/mikew/robo25ws/build/serial_driver' returned '2': AMENT_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mikew/robo25ws/install/io_context:/home/mikew/robo25ws/install/asio_cmake_module:/opt/ros/humble LD_LIBRARY_PATH=/home/mikew/robo25ws/install/io_context/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/mikew/robo25ws/build/serial_driver -- -j8 -l8
