@@ -42,7 +42,7 @@ class EngineNode(Node):
         if self.sensor_serial_port.in_waiting > 0:
             try :
                 received_data = self.sensor_serial_port.readline().decode().strip()
-                self.get_logger().info(f"Received engine json: {received_data}")
+                #self.get_logger().info(f"Received engine json: {received_data}")
             except Exception as ex:
                 self.get_logger().error(f"Engine serial read failure : {ex}")
                 return
@@ -64,7 +64,7 @@ class EngineNode(Node):
                     drv = packet.get("rx")
                     drv_str = "{\"drv\":"+json.dumps(packet.get("rx"))+"}"
                     #self.sensor_serial_port.write(drv_str.encode())
-                    self.get_logger().info(f"{drv_str=}")  
+                    #self.get_logger().info(f"{drv_str=}")  
                 else :
                     self.get_logger().info(f"Engine serial json unknown tag : {received_data}")
                     return  
@@ -72,7 +72,7 @@ class EngineNode(Node):
                 self.get_logger().error(f"Engine serial json failure {ex} : {received_data}")
                 return
             self.txt = "{}".encode()
-            self.sensor_serial_port.write(self.txt)
+            #self.sensor_serial_port.write(self.txt)
 
     # modes encoded as JSON strings
     def robo25_json_callback(self, msg:String) -> None :
