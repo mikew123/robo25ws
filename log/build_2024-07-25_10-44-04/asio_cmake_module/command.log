@@ -1,4 +1,0 @@
-Invoking command in '/home/mikew/robo25ws/build/asio_cmake_module': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/mikew/robo25ws/build/asio_cmake_module -- -j8 -l8
-Invoked command in '/home/mikew/robo25ws/build/asio_cmake_module' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/mikew/robo25ws/build/asio_cmake_module -- -j8 -l8
-Invoking command in '/home/mikew/robo25ws/build/asio_cmake_module': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/mikew/robo25ws/build/asio_cmake_module
-Invoked command in '/home/mikew/robo25ws/build/asio_cmake_module' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/mikew/robo25ws/build/asio_cmake_module

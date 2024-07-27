@@ -1,8 +1,0 @@
-[01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
-[01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:326:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kprintff[m[K’ was not declared in this scope; did you mean ‘[01m[Kprintf[m[K’?
-  326 |   [01;31m[Kprintff[m[K(stdout, "main");
-      |   [01;31m[K^~~~~~~[m[K
-      |   [32m[Kprintf[m[K
-gmake[2]: *** [CMakeFiles/serial_driver_nodes.dir/build.make:90: CMakeFiles/serial_driver_nodes.dir/src/lifecycle_service_client.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/serial_driver_nodes.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

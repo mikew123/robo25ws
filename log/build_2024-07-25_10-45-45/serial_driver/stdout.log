@@ -1,5 +1,0 @@
-[ 20%] Built target lifecycle_service_client
-[ 50%] Built target serial_driver
-[ 70%] Built target serial_bridge
-[35m[1mConsolidate compiler generated dependencies of target serial_driver_nodes[0m
-[ 80%] [32mBuilding CXX object CMakeFiles/serial_driver_nodes.dir/src/lifecycle_service_client.cpp.o[0m

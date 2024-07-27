@@ -1,7 +1,0 @@
-[01m[K/home/mikew/robo25ws/src/transport_drivers/serial_driver/src/lifecycle_service_client.cpp:20:10:[m[K [01;31m[Kfatal error: [m[KString: No such file or directory
-   20 | #include [01;31m[K<String>[m[K
-      |          [01;31m[K^~~~~~~~[m[K
-compilation terminated.
-gmake[2]: *** [CMakeFiles/serial_driver_nodes.dir/build.make:90: CMakeFiles/serial_driver_nodes.dir/src/lifecycle_service_client.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/serial_driver_nodes.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

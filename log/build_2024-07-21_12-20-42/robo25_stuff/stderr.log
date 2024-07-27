@@ -1,3 +1,0 @@
-/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
-  warnings.warn(
-error: [Errno 17] File exists: '/home/mikew/robo25ws/build/robo25_stuff/resource/robo25_stuff' -> '/home/mikew/robo25ws/install/robo25_stuff/share/ament_index/resource_index/packages/robo25_stuff'
