@@ -112,13 +112,55 @@ The microcontroller firmware is C-code developed using the Arduino IDE. The inte
 The messages to/from the computer and controllers are strings in JSON format</br>
 {"msg_type":{...}} The msg_type is used. Not all of the data needs to be in the message
 ### Messages from engine controller to the computer
-{"systat": {"gear": string, "mux": string, "fsa": bool, "rca": bool}}</br>
+{"systat": {"sft": string, "mux": string, "fsa": bool, "rca": bool}}</br>
+Engine system status</br>
 Generates ros2 topic "/engine_systat"</br>
+- sft> drive gear mode</br>
+  "low" Low speed</br>
+  "high" High speed</br>
+  TODO: idle or neutral</br>
+- mux> RC control mux selection</br>
+  rcvr: RC receiver signals from transmitter can drive</br>
+  comp: Computer can drive</br>
+- fsa> Failsafe active</br>
+  true Failsafe is active, computer can drive</br>
+  false Failsafe is not active, computer drive signals ignored - stopped</br> 
+- rca> Receiver active</br>
+  (not working yet)</br>
 </br>
-{"rx": {"gear": string, "thr": float, "str": float}}</br>
+{"rx": {"sft": string, "thr": float, "str": float}}</br>
+Signals decoded from the transmitter via the receiver</br>
 Generates ros2 topic "/engine_rx"</br>
+- sft> Gear shift mode</br>
+  "low" Low speed gear</br>
+  "high" High speed gear</br>
+- thr> Throttle percent, + for forward, - for reverse</br>
+- str> Steering percent, + for right, - for left</br>
 </br>
 
 ### Messages to the engine controller from computer
-
+{"cfg": {"fsa":string, "mux":string, "lbk":"string, "rxe": bool}}</br>
+Configures the engine controller operation modes</br>
+- fsa> Fail safe over-ride</br>
+  true Failsafe is ignored (DANGER)</br>
+  false Failsafe is enforced for computer to drive</br>
+- mux> (not implimented yet)</br>
+  "rcvr" Drives car using the hand held transmitter</br>
+  "comp" Drives car from the RX meassages from the computer</br>
+- lbk> Loopback the decoded signals in the engine controller from the receiver to drive it</br>
+  "wid" loops back the raw PWM width signals</br>
+  "pct" loops back the signals after converting to percent</br>
+  "dis" disables any loopback on the engine controller</br>
+- rxe> Controls the RX data to the computer</br>
+  true enables</br>
+  false disables</br>
+</br>
+{"drv": {"sft":string, "thr":float, "str":float}}</br>
+Drive controls to operate car motion</br>
+- sft> Gear shift mode</br>
+  "low" Low speed gear</br>
+  "high" High speed gear</br>
+- thr> Throttle percent, + for forward, - for reverse</br>
+- str> Steering percent, + for right, - for left</br>
+</br>
 
