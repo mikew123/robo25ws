@@ -96,8 +96,8 @@ float sThrottlePct = 0;
 String sShiftGear = "low";
 
 
-String sFailSafe;
-String sRcMux;
+String sFailSafe = "ena";
+String sRcMux = "rcvr";
 String sLoopback = "off";
 bool sRxEnable = false;
 
@@ -318,7 +318,7 @@ void computerSignals() {
 
 // Monitor failsafe mechanism
 void checkFailsafe() {
-  if (muxSelRcvr == true) {
+  if ((muxSelRcvr == true) || (sFailSafe == "dis")) {
     failsafeActive = false;
   } else  {
     // computer is selected for control
@@ -479,19 +479,7 @@ void serialRx() {
     jsonParse(incomingString.c_str());
   }
 }
-
-bool jsonParse(const char *jsonStr) {
-  //Serial.println(jsonStr);
-
-  JSONVar myObject = JSON.parse(jsonStr);
-
-  if (JSON.typeof(myObject) == "undefined") {
-    Serial.println("Parsing JSON string input failed!");
-    return false;
-  }
-
-  if (myObject.hasOwnProperty("drv")) {
-    JSONVar drvObject = myObject["drv"];
+bool jsonParseDrv(JSONVar drvObject) {
 
     if (drvObject.hasOwnProperty("str")) {
       sSteerPct = (double) drvObject["str"];
@@ -510,11 +498,11 @@ bool jsonParse(const char *jsonStr) {
       //Serial.print("gear = ");
       //Serial.println(sShiftGear);
     }
-  }
-  
-  if (myObject.hasOwnProperty("cfg")) {
-    JSONVar cfgObject = myObject["cfg"];
-    
+
+  return true;
+}
+
+bool jsonParseCfg(JSONVar cfgObject) {
     // Failsafe 
     if (cfgObject.hasOwnProperty("fsa")) {
       sFailSafe = (String) cfgObject["fsa"];
@@ -539,10 +527,30 @@ bool jsonParse(const char *jsonStr) {
     // receiver RX msg enable
     if (cfgObject.hasOwnProperty("rxe")) {
       sRxEnable = (bool) cfgObject["rxe"];
-      //Serial.print("rx enable = ");
-      //Serial.println(sRxEnable);
+      // Serial.print("rx enable = ");
+      // Serial.println(sRxEnable);
     }
-  }
 
   return true;
+}
+
+bool jsonParse(const char *jsonStr) {
+  //Serial.println(jsonStr);
+
+  JSONVar myObject = JSON.parse(jsonStr);
+
+  if (JSON.typeof(myObject) == "undefined") {
+    Serial.println("Parsing JSON string input failed!");
+    return false;
+  }
+
+  if (myObject.hasOwnProperty("drv")) {
+    return jsonParseDrv(myObject["drv"]);
+  }
+  
+  if (myObject.hasOwnProperty("cfg")) {
+    return jsonParseCfg(myObject["cfg"]);
+  }
+
+  return false;
 }
