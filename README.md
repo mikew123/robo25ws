@@ -112,7 +112,7 @@ The microcontroller firmware is C-code developed using the Arduino IDE. The inte
 The messages to/from the computer and controllers are strings in JSON format</br>
 {"msg_type":{...}} The msg_type is used. Not all of the data needs to be in the message
 ### Messages from engine controller to the computer
-{"systat": {"sft": string, "mux": string, "fsa": bool, "rca": bool}}</br>
+#### {"systat": {"sft": string, "mux": string, "fsa": bool, "rca": bool}}</br>
 Engine system status</br>
 Generates ros2 topic "/engine_systat"</br>
 - sft> drive gear mode</br>
@@ -127,8 +127,7 @@ Generates ros2 topic "/engine_systat"</br>
   false Failsafe is not active, computer drive signals ignored - stopped</br> 
 - rca> Receiver active</br>
   (not working yet)</br>
-</br>
-{"rx": {"sft": string, "thr": float, "str": float}}</br>
+#### {"rx": {"sft": string, "thr": float, "str": float}}</br>
 Signals decoded from the transmitter via the receiver</br>
 Generates ros2 topic "/engine_rx"</br>
 - sft> Gear shift mode</br>
@@ -136,10 +135,9 @@ Generates ros2 topic "/engine_rx"</br>
   "high" High speed gear</br>
 - thr> Throttle percent, + for forward, - for reverse</br>
 - str> Steering percent, + for right, - for left</br>
-</br>
 
 ### Messages to the engine controller from computer
-{"cfg": {"fsa":string, "mux":string, "lbk":"string, "rxe": bool}}</br>
+#### {"cfg": {"fsa":string, "mux":string, "lbk":"string, "rxe": bool}}</br>
 Configures the engine controller operation modes</br>
 - fsa> Fail safe over-ride</br>
   true Failsafe is ignored (DANGER)</br>
@@ -154,8 +152,8 @@ Configures the engine controller operation modes</br>
 - rxe> Controls the RX data to the computer</br>
   true enables</br>
   false disables</br>
-</br>
-{"drv": {"sft":string, "thr":float, "str":float}}</br>
+
+#### {"drv": {"sft":string, "thr":float, "str":float}}</br>
 Drive controls to operate car motion</br>
 - sft> Gear shift mode</br>
   "low" Low speed gear</br>
