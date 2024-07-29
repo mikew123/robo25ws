@@ -21,7 +21,7 @@ class EngineNode(Node):
     def __init__(self):
         super().__init__('engine_node')
 
-        self.sensor_serial_port = serial.Serial(self.serial_port, 1000000)
+        self.engine_serial_port = serial.Serial(self.serial_port, 1000000)
         
         self.engine_systat_publisher = self.create_publisher(String, 'engine_systat', 10)
         self.engine_rx_publisher = self.create_publisher(String, 'engine_rx', 10)
@@ -31,18 +31,20 @@ class EngineNode(Node):
         self.timer = self.create_timer((1.0/self.timerRateHz), self.timer_callback)
         
         # configure interface
-        # DEBUG loopback Enable receiver RX data
-        self.sensor_serial_port.write("{\"cfg\":{\"rxe\":true}}".encode())
+        self.engine_serial_port.write("{\"cfg\":{\"rxe\":false, \"fsa\":\"ena\"}}".encode())
+        # # DEBUG loopback Enable receiver RX data
+        # self.engine_serial_port.write("{\"cfg\":{\"rxe\":true, \"fsa\":\"dis\"}}".encode())
+        # self.engine_rx_subscription = self.create_subscription(String, 'engine_rx', self.engine_rx_callback, 10)
         
         self.get_logger().info(f"EngineNode Started")
 
     # check serial port at timerRateHz and parse out messages to publish
     def timer_callback(self):
         # Check if a line has been received on the serial port
-        if self.sensor_serial_port.in_waiting > 0:
+        if self.engine_serial_port.in_waiting > 0:
             try :
-                received_data = self.sensor_serial_port.readline().decode().strip()
-                self.get_logger().info(f"Received engine json: {received_data}")
+                received_data = self.engine_serial_port.readline().decode().strip()
+                #self.get_logger().info(f"Received engine json: {received_data}")
             except Exception as ex:
                 self.get_logger().error(f"Engine serial read failure : {ex}")
                 return
@@ -60,19 +62,26 @@ class EngineNode(Node):
                     msg.data = rx
                     self.engine_rx_publisher.publish(msg)
                     
-                    #debug loopback
-                    drv = packet.get("rx")
-                    drv_str = "{\"drv\":"+json.dumps(packet.get("rx"))+"}"
-                    #self.sensor_serial_port.write(drv_str.encode())
-                    self.get_logger().info(f"{drv_str=}")  
+                    # #debug loopback
+                    # drv = packet.get("rx")
+                    # drv_str = "{\"drv\":"+json.dumps(packet.get("rx"))+"}"
+                    # self.engine_serial_port.write((drv_str+"\n").encode())
+                    # self.get_logger().info(f"{drv_str=}")  
                 else :
                     self.get_logger().info(f"Engine serial json unknown tag : {received_data}")
                     return  
             except Exception as ex:
                 self.get_logger().error(f"Engine serial json failure {ex} : {received_data}")
                 return
-            self.txt = "{}".encode()
-            self.sensor_serial_port.write(self.txt)
+
+    # # Loopback test
+    # def engine_rx_callback(self, msg:String) -> None :
+    #     packet_bytes = msg.data
+    #     packet = json.loads(packet_bytes)
+    #     drvCmd = {"drv": packet}
+    #     drvStr = json.dumps(drvCmd)
+    #     self.engine_serial_port.write((drvStr+"\n").encode())
+    #     self.get_logger().info(f"{drvStr=}")  
 
     # modes encoded as JSON strings
     def robo25_json_callback(self, msg:String) -> None :
@@ -81,13 +90,13 @@ class EngineNode(Node):
 
         try :
             packet = json.loads(packet_bytes)
-            if "run_state" in packet :
+            if "engine_cfg" in packet :
                 if self.nav_modeReady == False :
                     self.nav_mode = packet_bytes
                     self.nav_modeReady = True
                 
         except Exception as ex:
-            self.get_logger().error(f"watch serial robo24_json_callback exception {ex}")
+            self.get_logger().error(f"watch serial robo25_json_callback exception {ex}")
 
 def main(args=None):
     rclpy.init(args=args)

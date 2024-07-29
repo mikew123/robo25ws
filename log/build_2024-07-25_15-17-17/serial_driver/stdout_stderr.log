@@ -1,9 +1,0 @@
-[31mCMake Error at CMakeLists.txt:47:
-  Parse error.  Expected "(", got newline with text "
-
-  ".
-
-[0m
--- Configuring incomplete, errors occurred!
-See also "/home/mikew/robo25ws/build/serial_driver/CMakeFiles/CMakeOutput.log".
-gmake: *** [Makefile:420: cmake_check_build_system] Error 1
