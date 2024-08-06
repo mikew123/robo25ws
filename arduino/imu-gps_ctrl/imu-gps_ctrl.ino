@@ -169,9 +169,9 @@ void procGps() {
 
     JSONVar jsonObject;
     jsonObject["gps"]["lat"] = myGNSS.getLatitude();
-    jsonObject["imu"]["lon"] = myGNSS.getLongitude();
-    jsonObject["imu"]["alt"] = myGNSS.getAltitude();
-    jsonObject["imu"]["siv"] = myGNSS.getSIV();
+    jsonObject["gps"]["lon"] = myGNSS.getLongitude();
+    jsonObject["gps"]["alt"] = myGNSS.getAltitude();
+    jsonObject["gps"]["siv"] = myGNSS.getSIV();
     Serial.println(jsonObject);
 
   }
@@ -230,4 +230,3 @@ void json_SH2_ARVR_STABILIZED_RV(sh2_SensorValue_t sensorValue) {
   jsonObject["imu"]["rvec"]["real"] = sensorValue.un.arvrStabilizedRV.real;
   Serial.println(jsonObject);
 }
-
