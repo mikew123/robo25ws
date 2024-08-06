@@ -21,6 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
             'engine_node = robo25_stuff.engine_node:main',
+            'imu_gps_node = robo25_stuff.imu_gps_node:main',
         ],
     },
 )

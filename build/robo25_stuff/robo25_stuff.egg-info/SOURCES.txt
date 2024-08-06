@@ -4,6 +4,7 @@ setup.py
 resource/robo25_stuff
 robo25_stuff/__init__.py
 robo25_stuff/engine_node.py
+robo25_stuff/imu_gps_node.py
 robo25_stuff.egg-info/PKG-INFO
 robo25_stuff.egg-info/SOURCES.txt
 robo25_stuff.egg-info/dependency_links.txt
