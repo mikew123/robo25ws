@@ -15,8 +15,9 @@ class ImuGpsNode(Node):
 
     timerRateHz = 110.0; # Rate to check serial port for messages
 
-    # Hane not figured out how to get bu-id in Docker yet
-    serial_port = "/dev/ttyACM1"
+    # Have not figured out how to get by-id in Docker yet
+    #serial_port = "/dev/ttyACM1"
+    serial_port = "/dev/ttyACM0"
 
     # Dont know how to enable by-id on the Docker container
     #serial_port:str = "/dev/serial/by-id/usb-Waveshare_RP2040_Zero_E6625887D3477130-if00"
