@@ -86,6 +86,11 @@ void setupGps(void) {
 
   myGNSS.setUART1Output(COM_TYPE_UBX); //Set the UART port to output UBX only
   myGNSS.setMeasurementRate(g_gpsInterval);
+
+  //myGNSS.setDynamicModel(DYN_MODEL_PORTABLE);
+  myGNSS.setDynamicModel(DYN_MODEL_PEDESTRIAN);
+  //myGNSS.setDynamicModel(DYN_MODEL_AUTOMOBILE);
+
 }
 
 void setup(void) {
@@ -158,22 +163,14 @@ bool jsonParseCfg(JSONVar cfgObject) {
 void procGps() {
   if (g_gpsEna == false) return;
 
-  static unsigned long lastTime = 0;
-
-  //Query module 10 per second.
-  //The module (blocking) only responds when a new position is available
-  unsigned long currTime = millis();
-  if (currTime - lastTime > g_gpsInterval)
-  {
-    lastTime = currTime;
-
+  // Check to see if data is available
+  if (myGNSS.getPVT()) {
     JSONVar jsonObject;
     jsonObject["gps"]["lat"] = myGNSS.getLatitude();
     jsonObject["gps"]["lon"] = myGNSS.getLongitude();
     jsonObject["gps"]["alt"] = myGNSS.getAltitude();
     jsonObject["gps"]["siv"] = myGNSS.getSIV();
     Serial.println(jsonObject);
-
   }
 }
 
