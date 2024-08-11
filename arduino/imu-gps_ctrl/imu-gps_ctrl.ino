@@ -25,6 +25,9 @@ bool g_gpsEna = false;
 bool g_cpsEna = false;
 
 int g_gpsInterval = 100;
+dynModel g_dyn_model = DYN_MODEL_PORTABLE;
+//dynModel g_dyn_model = DYN_MODEL_PEDESTRIAN;
+//dynModel g_dyn_model = DYN_MODEL_AUTOMOTIVE;
 
 void setReports(void) {
   uint32_t period = 100000; // 10 Hz
@@ -87,9 +90,7 @@ void setupGps(void) {
   myGNSS.setUART1Output(COM_TYPE_UBX); //Set the UART port to output UBX only
   myGNSS.setMeasurementRate(g_gpsInterval);
 
-  //myGNSS.setDynamicModel(DYN_MODEL_PORTABLE);
-  myGNSS.setDynamicModel(DYN_MODEL_PEDESTRIAN);
-  //myGNSS.setDynamicModel(DYN_MODEL_AUTOMOBILE);
+  myGNSS.setDynamicModel(g_dyn_model);
 
 }
 
@@ -100,7 +101,7 @@ void setup(void) {
 
   Serial.println("IMU + GPS");
   
-  setupImu();
+  //setupImu();
 
   setupGps();
 
