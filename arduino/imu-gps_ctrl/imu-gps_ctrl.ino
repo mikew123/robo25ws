@@ -1,8 +1,11 @@
 #include <Arduino.h>
-#include <Adafruit_BNO08x.h>
 #include <Arduino_JSON.h>
+
+#include <Adafruit_BNO08x.h>
+
 #include <SparkFun_u-blox_GNSS_v3.h> //http://librarymanager/All#SparkFun_u-blox_GNSS_v3
-SFE_UBLOX_GNSS_SERIAL myGNSS;
+
+#include <QMC5883LCompass.h>
 
 // No reset pin for UART
 #define BNO08X_RESET -1
@@ -16,6 +19,11 @@ SFE_UBLOX_GNSS_SERIAL myGNSS;
 #define RX1 5
 
 Adafruit_BNO08x  bno08x(BNO08X_RESET);
+
+SFE_UBLOX_GNSS_SERIAL myGNSS;
+
+QMC5883LCompass compass;
+
 sh2_SensorValue_t sensorValue;
 
 // Global variables
@@ -94,6 +102,10 @@ void setupGps(void) {
 
 }
 
+void setupCmp(void) {
+  compass.init();
+}
+
 void setup(void) {
 
   Serial.begin(115200);
@@ -105,6 +117,8 @@ void setup(void) {
 
   setupGps();
 
+  setupCmp();
+  
   delay(10);
 }
 
