@@ -1,11 +1,12 @@
 import rclpy
 import json
 import serial
-
+import math
 from rclpy.node import Node
 from std_msgs.msg import String, Float32MultiArray
 from sensor_msgs.msg import Imu
 from sensor_msgs.msg import NavSatFix
+from geometry_msgs.msg import Pose
 
 class ImuGpsNode(Node):
     '''
@@ -26,6 +27,11 @@ class ImuGpsNode(Node):
     rvelJsonPacket = None
     rvecJsonPacket = None
 
+    gpsCntr    = 0
+    gpsCnt     = 10
+    gpsLatYAcc = 0.0
+    gpsLonXAcc = 0.0
+
     def __init__(self):
         super().__init__('imu_gps_node')
 
@@ -34,12 +40,15 @@ class ImuGpsNode(Node):
         self.imu_test_publisher = self.create_publisher(String, 'imu_test', 10)
         self.imu_msg_publisher = self.create_publisher(Imu, 'imu_msg', 10)
         self.gps_msg_publisher = self.create_publisher(NavSatFix, 'gps_msg', 10)
+        self.gps_pose_publisher = self.create_publisher(Pose, 'gps_pose', 10)
 
+        self.gps_msg_subscription = self.create_subscription(NavSatFix,"gps_msg", self.gps_msg_subscription_callback, 10)
+        
 
         self.timer = self.create_timer((1.0/self.timerRateHz), self.timer_callback)
         
         # configure interface
-        self.imu_gps_serial_port.write("{\"cfg\":{\"imu\":true, \"gps\":true}}".encode())
+        self.imu_gps_serial_port.write("{\"cfg\":{\"imu\":false, \"gps\":true}}".encode())
         
         self.get_logger().info(f"ImuGpsNode Started")
 
@@ -49,7 +58,7 @@ class ImuGpsNode(Node):
         if self.imu_gps_serial_port.in_waiting > 0:
             try :
                 received_data = self.imu_gps_serial_port.readline().decode().strip()
-                #self.get_logger().info(f"Received engine json: {received_data}")
+                self.get_logger().info(f"Received engine json: {received_data}")
             except Exception as ex:
                 self.get_logger().error(f"IMU GPS serial read failure : {ex}")
                 return
@@ -69,8 +78,32 @@ class ImuGpsNode(Node):
             except Exception as ex:
                 self.get_logger().error(f"IMU GPS serial json failure {ex} : {received_data}")
                 return
+    def gps_msg_subscription_callback(self, msg: NavSatFix) -> None:
+        
+        lon = msg.longitude
+        lat = msg.latitude
+        
+        latY = (lat/360)*40007863
+        lonX = ((lon*(math.cos((lat/360)*2*math.pi)))/360)*40075017
+        
+        # Offset relative lat lon to zero at start
+        if self.gpsCntr < self.gpsCnt :
+            self.gpsCntr +=1
+            self.gpsLatYAcc += latY
+            self.gpsLonXAcc += lonX
             
-    def gpsPublish(self, gpsJsonPacket) :        
+        latY = latY - self.gpsLatYAcc/self.gpsCntr
+        lonX = lonX - self.gpsLonXAcc/self.gpsCntr
+        
+        pmsg = Pose()
+        pmsg.position.x = lonX
+        pmsg.position.y = latY
+        
+        self.gps_pose_publisher.publish(pmsg)
+        
+        self.get_logger().info(f"gps_msg_subscription_callback : {latY=} {lonX=}")
+        
+    def gpsPublish(self, gpsJsonPacket) -> None:        
         #self.get_logger().info(f"gpsPublish : {gpsJsonPacket=}")
 
         msg = NavSatFix();

@@ -30,7 +30,7 @@ sh2_SensorValue_t sensorValue;
 
 bool g_imuEna = false;
 bool g_gpsEna = false;
-bool g_cpsEna = false;
+bool g_cmpEna = false;
 
 int g_gpsInterval = 100;
 dynModel g_dyn_model = DYN_MODEL_PORTABLE;
@@ -166,8 +166,8 @@ bool jsonParseCfg(JSONVar cfgObject) {
     g_gpsEna = (bool) cfgObject["gps"];
     retVal = true;
   }
-  if (cfgObject.hasOwnProperty("cps")) {
-    g_cpsEna = (bool) cfgObject["cps"];
+  if (cfgObject.hasOwnProperty("cmp")) {
+    g_cmpEna = (bool) cfgObject["cmp"];
     retVal = true;
   }
   return retVal;
