@@ -18,6 +18,10 @@
 #define TX1 4
 #define RX1 5
 
+// Wire I2C0 pins
+#define SDA0 8
+#define SCL0 9
+
 Adafruit_BNO08x  bno08x(BNO08X_RESET);
 
 SFE_UBLOX_GNSS_SERIAL myGNSS;
@@ -103,7 +107,14 @@ void setupGps(void) {
 }
 
 void setupCmp(void) {
+  // Temp use IMU wires
+  Wire.setSDA(SDA0);
+  Wire.setSCL(SCL0);
   compass.init();
+  compass.setMagneticDeclination(2, 38); // Dallas
+  compass.setSmoothing(10,true);  
+
+  Serial.println("Compass I2C connected");
 }
 
 void setup(void) {
@@ -113,7 +124,7 @@ void setup(void) {
 
   Serial.println("IMU + GPS");
   
-  //setupImu();
+  setupImu();
 
   setupGps();
 
@@ -127,6 +138,7 @@ void loop() {
   serialRx();
   procImu();
   procGps();
+  procCmp();
 }
 
 
@@ -173,12 +185,28 @@ bool jsonParseCfg(JSONVar cfgObject) {
   return retVal;
 }
 
+void procCmp(void) {
+  if(g_cmpEna == false) return;
+
+  int a;
+  
+  // Read compass values
+  compass.read();
+
+  // Return Azimuth reading
+    JSONVar jsonObject;
+    jsonObject["cmp"]["azi"] = compass.getAzimuth();
+
+    Serial.println(jsonObject);
+}
+
 // process the serial port connected to the uBlox GNSS M10Q
 // NOTE: default is 1 msg/sec and 9600 baud
 void procGps() {
   if (g_gpsEna == false) return;
 
   // Check to see if data is available
+
   if (myGNSS.getPVT()) {
     JSONVar jsonObject;
     jsonObject["gps"]["lat"] = myGNSS.getLatitude();
