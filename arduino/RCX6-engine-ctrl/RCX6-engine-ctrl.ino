@@ -247,6 +247,7 @@ void loop()
   // computer signals to servos and motor
   computerSignals();
 
+
   // send a system status message
   sendSystemStatus(loopMillis);
 
@@ -564,6 +565,8 @@ bool jsonParse(const char *jsonStr) {
   if (myObject.hasOwnProperty("id")) {
     JSONVar jsonObject;
     jsonObject["id"] = "engine";
+    Serial.flush(); // ensure it is empty
+    Serial.println(); // terminate any truncated message already transmitted.
     Serial.println(jsonObject);    
     return true;
   }

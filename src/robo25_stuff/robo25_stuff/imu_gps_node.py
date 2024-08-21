@@ -16,13 +16,9 @@ class ImuGpsNode(Node):
     '''
 
     timerRateHz = 110.0; # Rate to check serial port for messages
-
-    # Have not figured out how to get by-id in Docker yet
-    #serial_port = "/dev/ttyACM1"
-    #serial_port = "/dev/ttyACM0"
     
     # Try opening serial ports and checking "id"
-    serialPorts = ("/dev/ttyACM0", "/dev/ttyACM1")
+    serialPorts = ("/dev/ttyACM0", "/dev/ttyACM1", "/dev/ttyACM2", "/dev/ttyACM3")
     serialId = "imu_gps"
     
     # Dont know how to enable by-id on the Docker container
@@ -40,7 +36,6 @@ class ImuGpsNode(Node):
     def __init__(self):
         super().__init__('imu_gps_node')
 
-        #self.imu_gps_serial_port = serial.Serial(self.serial_port, 1000000)
         self.imu_gps_serial_port = self.determineSerialPort(self.serialId)
         if self.imu_gps_serial_port == None :
             self.get_logger().info(f"ImuGpsNode Serial port id {self.serialId} not found - Exit node")

@@ -14,10 +14,8 @@ class EngineNode(Node):
 
     timerRateHz = 220.0; # Rate to check serial port for messages
 
-    #serial_port = "/dev/ttyACM0"
-    
     # Try opening serial ports and checking "id"
-    serialPorts = ("/dev/ttyACM0", "/dev/ttyACM1")
+    serialPorts = ("/dev/ttyACM0", "/dev/ttyACM1", "/dev/ttyACM2", "/dev/ttyACM3")
     serialId = "engine"
 
     # Dont know how to enable by-id on the Docker container
@@ -26,7 +24,6 @@ class EngineNode(Node):
     def __init__(self):
         super().__init__('engine_node')
 
-        #self.engine_serial_port = serial.Serial(self.serial_port, 1000000)
         self.engine_serial_port = self.determineSerialPort(self.serialId)
         if self.engine_serial_port == None :
             self.get_logger().info(f"ImuGpsNode Serial port id {self.serialId} not found - Exit node")
@@ -40,7 +37,7 @@ class EngineNode(Node):
         self.timer = self.create_timer((1.0/self.timerRateHz), self.timer_callback)
         
         # configure interface
-        self.engine_serial_port.write("{\"cfg\":{\"rxe\":false, \"sse\":true, \"fsa\":\"ena\"}}".encode())
+        self.engine_serial_port.write("{\"cfg\":{\"rxe\":true, \"sse\":true, \"fsa\":\"ena\"}}".encode())
         # # DEBUG loopback Enable receiver RX data
         # self.engine_serial_port.write("{\"cfg\":{\"rxe\":true, \"fsa\":\"dis\"}}".encode())
         # self.engine_rx_subscription = self.create_subscription(String, 'engine_rx', self.engine_rx_callback, 10)
@@ -58,7 +55,7 @@ class EngineNode(Node):
                 # read port multiple times checking for "id"
                 for i in range(10):
                     received_data = node_serial_port.readline().decode().strip()
-                    #self.get_logger().info(f"Received engine json: {received_data}")
+                    self.get_logger().info(f"Received engine json: {received_data}")
                     try :
                         packet = json.loads(received_data)
                         if "id" in packet:
