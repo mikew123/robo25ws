@@ -1,6 +1,7 @@
 import rclpy
 import json
 import serial
+import time
 
 from rclpy.node import Node
 from std_msgs.msg import String, Float32MultiArray
@@ -13,7 +14,11 @@ class EngineNode(Node):
 
     timerRateHz = 220.0; # Rate to check serial port for messages
 
-    serial_port = "/dev/ttyACM0"
+    #serial_port = "/dev/ttyACM0"
+    
+    # Try opening serial ports and checking "id"
+    serialPorts = ("/dev/ttyACM0", "/dev/ttyACM1")
+    serialId = "engine"
 
     # Dont know how to enable by-id on the Docker container
     #serial_port:str = "/dev/serial/by-id/usb-Waveshare_RP2040_Zero_E6625887D3477130-if00"
@@ -21,7 +26,11 @@ class EngineNode(Node):
     def __init__(self):
         super().__init__('engine_node')
 
-        self.engine_serial_port = serial.Serial(self.serial_port, 1000000)
+        #self.engine_serial_port = serial.Serial(self.serial_port, 1000000)
+        self.engine_serial_port = self.determineSerialPort(self.serialId)
+        if self.engine_serial_port == None :
+            self.get_logger().info(f"ImuGpsNode Serial port id {self.serialId} not found - Exit node")
+            exit(1)
         
         self.engine_systat_publisher = self.create_publisher(String, 'engine_systat', 10)
         self.engine_rx_publisher = self.create_publisher(String, 'engine_rx', 10)
@@ -31,12 +40,36 @@ class EngineNode(Node):
         self.timer = self.create_timer((1.0/self.timerRateHz), self.timer_callback)
         
         # configure interface
-        self.engine_serial_port.write("{\"cfg\":{\"rxe\":false, \"fsa\":\"ena\"}}".encode())
+        self.engine_serial_port.write("{\"cfg\":{\"rxe\":false, \"sse\":true, \"fsa\":\"ena\"}}".encode())
         # # DEBUG loopback Enable receiver RX data
         # self.engine_serial_port.write("{\"cfg\":{\"rxe\":true, \"fsa\":\"dis\"}}".encode())
         # self.engine_rx_subscription = self.create_subscription(String, 'engine_rx', self.engine_rx_callback, 10)
         
         self.get_logger().info(f"EngineNode Started")
+
+    # check serial ports to find the one that matches the id
+    def determineSerialPort(self, id) :
+        for serial_port in self.serialPorts :
+            try:
+                self.get_logger().info(f"Try {serial_port}")
+                node_serial_port = serial.Serial(serial_port, 1000000, timeout=0.1)
+                node_serial_port.write("{\"id\":0}".encode())
+                time.sleep(1)
+                # read port multiple times checking for "id"
+                for i in range(10):
+                    received_data = node_serial_port.readline().decode().strip()
+                    #self.get_logger().info(f"Received engine json: {received_data}")
+                    try :
+                        packet = json.loads(received_data)
+                        if "id" in packet:
+                            if packet.get("id") == id :
+                                self.get_logger().info(f"Found {id} serial port: {serial_port}")
+                                return node_serial_port
+                    except Exception as ex:
+                        self.get_logger().info(f"Bad json.loads packet {received_data}: {ex}")
+            except Exception as ex:
+                self.get_logger().info(f"Serial port {serial_port} did not open: {ex}")
+        return None
 
     # check serial port at timerRateHz and parse out messages to publish
     def timer_callback(self):

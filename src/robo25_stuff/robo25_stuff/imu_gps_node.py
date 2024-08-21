@@ -2,6 +2,7 @@ import rclpy
 import json
 import serial
 import math
+import time
 from rclpy.node import Node
 from std_msgs.msg import String, Float32MultiArray
 from sensor_msgs.msg import Imu
@@ -22,6 +23,7 @@ class ImuGpsNode(Node):
     
     # Try opening serial ports and checking "id"
     serialPorts = ("/dev/ttyACM0", "/dev/ttyACM1")
+    serialId = "imu_gps"
     
     # Dont know how to enable by-id on the Docker container
     #serial_port:str = "/dev/serial/by-id/usb-Waveshare_RP2040_Zero_E6625887D3477130-if00"
@@ -39,8 +41,11 @@ class ImuGpsNode(Node):
         super().__init__('imu_gps_node')
 
         #self.imu_gps_serial_port = serial.Serial(self.serial_port, 1000000)
-        self.determineSerialPort("imu_gps")
-        
+        self.imu_gps_serial_port = self.determineSerialPort(self.serialId)
+        if self.imu_gps_serial_port == None :
+            self.get_logger().info(f"ImuGpsNode Serial port id {self.serialId} not found - Exit node")
+            exit(1)
+            
         self.imu_test_publisher = self.create_publisher(String, 'imu_test', 10)
         self.imu_msg_publisher = self.create_publisher(Imu, 'imu_msg', 10)
         self.gps_msg_publisher = self.create_publisher(NavSatFix, 'gps_msg', 10)
@@ -56,25 +61,37 @@ class ImuGpsNode(Node):
         
         self.get_logger().info(f"ImuGpsNode Started")
 
+    # check serial ports to find the one that matches the id
     def determineSerialPort(self, id) :
-        # check serial ports to find the one that matches the id
         for serial_port in self.serialPorts :
             try:
                 self.get_logger().info(f"Try {serial_port}")
-                self.imu_gps_serial_port = serial.Serial(serial_port, 1000000)
-                self.imu_gps_serial_port.write("{\"id\":0}".encode())
-                received_data = self.imu_gps_serial_port.readline().decode().strip()
-                self.get_logger().info(f"Received engine json: {received_data}")
+                node_serial_port = serial.Serial(serial_port, 1000000, timeout=0.1)
+                node_serial_port.write("{\"id\":0}".encode())
+                time.sleep(1)
+                # read port multiple times checking for "id"
+                for i in range(10):
+                    received_data = node_serial_port.readline().decode().strip()
+                    #self.get_logger().info(f"Received engine json: {received_data}")
+                    try :
+                        packet = json.loads(received_data)
+                        if "id" in packet:
+                            if packet.get("id") == id :
+                                self.get_logger().info(f"Found {id} serial port: {serial_port}")
+                                return node_serial_port
+                    except Exception as ex:
+                        self.get_logger().info(f"Bad json.loads packet {received_data}: {ex}")
             except Exception as ex:
                 self.get_logger().info(f"Serial port {serial_port} did not open: {ex}")
-        
+        return None
+    
     # check serial port at timerRateHz and parse out messages to publish
     def timer_callback(self):
         # Check if a line has been received on the serial port
         if self.imu_gps_serial_port.in_waiting > 0:
             try :
                 received_data = self.imu_gps_serial_port.readline().decode().strip()
-                self.get_logger().info(f"Received engine json: {received_data}")
+                #self.get_logger().info(f"Received engine json: {received_data}")
             except Exception as ex:
                 self.get_logger().error(f"IMU GPS serial read failure : {ex}")
                 return
@@ -94,6 +111,7 @@ class ImuGpsNode(Node):
             except Exception as ex:
                 self.get_logger().error(f"IMU GPS serial json failure {ex} : {received_data}")
                 return
+            
     def gps_msg_subscription_callback(self, msg: NavSatFix) -> None:
         
         lon = msg.longitude
@@ -117,7 +135,7 @@ class ImuGpsNode(Node):
         
         self.gps_pose_publisher.publish(pmsg)
         
-        self.get_logger().info(f"gps_msg_subscription_callback : {latY=} {lonX=}")
+        #self.get_logger().info(f"gps_msg_subscription_callback : {latY=} {lonX=}")
         
     def gpsPublish(self, gpsJsonPacket) -> None:        
         #self.get_logger().info(f"gpsPublish : {gpsJsonPacket=}")
