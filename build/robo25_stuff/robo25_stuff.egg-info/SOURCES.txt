@@ -1,6 +1,13 @@
 package.xml
 setup.cfg
 setup.py
+../../build/robo25_stuff/robo25_stuff.egg-info/PKG-INFO
+../../build/robo25_stuff/robo25_stuff.egg-info/SOURCES.txt
+../../build/robo25_stuff/robo25_stuff.egg-info/dependency_links.txt
+../../build/robo25_stuff/robo25_stuff.egg-info/entry_points.txt
+../../build/robo25_stuff/robo25_stuff.egg-info/requires.txt
+../../build/robo25_stuff/robo25_stuff.egg-info/top_level.txt
+../../build/robo25_stuff/robo25_stuff.egg-info/zip-safe
 resource/robo25_stuff
 robo25_stuff/__init__.py
 robo25_stuff/engine_node.py

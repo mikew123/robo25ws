@@ -164,6 +164,13 @@ bool jsonParse(const char *jsonStr) {
   if (myObject.hasOwnProperty("cfg")) {
     return jsonParseCfg(myObject["cfg"]);
   }
+  
+  if (myObject.hasOwnProperty("id")) {
+    JSONVar jsonObject;
+    jsonObject["id"] = "imu_gps";
+    Serial.println(jsonObject);    
+    return true;
+  }
 
   return false;
 }

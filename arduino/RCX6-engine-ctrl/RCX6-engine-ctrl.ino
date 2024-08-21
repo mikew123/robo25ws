@@ -100,6 +100,7 @@ String sFailSafe = "ena";
 String sRcMux = "rcvr";
 String sLoopback = "off";
 bool sRxEnable = false;
+bool sSystatEnable = false;
 
 /**************************************************************************************
  * INTERRUPTS
@@ -356,6 +357,8 @@ void sendRxData(unsigned long loopMillis) {
 
 // Send system status message to host computer
 void sendSystemStatus(unsigned long loopMillis) {
+  if (sSystatEnable == false) return;
+  
   // Send system status at defined rate
   if (((signed long long)loopMillis - systemStatusMillis_last) > systemStatusPeriod) {
     systemStatusMillis_last = loopMillis;
@@ -478,6 +481,7 @@ void serialRx() {
     String incomingString = Serial.readStringUntil('\n');
     jsonParse(incomingString.c_str());
   }
+
 }
 bool jsonParseDrv(JSONVar drvObject) {
 
@@ -531,6 +535,11 @@ bool jsonParseCfg(JSONVar cfgObject) {
       // Serial.println(sRxEnable);
     }
 
+    // status msg enable
+    if (cfgObject.hasOwnProperty("sse")) {
+      sSystatEnable = (bool) cfgObject["sse"];
+    }
+
   return true;
 }
 
@@ -550,6 +559,13 @@ bool jsonParse(const char *jsonStr) {
   
   if (myObject.hasOwnProperty("cfg")) {
     return jsonParseCfg(myObject["cfg"]);
+  }
+
+  if (myObject.hasOwnProperty("id")) {
+    JSONVar jsonObject;
+    jsonObject["id"] = "engine";
+    Serial.println(jsonObject);    
+    return true;
   }
 
   return false;

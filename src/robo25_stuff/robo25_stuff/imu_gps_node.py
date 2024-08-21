@@ -18,8 +18,11 @@ class ImuGpsNode(Node):
 
     # Have not figured out how to get by-id in Docker yet
     #serial_port = "/dev/ttyACM1"
-    serial_port = "/dev/ttyACM0"
-
+    #serial_port = "/dev/ttyACM0"
+    
+    # Try opening serial ports and checking "id"
+    serialPorts = ("/dev/ttyACM0", "/dev/ttyACM1")
+    
     # Dont know how to enable by-id on the Docker container
     #serial_port:str = "/dev/serial/by-id/usb-Waveshare_RP2040_Zero_E6625887D3477130-if00"
 
@@ -35,7 +38,8 @@ class ImuGpsNode(Node):
     def __init__(self):
         super().__init__('imu_gps_node')
 
-        self.imu_gps_serial_port = serial.Serial(self.serial_port, 1000000)
+        #self.imu_gps_serial_port = serial.Serial(self.serial_port, 1000000)
+        self.determineSerialPort("imu_gps")
         
         self.imu_test_publisher = self.create_publisher(String, 'imu_test', 10)
         self.imu_msg_publisher = self.create_publisher(Imu, 'imu_msg', 10)
@@ -52,6 +56,18 @@ class ImuGpsNode(Node):
         
         self.get_logger().info(f"ImuGpsNode Started")
 
+    def determineSerialPort(self, id) :
+        # check serial ports to find the one that matches the id
+        for serial_port in self.serialPorts :
+            try:
+                self.get_logger().info(f"Try {serial_port}")
+                self.imu_gps_serial_port = serial.Serial(serial_port, 1000000)
+                self.imu_gps_serial_port.write("{\"id\":0}".encode())
+                received_data = self.imu_gps_serial_port.readline().decode().strip()
+                self.get_logger().info(f"Received engine json: {received_data}")
+            except Exception as ex:
+                self.get_logger().info(f"Serial port {serial_port} did not open: {ex}")
+        
     # check serial port at timerRateHz and parse out messages to publish
     def timer_callback(self):
         # Check if a line has been received on the serial port
