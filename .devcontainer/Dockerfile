@@ -49,9 +49,10 @@ ENV LC_ALL=en_US.UTF-8
 # Copy the entrypoint and bashrc scripts so we have 
 # our container's environment set up correctly
 COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 COPY bashrc /home/${USERNAME}/.bashrc
 
 
 # Set up entrypoint and default command
-ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
 CMD ["bash"]

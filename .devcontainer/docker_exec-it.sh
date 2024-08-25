@@ -1,3 +1,5 @@
 #!/bin/bash
 
-docker exec -it ubuntu bash
+docker exec -it \
+ubuntu \
+bash

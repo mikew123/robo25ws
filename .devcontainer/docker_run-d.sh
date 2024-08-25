@@ -2,7 +2,7 @@
 
 docker rm ubuntu
 
-docker run -it \
+docker run -dt \
   --user robo25 \
   --name ubuntu \
   --network=host \

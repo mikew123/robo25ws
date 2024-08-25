@@ -46,26 +46,28 @@ class EngineNode(Node):
 
     # check serial ports to find the one that matches the id
     def determineSerialPort(self, id) :
-        for serial_port in self.serialPorts :
-            try:
-                self.get_logger().info(f"Try {serial_port}")
-                node_serial_port = serial.Serial(serial_port, 1000000, timeout=0.1)
-                node_serial_port.write("{\"id\":0}".encode())
-                time.sleep(1)
-                # read port multiple times checking for "id"
-                for i in range(10):
-                    received_data = node_serial_port.readline().decode().strip()
-                    self.get_logger().info(f"Received engine json: {received_data}")
-                    try :
-                        packet = json.loads(received_data)
-                        if "id" in packet:
-                            if packet.get("id") == id :
-                                self.get_logger().info(f"Found {id} serial port: {serial_port}")
-                                return node_serial_port
-                    except Exception as ex:
-                        self.get_logger().info(f"Bad json.loads packet {received_data}: {ex}")
-            except Exception as ex:
-                self.get_logger().info(f"Serial port {serial_port} did not open: {ex}")
+        for a in range(10):
+            for serial_port in self.serialPorts :
+                try:
+                    self.get_logger().info(f"Try {serial_port}")
+                    node_serial_port = serial.Serial(serial_port, 1000000, timeout=0.01)
+                    node_serial_port.write("{\"id\":0}".encode())
+                    time.sleep(1)
+                    # read port multiple times checking for "id"
+                    for i in range(10):
+                        received_data = node_serial_port.readline().decode().strip()
+                        #self.get_logger().info(f"Received engine json: {received_data}")
+                        try :
+                            packet = json.loads(received_data)
+                            if "id" in packet:
+                                if packet.get("id") == id :
+                                    self.get_logger().info(f"Found {id} serial port: {serial_port}")
+                                    return node_serial_port
+                        except Exception as ex:
+                            if received_data != "" :
+                                self.get_logger().info(f"Bad json.loads packet {received_data}: {ex}")
+                except Exception as ex:
+                    self.get_logger().info(f"Serial port {serial_port} did not open: {ex}")
         return None
 
     # check serial port at timerRateHz and parse out messages to publish
