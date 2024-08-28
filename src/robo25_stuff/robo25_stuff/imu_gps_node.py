@@ -4,7 +4,7 @@ import serial
 import math
 import time
 from rclpy.node import Node
-from std_msgs.msg import String, Float32MultiArray
+from std_msgs.msg import String, Int32, Float32MultiArray
 from sensor_msgs.msg import Imu
 from sensor_msgs.msg import NavSatFix
 from geometry_msgs.msg import Pose
@@ -33,6 +33,7 @@ class ImuGpsNode(Node):
     gpsLatYAcc = 0.0
     gpsLonXAcc = 0.0
 
+    
     def __init__(self):
         super().__init__('imu_gps_node')
 
@@ -43,16 +44,17 @@ class ImuGpsNode(Node):
             
         self.imu_test_publisher = self.create_publisher(String, 'imu_test', 10)
         self.imu_msg_publisher = self.create_publisher(Imu, 'imu_msg', 10)
-        self.gps_msg_publisher = self.create_publisher(NavSatFix, 'gps_msg', 10)
+        self.gps_nav_publisher = self.create_publisher(NavSatFix, 'gps_nav', 10)
         self.gps_pose_publisher = self.create_publisher(Pose, 'gps_pose', 10)
+        self.cmp_azi_publisher = self.create_publisher(Int32, 'cmp_azi', 10)
 
-        self.gps_msg_subscription = self.create_subscription(NavSatFix,"gps_msg", self.gps_msg_subscription_callback, 10)
+        self.gps_nav_subscription = self.create_subscription(NavSatFix,"gps_nav", self.gps_nav_subscription_callback, 10)
         
 
         self.timer = self.create_timer((1.0/self.timerRateHz), self.timer_callback)
         
         # configure interface
-        self.imu_gps_serial_port.write("{\"cfg\":{\"imu\":false, \"gps\":true}}".encode())
+        self.imu_gps_serial_port.write("{\"cfg\":{\"imu\":true, \"gps\":true, \"cmp\":true}}".encode())
         
         self.get_logger().info(f"ImuGpsNode Started")
 
@@ -102,6 +104,9 @@ class ImuGpsNode(Node):
                 if "gps" in packet :
                     self.gpsPublish(packet.get("gps"))
                     unknown = False
+                if "cmp" in packet :
+                    self.cmpPublish(packet.get("cmp"))
+                    unknown = False
                 if unknown :
                     self.get_logger().info(f"IMU GPS serial json unknown : {received_data}")
                     return  
@@ -109,13 +114,14 @@ class ImuGpsNode(Node):
                 self.get_logger().error(f"IMU GPS serial json failure {ex} : {received_data}")
                 return
             
-    def gps_msg_subscription_callback(self, msg: NavSatFix) -> None:
+    def gps_nav_subscription_callback(self, msg: NavSatFix) -> None:
         
         lon = msg.longitude
         lat = msg.latitude
         
         latY = (lat/360)*40007863
-        lonX = ((lon*(math.cos((lat/360)*2*math.pi)))/360)*40075017
+        #lonX = ((lon/360)*(math.cos((lat/360)*2*math.pi)))*40075017
+        lonX = ((lon/360)*(1.0))*40075017
         
         # Offset relative lat lon to zero at start
         if self.gpsCntr < self.gpsCnt :
@@ -134,6 +140,12 @@ class ImuGpsNode(Node):
         
         #self.get_logger().info(f"gps_msg_subscription_callback : {latY=} {lonX=}")
         
+    def cmpPublish(self, cmpJsonPacket) -> None:        
+        #self.get_logger().info(f"cmpPublish : {cmpJsonPacket=}")
+        msg = Int32()
+        msg.data = cmpJsonPacket.get("azi")
+        self.cmp_azi_publisher.publish(msg)
+        
     def gpsPublish(self, gpsJsonPacket) -> None:        
         #self.get_logger().info(f"gpsPublish : {gpsJsonPacket=}")
 
@@ -146,12 +158,14 @@ class ImuGpsNode(Node):
         msg.header.frame_id = "base_link"
 
         # TODO: status fields
+        # put num sat in view into status field service
+        msg.status.service = gpsJsonPacket.get("siv")
 
         msg.latitude  = 1e-7*gpsJsonPacket.get("lat")
         msg.longitude = 1e-7*gpsJsonPacket.get("lon")
         msg.altitude  = 1e-3*gpsJsonPacket.get("alt") # mm to Meters
 
-        self.gps_msg_publisher.publish(msg)
+        self.gps_nav_publisher.publish(msg)
 
     def imuPublish(self, imuJsonPacket) :        
         #self.get_logger().info(f"imuPublish : {imuJsonPacket=}")

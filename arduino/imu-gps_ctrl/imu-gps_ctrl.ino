@@ -42,7 +42,7 @@ dynModel g_dyn_model = DYN_MODEL_PORTABLE;
 //dynModel g_dyn_model = DYN_MODEL_AUTOMOTIVE;
 
 void setReports(void) {
-  uint32_t period = 100000; // 10 Hz
+  uint32_t period = 500000; // 2 Hz
   Serial.println("Setting desired reports");
   if (! bno08x.enableReport(SH2_GYROSCOPE_CALIBRATED, period)) { //0x02
     Serial.print("Could not enable report SH2_GYROSCOPE_CALIBRATED 0x");
@@ -107,14 +107,37 @@ void setupGps(void) {
 }
 
 void setupCmp(void) {
-  // Temp use IMU wires
   Wire.setSDA(SDA0);
   Wire.setSCL(SCL0);
+   
   compass.init();
-  compass.setMagneticDeclination(2, 38); // Dallas
-  compass.setSmoothing(10,true);  
 
-  Serial.println("Compass I2C connected");
+// #1
+//  compass.setCalibrationOffsets(-121.00, -114.00, 610.00);
+//  compass.setCalibrationScales(2.33, 2.47, 0.46);
+// #2
+//  compass.setCalibrationOffsets(696.00, 443.00, -364.00);
+//  compass.setCalibrationScales(0.94, 0.95, 1.13);
+// #3
+//  compass.setCalibrationOffsets(258.00, 134.00, -396.00);
+//  compass.setCalibrationScales(0.92, 0.91, 1.22);
+// #4
+  compass.setCalibrationOffsets(39.00, 333.00, 830.00);
+  compass.setCalibrationScales(1.00, 0.82, 1.27);
+// #5
+//  compass.setCalibrationOffsets(405.00, 129.00, 42.00);
+//  compass.setCalibrationScales(1.05, 0.98, 0.97);
+// #6
+//  compass.setCalibrationOffsets(505.00, 259.00, 169.00);
+//  compass.setCalibrationScales(1.15, 0.91, 0.97);  
+// #7
+//  compass.setCalibrationOffsets(1017.00, 155.00, 261.00);
+//  compass.setCalibrationScales(1.34, 0.85, 0.93);
+
+  compass.setMagneticDeclination(13, 0); // tweaked from Dallas = 2, 37
+  compass.setSmoothing(10,true); 
+
+  Serial.println("Compass I2C connected and calibrated");
 }
 
 void setup(void) {
